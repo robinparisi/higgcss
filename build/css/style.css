@@ -591,12 +591,12 @@ li:not(.main-content li) {
   position: absolute;
   bottom: 1.35em;
   left: 1em;
-  padding: .3em 1em;
-  border-radius: 0.2em;
+  padding: .5em 1em;
+  min-width: 400px;
+  border-radius: 0.5em;
   background: #252525;
   color: #ffffff;
   content: attr(data-tooltip);
-  white-space: nowrap;
 }
 .tooltip:hover:before {
   position: absolute;
