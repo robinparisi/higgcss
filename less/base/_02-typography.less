@@ -1,0 +1,36 @@
+/* ----------------------------- */
+/* == typography */
+/* ----------------------------- */
+
+html {
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font-size: @base-font;
+  font-family: helvetica, arial, sans-serif;
+  line-height: @line-height;
+}
+
+p, ul, ol, dl, blockquote, pre, td, th, label, textarea, caption {
+  margin: 0 0 unit(@line-height, em) 0; /* equiv 14px */
+  font-size: 1em;
+  line-height: unit(@line-height, em);;
+}
+
+h1, .h1 { .flow(40); }
+h2, .h2 { .flow(30); }
+h3, .h3 { .flow(20); }
+h4, .h4 { .flow(18) }
+h5, .h5 { .flow(18) }
+h6, .h6 { .flow(18) }
+
+/* useful
+-------------------------------------------------------------- */
+
+.uppercase {
+  text-transform: uppercase;
+}
+

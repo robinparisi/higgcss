@@ -1,0 +1,45 @@
+/* ----------------------------- */
+/* == layout */
+/* ----------------------------- */
+
+/* BFC to the rescue */
+.mod {
+  overflow: hidden;
+}
+
+/* blocks that needs to be placed under floats */
+.clear,
+.line,
+.row {
+  clear: both;
+}
+
+/* blocks that must contain floats */
+.clearfix:after,
+.line:after,
+.mod:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+/* table layout
+-------------------------------------------------------------- */
+
+.row {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.row > *,
+.col {
+  display: table-cell;
+  vertical-align: top;
+}
+
+/* inline-block */
+.inbl {
+  display: inline-block;
+  vertical-align: top;
+}
+
