@@ -19,6 +19,11 @@
   margin-bottom: unit(@margin-bottom, em);
 }
 
+.em(@size, @bf: @base-font){
+  @em: @size / @bf;
+  font-size: unit(@em, em);
+}
+
 /* debug vertical rythm */
 .rythm(@bh: @line-height) {
   background: linear-gradient(to bottom, #BA9B9A .1em, transparent .1em ) !important;
@@ -31,4 +36,19 @@
 
 .setColor (@bgColor) when (lightness(@bgColor) =< 60%) {
   color: white;
+}
+
+.placeholder(@color: #ccc) {
+  input::-webkit-input-placeholder {
+    color: @color;
+  }
+  input:-moz-placeholder {
+    color: @color;
+  }
+  textarea::-webkit-input-placeholder {
+    color: @color;
+  }
+  textarea:-moz-placeholder {
+    color: @color;
+  }
 }

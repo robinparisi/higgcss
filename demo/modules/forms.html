@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../../build/css/style.css" media="all">
+    <style>
+        .container {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Fieldset -->
+    <fieldset>
+        <legend>Un super fieldset</legend>
+        <!-- ici le formulaire -->
+    </fieldset>
+
+    <!-- Input text -->
+    <div>
+        <label for="name">Nom</label>
+        <input id="name" name="name" type="text">
+    </div>
+
+    <!-- Input error -->
+    <div>
+        <label for="error">Champ avec une erreur</label>
+        <div class="ferror">
+            <input id="error" name="name" type="text">
+            <div class="ferror-message">Une adresse email valide est requise</div>
+        </div>
+    </div>
+
+
+    <!-- equal grid -->
+
+    <div class="grid-3">
+        <div>
+            <label for="elem1">Elem 1</label>
+            <input  id="elem1" type="text">
+        </div>
+        <div>
+            <label for="elem2">Elem 2</label>
+            <input  id="elem2" type="text">
+        </div>
+        <div>
+            <label for="elem3">Elem 3</label>
+            <input  id="elem3" type="text">
+        </div>
+    </div>
+
+    <!-- unequal grid -->
+
+    <div class="grid-3-1">
+        <div>
+            <label for="elem4">Elem 4</label>
+            <input  id="elem4" type="text">
+        </div>
+        <div>
+            <label for="elem5">Elem 5</label>
+            <input  id="elem5" type="text">
+        </div>
+    </div>
+
+    <!-- largeur des champs -->
+    <div>
+        <label for="tiny">Tiny</label>
+        <input  id="tiny" type="text" class="ftiny">
+    </div>
+    <div>
+        <label for="small">Small</label>
+        <input  id="small" type="text" class="fsmall">
+    </div>
+    <div>
+        <label for="medium">Medium</label>
+        <input  id="medium" type="text" class="fmedium">
+    </div>
+    <div>
+        <label for="large">Large</label>
+        <input  id="large" type="text" class="flarge">
+    </div>
+    <div>
+        <label for="wide">Wide</label>
+        <input  id="wide" type="text" class="fwide">
+    </div>
+
+    <!-- Input text important -->
+    <div>
+        <label for="important">Champs requis <span class="required">*</span></label>
+        <input id="important" name="name" type="text">
+    </div>
+
+    <!-- Input icon prefix -->
+    <div>
+        <label for="icon-left">Icon left</label>
+        <div class="prefix-input fsmall">
+            <span class="my_icon">@</span>
+            <input id="icon-left" name="icon left" type="text">
+        </div>
+    </div>
+
+    <!-- Input icon postfix -->
+    <div>
+        <label for="icon-right">Icon right</label>
+        <div class="postfix-input fsmall">
+            <span class="my_icon">@</span>
+            <input id="icon-right" name="icon right" type="text">
+        </div>
+    </div>
+
+    <!-- Input password -->
+    <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password">
+    </div>
+
+    <!-- Input select -->
+    <div>
+        <label for="fruits">Select box</label>
+        <select id="fruits">
+            <option value="banane">Banane</option>
+            <option value="fraise">Fraise</option>
+            <option value="poire">Poire</option>
+        </select>
+    </div>
+
+    <!-- Textarea -->
+    <div>
+        <label for="text">Un textarea</label>
+        <textarea rows="20" cols="50" id="text">
+        </textarea>
+    </div>
+
+    <!--- Radio groupe -->
+    <div>
+        <span class="label">Un groupe de radio : </span>
+        <div class="ferror">
+            <input name="radio" type="radio" id="radio1" value="starwars">
+            <label for="radio1">Star Wars</label>
+            <input name="radio" type="radio" id="radio2" value="startreck">
+            <label for="radio2">Star Trek</label>
+            <div class="ferror-message">Message d'erreur</div>
+        </div>
+    </div>
+
+    <!-- Checkboxes groupe -->
+    <div>
+        <span class="label">Un groupe de checkbox :</span>
+        <input type="checkbox" name="frites" id="frites" /> <label for="frites">bleu</label>
+        <input type="checkbox" name="steak" id="steak" /> <label for="steak">vert</label>
+        <input type="checkbox" name="epinards" id="epinards" /> <label for="epinards">jaune</label>
+        <input type="checkbox" name="huitres" id="huitres" /> <label for="huitres">rouge</label>
+    </div>
+
+
+
+</div>
+</body>
+</html>
