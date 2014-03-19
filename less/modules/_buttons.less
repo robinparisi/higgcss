@@ -1,0 +1,76 @@
+/* ----------------------------- */
+/* == buttons                     */
+/* ----------------------------- */
+
+/* config
+-------------------------------------------------------------- */
+
+@btn-primary:       @primary-color;
+@btn-secondary:     @secondary-color;
+@btn-success:       #1cb841;
+@btn-danger:        #c53a3a;
+
+@btn-hover:         5%;
+@btn-radius:        4px;
+
+/* base
+-------------------------------------------------------------- */
+
+.btn,
+button,
+input[type='submit'] {
+  display: inline-block;
+  padding: 0.9em 2em;
+  border: none;
+  border-radius: @btn-radius;
+  vertical-align: baseline;
+  text-align: center;
+  text-decoration: none !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+  line-height: normal;
+  cursor: pointer;
+  transition: background-color .4s;
+}
+
+
+/* colors
+-------------------------------------------------------------- */
+
+.primary {
+  background-color: @primary-color;
+  .setColor(@primary-color);
+}
+
+.primary:hover {
+  background-color: darken(@primary-color, @btn-hover);
+}
+
+.secondary {
+  background-color: @secondary-color;
+  .setColor(@secondary-color);
+}
+
+.secondary:hover {
+  background-color: darken(@secondary-color, @btn-hover);
+}
+
+.success {
+  background-color: @success-color;
+  .setColor(@success-color);
+}
+
+.success:hover {
+  background-color: darken(@success-color, @btn-hover);
+}
+
+.danger {
+  background-color: @danger-color;
+  .setColor(@danger-color);
+}
+
+.danger:hover {
+  background-color: darken(@danger-color, @btn-hover);
+}
+
+
+

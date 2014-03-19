@@ -616,6 +616,59 @@ li:not(.main-content li) {
 /* == modules */
 /* ----------------------------- */
 /* ----------------------------- */
+/* == buttons                     */
+/* ----------------------------- */
+/* config
+-------------------------------------------------------------- */
+/* base
+-------------------------------------------------------------- */
+.btn,
+button,
+input[type='submit'] {
+  display: inline-block;
+  padding: 0.9em 2em;
+  border: none;
+  border-radius: 4px;
+  vertical-align: baseline;
+  text-align: center;
+  text-decoration: none !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  line-height: normal;
+  cursor: pointer;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+/* colors
+-------------------------------------------------------------- */
+.primary {
+  background-color: #002f2f;
+  color: white;
+}
+.primary:hover {
+  background-color: #001516;
+}
+.secondary {
+  background-color: #046380;
+  color: white;
+}
+.secondary:hover {
+  background-color: #035067;
+}
+.success {
+  background-color: #58c026;
+  color: white;
+}
+.success:hover {
+  background-color: #4eab22;
+}
+.danger {
+  background-color: #ca3838;
+  color: white;
+}
+.danger:hover {
+  background-color: #b83131;
+}
+/* ----------------------------- */
 /* == tooltips */
 /* ----------------------------- */
 /* configuration
