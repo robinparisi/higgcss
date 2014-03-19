@@ -1,5 +1,5 @@
 /* ----------------------------- */
-/* == main */
+/* == layout */
 /* ----------------------------- */
 
 html,
@@ -12,50 +12,45 @@ body {
   margin-right: auto;
   margin-left: auto;
   max-width: 960px;
-  color: #000;
+  color: @dark-text;
 }
 
-/* ----------------------------- */
-/* == header */
-/* ----------------------------- */
+/* header
+-------------------------------------------------------------- */
 
-/* ----------------------------- */
-/* == navigation */
-/* ----------------------------- */
+/* navigation
+-------------------------------------------------------------- */
 
-.main-navigation {
+.navigation {
   margin: 10px 0;
 }
 
-.main-navigation ul {
+.navigation ul {
   padding-left: 0;
 }
 
-.main-navigation li {
+.navigation li {
   display: inline-block;
   margin: 10px 0;
 }
 
-.main-navigation li a {
+.navigation li a {
   padding: 10px 5px;
   background-color: @primary-color;
 }
 
-/* ----------------------------- */
-/* == content */
-/* ----------------------------- */
+/* content
+-------------------------------------------------------------- */
 
-.main-content {
+.content {
   overflow: hidden;
   padding: 0 0;
-  .rythm();
 }
 
-/* ----------------------------- */
-/* == footer */
-/* ----------------------------- */
+/* footer
+-------------------------------------------------------------- */
 
-.main-footer {
+.footer {
   padding: 10px;
   background-color: @secondary-color;
   text-align: center;

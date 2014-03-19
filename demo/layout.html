@@ -1,63 +1,71 @@
 <!doctype html>
-<html lang="fr">
+<html>
 <head>
     <meta charset="UTF-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-    <title></title>
-    <meta name="description" content="">
+    <title>Layout - Higgcss</title>
+    <meta name="description" content="ma description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+
     <link rel="stylesheet" href="../build/css/style.css" media="all">
-
-    <style>
-
-        /* demo styles */
-
-        .container {
-            padding: 20px;
-            margin-top: 20px;
-            border: 1px dotted #000;
-        }
-
-        h2 {
-            margin-top: 20px;
-        }
-
-        .line > div, .row > div {
-            padding: 20px;
-        }
-
-        .row {
-            height: 200px;
-        }
-
-        .container > div > div:nth-child(1) { background-color: #fff3d8; }
-        .container > div > div:nth-child(2) { background-color: #a7f2c8; }
-        .container > div > div:nth-child(3) { background-color: #f2a488; }
-        .container > div > div:nth-child(4) { background-color: #cf93a7; }
-        .container > div > div:nth-child(5) { background-color: #58808c; }
-        .container > div > div:nth-child(6) { background-color: #ffc6d2; }
-
-    </style>
-
 </head>
 <body>
+<div class="container pa2">
+    <header class="header" role="banner">
+        <h1>Skeleton</h1>
+        <nav class="navigation" role="navigation">
+            <ul>
+                <li><a href="#">Menu 1</a></li>
+                <li><a href="#">Menu 2</a></li>
+                <li><a href="#">Menu 3</a></li>
+                <li><a href="#">Menu 4</a></li>
+                <li><a href="#">Menu 5</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="content" role="main">
+        <!-- Contenu -->
 
-<div class="container">
-    <h2>Float</h2>
-    <div class="line">
-        <div class="mod left w33">mod left w33</div>
-        <div class="mod left w33">mod left w33</div>
-        <div class="mod left w33">mod left w33</div>
-    </div>
-    <h2>Display table</h2>
-    <div class="row">
-        <div class="col w20 vmiddle">col w20 vmiddle</div>
-        <div class="col w20">col w20</div>
-        <div class="col">col</div>
-    </div>
+        <h1>Titre de niveau 1</h1>
+        <h2>Titre de niveau 2</h2>
+        <h3>Titre de niveau 3</h3>
+
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        <a href="#" class="btn btn-primary">Ohhhhhh</a>
+        <a href="#" class="btn btn-secondary">Ahhhhhh</a>
+        <ul>
+            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+            <li>Aliquam tincidunt mauris eu risus.</li>
+            <li>Vestibulum auctor dapibus neque.</li>
+        </ul>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Lorem ipsum</th>
+                <th>Lorem ipsum</th>
+                <th>Lorem ipsum</th>
+                <th>Lorem ipsum</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Lorem ipsum</td>
+                <td>Lorem ipsum</td>
+                <td>Lorem ipsum</td>
+                <td>Lorem ipsum</td>
+            </tr>
+            </tbody>
+        </table>
+        <!-- /Contenu -->
+    </section>
+    <footer class="footer" role="contentinfo">
+        Higgcss
+    </footer>
 </div>
 
 </body>
