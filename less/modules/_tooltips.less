@@ -5,7 +5,7 @@
 /* configuration
 -------------------------------------------------------------- */
 
-@tooltip-bg      : #252525;
+@tooltip-bg      : rgba(0, 0, 0, 0.80);
 @tooltip-color   : #fff;
 @tooltip-radius  : .5em;
 
@@ -17,17 +17,20 @@
   cursor: help;
 }
 
+.tooltip:after {
+  font-family: helvetica, arial, sans-serif;
+}
 
 .tooltip:hover:after {
   position: absolute;
   bottom: 1.35em;
   left: 1em;
   padding: .5em 1em;
-  min-width: 400px;
   border-radius: @tooltip-radius;
   background: @tooltip-bg;
   color: @tooltip-color;
   content: attr(data-tooltip);
+  white-space: nowrap;
 }
 
 .tooltip:hover:before {

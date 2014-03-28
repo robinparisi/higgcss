@@ -14,10 +14,6 @@
 -------------------------------------------------------------- */
 /* responsive
 -------------------------------------------------------------- */
-/* buttons
--------------------------------------------------------------- */
-/* alerts
--------------------------------------------------------------- */
 /* ----------------------------- */
 /* == base */
 /* ----------------------------- */
@@ -76,7 +72,7 @@ html {
   -ms-text-size-adjust: 100%;
 }
 body {
-  font-size: 15px;
+  font-size: 18px;
   font-family: helvetica, arial, sans-serif;
   line-height: 1.5;
 }
@@ -99,56 +95,56 @@ caption {
 h1,
 .h1 {
   /* font size */
-  font-size: 2.66666667em;
+  font-size: 2.77777778em;
   /* line height */
-  line-height: 1.125em;
+  line-height: 1.08em;
   /* margin */
-  margin-bottom: 0.5625em;
+  margin-bottom: 0.54em;
 }
 h2,
 .h2 {
   /* font size */
-  font-size: 2em;
+  font-size: 2.77777778em;
   /* line height */
-  line-height: 1.5em;
+  line-height: 1.08em;
   /* margin */
-  margin-bottom: 0.75em;
+  margin-bottom: 0.54em;
 }
 h3,
 .h3 {
   /* font size */
-  font-size: 1.33333333em;
+  font-size: 2.77777778em;
   /* line height */
-  line-height: 2.25em;
+  line-height: 1.08em;
   /* margin */
-  margin-bottom: 1.125em;
+  margin-bottom: 0.54em;
 }
 h4,
 .h4 {
   /* font size */
-  font-size: 1.2em;
+  font-size: 1em;
   /* line height */
-  line-height: 2.5em;
+  line-height: 3em;
   /* margin */
-  margin-bottom: 1.25em;
+  margin-bottom: 1.5em;
 }
 h5,
 .h5 {
   /* font size */
-  font-size: 1.2em;
+  font-size: 1em;
   /* line height */
-  line-height: 2.5em;
+  line-height: 3em;
   /* margin */
-  margin-bottom: 1.25em;
+  margin-bottom: 1.5em;
 }
 h6,
 .h6 {
   /* font size */
-  font-size: 1.2em;
+  font-size: 1em;
   /* line height */
-  line-height: 2.5em;
+  line-height: 3em;
   /* margin */
-  margin-bottom: 1.25em;
+  margin-bottom: 1.5em;
 }
 /* useful
 -------------------------------------------------------------- */
@@ -431,6 +427,13 @@ h6,
 .grid-4 > div:nth-child(4n) {
   margin-right: 0;
 }
+.grid-12 > div {
+  width: 4.66666667%;
+  margin: 0 4% 4% 0;
+}
+.grid-12 > div:nth-child(12n) {
+  margin-right: 0;
+}
 .grid-2-1 > div:nth-child(1n) {
   width: 64%;
 }
@@ -527,6 +530,13 @@ body {
   margin-left: auto;
   max-width: 960px;
   color: #000000;
+}
+.rythm {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ba9b9a), to(transparent)) !important;
+  background: -webkit-linear-gradient(top, #ba9b9a 0.1em, transparent 0.1em) !important;
+  background: linear-gradient(to bottom, #ba9b9a 0.1em, transparent 0.1em) !important;
+  -webkit-background-size: 100% 1.5em !important;
+  background-size: 100% 1.5em !important;
 }
 /* header
 -------------------------------------------------------------- */
@@ -658,18 +668,18 @@ input[type='submit'] {
   background-color: #035067;
 }
 .btn-success {
-  background-color: #58c026;
+  background-color: #1cb841;
   color: white;
 }
 .btn-success:hover {
-  background-color: #4eab22;
+  background-color: #19a239;
 }
 .btn-danger {
-  background-color: #ca3838;
+  background-color: #c53a3a;
   color: white;
 }
 .btn-danger:hover {
-  background-color: #b83131;
+  background-color: #b13434;
 }
 /* ----------------------------------------- */
 /* == forms */
@@ -766,7 +776,7 @@ input[type='checkbox'] + label {
 }
 .prefix-input span,
 .postfix-input span {
-  font-size: 1.33333333em;
+  font-size: 1.11111111em;
   position: absolute;
   display: block;
   width: 30px;
@@ -800,16 +810,19 @@ input[type='checkbox'] + label {
   position: relative;
   cursor: help;
 }
+.tooltip:after {
+  font-family: helvetica, arial, sans-serif;
+}
 .tooltip:hover:after {
   position: absolute;
   bottom: 1.35em;
   left: 1em;
   padding: .5em 1em;
-  min-width: 400px;
   border-radius: 0.5em;
-  background: #252525;
+  background: rgba(0, 0, 0, 0.8);
   color: #ffffff;
   content: attr(data-tooltip);
+  white-space: nowrap;
 }
 .tooltip:hover:before {
   position: absolute;
@@ -818,7 +831,7 @@ input[type='checkbox'] + label {
   display: block;
   border: solid;
   border-width: .4em .4em 0 .4em;
-  border-color: #252525 transparent;
+  border-color: rgba(0, 0, 0, 0.8) transparent;
   content: "";
 }
 /* ----------------------------- */
