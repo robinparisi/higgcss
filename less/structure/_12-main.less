@@ -3,21 +3,16 @@
 /* ----------------------------- */
 
 
+/* texts
+-------------------------------------------------------------- */
 
 /* titles
 -------------------------------------------------------------- */
 
-.content h1 {
-  color: @primary-color;
-}
+.content h1 { .flow(40); }
+.content h2 { .flow(30); }
+.content h3 { .flow(20); }
 
-.content h2 {
-  color: @secondary-color;
-}
-
-.content h3 {
-  color: @tertiary-color;
-}
 
 /* links
 -------------------------------------------------------------- */
@@ -33,18 +28,11 @@ a:visited {
   color: @light-text;
 }
 
-.header a:hover {
-  color: lighten(@primary-color, 30%);
-}
-
 .footer a,
 .footer a:visited {
   color: @light-text;
 }
 
-.footer a:hover {
-  color: lighten(@primary-color, 30%);
-}
 
 /* lists
 -------------------------------------------------------------- */

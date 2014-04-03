@@ -72,7 +72,7 @@ html {
   -ms-text-size-adjust: 100%;
 }
 body {
-  font-size: 18px;
+  font-size: 14px;
   font-family: helvetica, arial, sans-serif;
   line-height: 1.5;
 }
@@ -88,63 +88,8 @@ label,
 textarea,
 caption {
   margin: 0 0 1.5em 0;
-  /* equiv 14px */
   font-size: 1em;
   line-height: 1.5em;
-}
-h1,
-.h1 {
-  /* font size */
-  font-size: 2.77777778em;
-  /* line height */
-  line-height: 1.08em;
-  /* margin */
-  margin-bottom: 0.54em;
-}
-h2,
-.h2 {
-  /* font size */
-  font-size: 2.77777778em;
-  /* line height */
-  line-height: 1.08em;
-  /* margin */
-  margin-bottom: 0.54em;
-}
-h3,
-.h3 {
-  /* font size */
-  font-size: 2.77777778em;
-  /* line height */
-  line-height: 1.08em;
-  /* margin */
-  margin-bottom: 0.54em;
-}
-h4,
-.h4 {
-  /* font size */
-  font-size: 1em;
-  /* line height */
-  line-height: 3em;
-  /* margin */
-  margin-bottom: 1.5em;
-}
-h5,
-.h5 {
-  /* font size */
-  font-size: 1em;
-  /* line height */
-  line-height: 3em;
-  /* margin */
-  margin-bottom: 1.5em;
-}
-h6,
-.h6 {
-  /* font size */
-  font-size: 1em;
-  /* line height */
-  line-height: 3em;
-  /* margin */
-  margin-bottom: 1.5em;
 }
 /* useful
 -------------------------------------------------------------- */
@@ -427,6 +372,55 @@ h6,
 .grid-4 > div:nth-child(4n) {
   margin-right: 0;
 }
+.grid-5 > div {
+  width: 16.8%;
+  margin: 0 4% 4% 0;
+}
+.grid-5 > div:nth-child(5n) {
+  margin-right: 0;
+}
+.grid-6 > div {
+  width: 13.33333333%;
+  margin: 0 4% 4% 0;
+}
+.grid-6 > div:nth-child(6n) {
+  margin-right: 0;
+}
+.grid-7 > div {
+  width: 10.85714286%;
+  margin: 0 4% 4% 0;
+}
+.grid-7 > div:nth-child(7n) {
+  margin-right: 0;
+}
+.grid-8 > div {
+  width: 9%;
+  margin: 0 4% 4% 0;
+}
+.grid-8 > div:nth-child(8n) {
+  margin-right: 0;
+}
+.grid-9 > div {
+  width: 7.55555556%;
+  margin: 0 4% 4% 0;
+}
+.grid-9 > div:nth-child(9n) {
+  margin-right: 0;
+}
+.grid-10 > div {
+  width: 6.4%;
+  margin: 0 4% 4% 0;
+}
+.grid-10 > div:nth-child(10n) {
+  margin-right: 0;
+}
+.grid-11 > div {
+  width: 5.45454545%;
+  margin: 0 4% 4% 0;
+}
+.grid-11 > div:nth-child(11n) {
+  margin-right: 0;
+}
 .grid-12 > div {
   width: 4.66666667%;
   margin: 0 4% 4% 0;
@@ -531,13 +525,6 @@ body {
   max-width: 960px;
   color: #000000;
 }
-.rythm {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ba9b9a), to(transparent)) !important;
-  background: -webkit-linear-gradient(top, #ba9b9a 0.1em, transparent 0.1em) !important;
-  background: linear-gradient(to bottom, #ba9b9a 0.1em, transparent 0.1em) !important;
-  -webkit-background-size: 100% 1.5em !important;
-  background-size: 100% 1.5em !important;
-}
 /* header
 -------------------------------------------------------------- */
 /* navigation
@@ -558,10 +545,6 @@ body {
 }
 /* content
 -------------------------------------------------------------- */
-.content {
-  overflow: hidden;
-  padding: 0 0;
-}
 /* footer
 -------------------------------------------------------------- */
 .footer {
@@ -572,16 +555,33 @@ body {
 /* ----------------------------- */
 /* == main */
 /* ----------------------------- */
+/* texts
+-------------------------------------------------------------- */
 /* titles
 -------------------------------------------------------------- */
 .content h1 {
-  color: #002f2f;
+  /* font size */
+  font-size: 2.85714286em;
+  /* line height */
+  line-height: 1.05em;
+  /* margin */
+  margin-bottom: 0.525em;
 }
 .content h2 {
-  color: #046380;
+  /* font size */
+  font-size: 2.14285714em;
+  /* line height */
+  line-height: 1.4em;
+  /* margin */
+  margin-bottom: 0.7em;
 }
 .content h3 {
-  color: #a7a37e;
+  /* font size */
+  font-size: 1.42857143em;
+  /* line height */
+  line-height: 2.1em;
+  /* margin */
+  margin-bottom: 1.05em;
 }
 /* links
 -------------------------------------------------------------- */
@@ -594,15 +594,9 @@ a:visited {
 .header a:visited {
   color: #fcfcfc;
 }
-.header a:hover {
-  color: #00c8c8;
-}
 .footer a,
 .footer a:visited {
   color: #fcfcfc;
-}
-.footer a:hover {
-  color: #00c8c8;
 }
 /* lists
 -------------------------------------------------------------- */
@@ -655,28 +649,28 @@ input[type='submit'] {
 -------------------------------------------------------------- */
 .btn-primary {
   background-color: #002f2f;
-  color: white;
+  color: #fff;
 }
 .btn-primary:hover {
   background-color: #001516;
 }
 .btn-secondary {
   background-color: #046380;
-  color: white;
+  color: #fff;
 }
 .btn-secondary:hover {
   background-color: #035067;
 }
 .btn-success {
   background-color: #1cb841;
-  color: white;
+  color: #fff;
 }
 .btn-success:hover {
   background-color: #19a239;
 }
 .btn-danger {
   background-color: #c53a3a;
-  color: white;
+  color: #fff;
 }
 .btn-danger:hover {
   background-color: #b13434;
@@ -776,7 +770,7 @@ input[type='checkbox'] + label {
 }
 .prefix-input span,
 .postfix-input span {
-  font-size: 1.11111111em;
+  font-size: 1.42857143em;
   position: absolute;
   display: block;
   width: 30px;
