@@ -122,13 +122,16 @@ caption {
 .txtleft {
   text-align: left;
 }
-.vtop {
+.vtop,
+.col.vtop {
   vertical-align: top;
 }
-.vbottom {
+.vbottom,
+.col.vbottom {
   vertical-align: bottom;
 }
-.vmiddle {
+.vmiddle,
+.col.vmiddle {
   vertical-align: middle;
 }
 /* ----------------------------- */
@@ -338,134 +341,46 @@ caption {
 /* ----------------------------- */
 /* == grid */
 /* ----------------------------- */
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 [class^="grid"]:after {
   display: table;
   clear: both;
   content: "";
 }
-[class^="grid"] > div {
+[class^="grid"] > * {
   float: left;
 }
-.grid-2 > div {
-  width: 48%;
-  margin: 0 4% 4% 0;
+.grid-2 > * {
+  width: 49%;
+  margin: 0 2% 2% 0;
 }
-.grid-2 > div:nth-child(2n) {
+.grid-2 > *:nth-child(2n) {
   margin-right: 0;
 }
-.grid-3 > div {
-  width: 30.66666667%;
-  margin: 0 4% 4% 0;
-}
-.grid-3 > div:nth-child(3n) {
-  margin-right: 0;
-}
-.grid-4 > div {
-  width: 22%;
-  margin: 0 4% 4% 0;
-}
-.grid-4 > div:nth-child(4n) {
-  margin-right: 0;
-}
-.grid-5 > div {
-  width: 16.8%;
-  margin: 0 4% 4% 0;
-}
-.grid-5 > div:nth-child(5n) {
-  margin-right: 0;
-}
-.grid-6 > div {
-  width: 13.33333333%;
-  margin: 0 4% 4% 0;
-}
-.grid-6 > div:nth-child(6n) {
-  margin-right: 0;
-}
-.grid-7 > div {
-  width: 10.85714286%;
-  margin: 0 4% 4% 0;
-}
-.grid-7 > div:nth-child(7n) {
-  margin-right: 0;
-}
-.grid-8 > div {
-  width: 9%;
-  margin: 0 4% 4% 0;
-}
-.grid-8 > div:nth-child(8n) {
-  margin-right: 0;
-}
-.grid-9 > div {
-  width: 7.55555556%;
-  margin: 0 4% 4% 0;
-}
-.grid-9 > div:nth-child(9n) {
-  margin-right: 0;
-}
-.grid-10 > div {
-  width: 6.4%;
-  margin: 0 4% 4% 0;
-}
-.grid-10 > div:nth-child(10n) {
-  margin-right: 0;
-}
-.grid-11 > div {
-  width: 5.45454545%;
-  margin: 0 4% 4% 0;
-}
-.grid-11 > div:nth-child(11n) {
-  margin-right: 0;
-}
-.grid-12 > div {
-  width: 4.66666667%;
-  margin: 0 4% 4% 0;
-}
-.grid-12 > div:nth-child(12n) {
-  margin-right: 0;
-}
-.grid-2-1 > div:nth-child(1n) {
-  width: 64%;
-}
-.grid-2-1 > div:nth-child(2n) {
-  margin-left: 4%;
-}
-.grid-2-1 > div:nth-child(2n) {
+.grid-3 > * {
   width: 32%;
+  margin: 0 2% 2% 0;
 }
-.grid-1-3 > div:nth-child(1n) {
-  width: 24%;
+.grid-3 > *:nth-child(3n) {
+  margin-right: 0;
 }
-.grid-1-3 > div:nth-child(2n) {
-  margin-left: 4%;
+.grid-4 > * {
+  width: 23.5%;
+  margin: 0 2% 2% 0;
 }
-.grid-1-3 > div:nth-child(2n) {
-  width: 72%;
+.grid-4 > *:nth-child(4n) {
+  margin-right: 0;
 }
-.grid-3-1 > div:nth-child(1n) {
-  width: 72%;
+.grid-2-1 > *:nth-child(1n) {
+  width: 65.33333333%;
 }
-.grid-3-1 > div:nth-child(2n) {
-  margin-left: 4%;
+.grid-2-1 > *:nth-child(2n) {
+  margin-left: 2%;
 }
-.grid-3-1 > div:nth-child(2n) {
-  width: 24%;
+.grid-2-1 > *:nth-child(2n) {
+  width: 32.66666667%;
 }
-.grid-1-4 > div:nth-child(1n) {
-  width: 19.2%;
-}
-.grid-1-4 > div:nth-child(2n) {
-  margin-left: 4%;
-}
-.grid-1-4 > div:nth-child(2n) {
-  width: 76.8%;
-}
-@media (max-width: 420px) {
-  [class^="grid"] > div {
+@media (max-width: 480px) {
+  [class^="grid"] > * {
     float: none !important;
     width: auto !important;
     margin-right: auto !important;
@@ -492,36 +407,38 @@ caption {
 /* mobile
 -------------------------------------------------------------- */
 @media (max-width: 480px) {
-  .smartphone-hidden {
-    display: none;
-  }
   .mod,
   .col {
     display: block !important;
     width: auto !important;
     float: none !important;
   }
+  .smartphone-hidden {
+    display: none !important;
+  }
 }
 /* ----------------------------- */
 /* == structure */
 /* ----------------------------- */
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
 /* == fonts */
-/* ----------------------------- */
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
 /* == icons */
-/* ----------------------------- */
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
 /* == layout */
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
 html,
 body {
   height: 100%;
   background-color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .container {
   margin-right: auto;
   margin-left: auto;
+  padding: 0 10px;
   max-width: 960px;
   color: #000000;
 }
@@ -529,12 +446,6 @@ body {
 -------------------------------------------------------------- */
 /* navigation
 -------------------------------------------------------------- */
-.navigation {
-  margin: 10px 0;
-}
-.navigation ul {
-  padding-left: 0;
-}
 .navigation li {
   display: inline-block;
   margin: 10px 0;
@@ -547,48 +458,23 @@ body {
 -------------------------------------------------------------- */
 /* footer
 -------------------------------------------------------------- */
-.footer {
-  padding: 10px;
-  background-color: #046380;
-  text-align: center;
-}
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
 /* == main */
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
 /* texts
 -------------------------------------------------------------- */
 /* titles
 -------------------------------------------------------------- */
-.content h1 {
-  /* font size */
-  font-size: 2.85714286em;
-  /* line height */
-  line-height: 1.05em;
-  /* margin */
-  margin-bottom: 0.525em;
-}
-.content h2 {
-  /* font size */
-  font-size: 2.14285714em;
-  /* line height */
-  line-height: 1.4em;
-  /* margin */
-  margin-bottom: 0.7em;
-}
-.content h3 {
-  /* font size */
-  font-size: 1.42857143em;
-  /* line height */
-  line-height: 2.1em;
-  /* margin */
-  margin-bottom: 1.05em;
-}
 /* links
 -------------------------------------------------------------- */
 a,
 a:hover,
 a:visited {
   text-decoration: none;
+}
+a,
+a:visited {
+  color: #046380;
 }
 .header a,
 .header a:visited {
@@ -603,15 +489,18 @@ a:visited {
 li:not(.content li) {
   list-style-type: none;
 }
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
+/* == modules */
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
 /* == rwd */
-/* ----------------------------- */
-/* ----------------------------- */
-/* == tablet */
-/* ----------------------------- */
-/* ----------------------------- */
-/* == tablet */
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* == rwd tablet */
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* == rwd smartphone */
+/* ----------------------------------------------------------- */
 /* ----------------------------- */
 /* == modules */
 /* ----------------------------- */
@@ -703,9 +592,13 @@ fieldset {
 /* reset */
 textarea,
 input[type='text'],
-input[type='password'] {
+input[type='password'],
+input[type='number'],
+input[type='mail'],
+select option {
   margin: 0;
-  width: 100%;
+  padding: 6px 12px;
+  font-size: inherit;
 }
 label,
 .label {
@@ -716,16 +609,18 @@ label,
 }
 input[type='text'],
 input[type='password'],
+input[type='number'],
+input[type='mail'],
 textarea {
-  height: 30px;
   border: 1px solid #d8d8d8;
-  border-radius: 4px;
+  border-radius: 0;
   background: #ffffff;
 }
 input[type='radio'] + label,
 input[type='checkbox'] + label {
   display: inline-block;
   padding: 0 10px 0 5px;
+  width: auto;
   vertical-align: baseline;
   text-align: left;
 }
@@ -773,11 +668,9 @@ input[type='checkbox'] + label {
   font-size: 1.42857143em;
   position: absolute;
   display: block;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
   color: #D8D8D8;
   text-align: center;
+  line-height: inherit;
 }
 .prefix-input input {
   padding-left: 40px;

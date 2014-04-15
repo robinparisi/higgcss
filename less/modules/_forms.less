@@ -5,8 +5,7 @@
 /* configuration
 -------------------------------------------------------------- */
 
-@input-height          : 30px;
-@input-border-radius   : 4px;
+@input-border-radius   : 0;
 @input-border          : 1px solid #D8D8D8;
 @input-backgroud-color : #fff;
 @input-hover           : 5%;
@@ -26,10 +25,13 @@ fieldset {
 /* reset */
 textarea,
 input[type='text'],
-input[type='password']
-{
+input[type='password'],
+input[type='number'],
+input[type='mail'],
+select option {
   margin: 0;
-  width: 100%;
+  padding: 6px 12px;
+  font-size: inherit;
 }
 
 label,
@@ -42,8 +44,9 @@ label,
 
 input[type='text'],
 input[type='password'],
+input[type='number'],
+input[type='mail'],
 textarea {
-  height: @input-height;
   border: @input-border;
   border-radius: @input-border-radius;
   background: @input-backgroud-color;
@@ -53,6 +56,7 @@ input[type='radio'] + label,
 input[type='checkbox'] + label {
   display: inline-block;
   padding: 0 10px 0 5px;
+  width: auto;
   vertical-align: baseline;
   text-align: left;
 }
@@ -100,11 +104,9 @@ input[type='checkbox'] + label {
   .em(20);
   position: absolute;
   display: block;
-  width: @input-height;
-  height: @input-height;
-  line-height: @input-height;
   color: #D8D8D8;
   text-align: center;
+  line-height: inherit;
 }
 
 .prefix-input input {
