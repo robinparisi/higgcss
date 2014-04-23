@@ -1,9 +1,9 @@
 /* ----------------------------- */
 /* == config */
 /* ----------------------------- */
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
 /* == config */
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
 /* base
 -------------------------------------------------------------- */
 /* colors
@@ -14,6 +14,8 @@
 -------------------------------------------------------------- */
 /* responsive
 -------------------------------------------------------------- */
+/* grids
+-------------------------------------------------------------- */
 /* ----------------------------- */
 /* == base */
 /* ----------------------------- */
@@ -21,7 +23,6 @@
 /* == usefuls mixins */
 /* ----------------------------- */
 /* automatic vertical rythm */
-/* debug vertical rythm */
 /* ----------------------------- */
 /* == reset */
 /* ----------------------------- */
@@ -33,46 +34,32 @@
   box-sizing: border-box;
 }
 body,
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-pre,
-form,
-fieldset,
-p,
-blockquote,
-th,
-td {
+h6 {
   margin: 0;
   padding: 0;
 }
 img {
-  vertical-align: middle;
   border: 0;
+  vertical-align: middle;
 }
 a img {
   border: none;
 }
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
 /* == typography */
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
 html {
   font-size: 62.5%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 body {
-  font-size: 14px;
+  font-size: 18px;
   font-family: helvetica, arial, sans-serif;
   line-height: 1.5;
 }
@@ -96,9 +83,9 @@ caption {
 .uppercase {
   text-transform: uppercase;
 }
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
 /* == alignment */
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
 /* block
 -------------------------------------------------------------- */
 .left {
@@ -134,9 +121,9 @@ caption {
 .col.vmiddle {
   vertical-align: middle;
 }
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
 /* == width */
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
 .w10 {
   width: 10%;
 }
@@ -179,9 +166,9 @@ caption {
 .w100 {
   width: 100%;
 }
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
 /* == spacings */
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
 .ma0 {
   margin: 0;
 }
@@ -302,9 +289,9 @@ caption {
 .pl3 {
   padding-left: 30px;
 }
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
 /* == layout */
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
 /* BFC to the rescue */
 .mod {
   overflow: hidden;
@@ -334,13 +321,12 @@ caption {
 .col {
   display: table-cell;
 }
-/* inline-block */
 .inbl {
   display: inline-block;
 }
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
 /* == grid */
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
 [class^="grid"]:after {
   display: table;
   clear: both;
@@ -417,6 +403,7 @@ caption {
     display: none !important;
   }
 }
+/* debug vertical rythm */
 /* ----------------------------- */
 /* == structure */
 /* ----------------------------- */
@@ -446,6 +433,9 @@ body {
 -------------------------------------------------------------- */
 /* navigation
 -------------------------------------------------------------- */
+.navigation ul {
+  padding-left: 0;
+}
 .navigation li {
   display: inline-block;
   margin: 10px 0;
@@ -456,14 +446,45 @@ body {
 }
 /* content
 -------------------------------------------------------------- */
+.content {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ba9b9a), to(transparent)) !important;
+  background: -webkit-linear-gradient(top, #ba9b9a 0.1em, transparent 0.1em) !important;
+  background: linear-gradient(to bottom, #ba9b9a 0.1em, transparent 0.1em) !important;
+  -webkit-background-size: 100% 1.5em !important;
+  background-size: 100% 1.5em !important;
+}
 /* footer
 -------------------------------------------------------------- */
 /* ----------------------------------------------------------- */
 /* == main */
 /* ----------------------------------------------------------- */
-/* texts
--------------------------------------------------------------- */
 /* titles
+-------------------------------------------------------------- */
+.content h1 {
+  /* font size */
+  font-size: 1.66666667em;
+  /* line height */
+  line-height: 1.8em;
+  /* margin */
+  margin-bottom: 0.9em;
+}
+.content h2 {
+  /* font size */
+  font-size: 1.33333333em;
+  /* line height */
+  line-height: 2.25em;
+  /* margin */
+  margin-bottom: 1.125em;
+}
+.content h3 {
+  /* font size */
+  font-size: 1.11111111em;
+  /* line height */
+  line-height: 2.7em;
+  /* margin */
+  margin-bottom: 1.35em;
+}
+/* texts
 -------------------------------------------------------------- */
 /* links
 -------------------------------------------------------------- */
@@ -549,20 +570,6 @@ input[type='submit'] {
 }
 .btn-secondary:hover {
   background-color: #035067;
-}
-.btn-success {
-  background-color: #1cb841;
-  color: #fff;
-}
-.btn-success:hover {
-  background-color: #19a239;
-}
-.btn-danger {
-  background-color: #c53a3a;
-  color: #fff;
-}
-.btn-danger:hover {
-  background-color: #b13434;
 }
 /* ----------------------------------------- */
 /* == forms */
@@ -665,7 +672,7 @@ input[type='checkbox'] + label {
 }
 .prefix-input span,
 .postfix-input span {
-  font-size: 1.42857143em;
+  font-size: 1.11111111em;
   position: absolute;
   display: block;
   color: #D8D8D8;
