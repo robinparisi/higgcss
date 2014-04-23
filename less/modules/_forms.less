@@ -1,11 +1,11 @@
-/* ----------------------------------------- */
-/* == forms */
-/* ----------------------------------------- */
+/* ----------------------------------------------------------- */
+/* == form */
+/* ----------------------------------------------------------- */
 
 /* configuration
 -------------------------------------------------------------- */
 
-@input-border-radius   : 0;
+@input-border-radius   : 2px;
 @input-border          : 1px solid #D8D8D8;
 @input-backgroud-color : #fff;
 @input-hover           : 5%;
@@ -14,31 +14,28 @@
 /* module
 -------------------------------------------------------------- */
 
-.placeholder(#c4c1be); /* placeholder */
+.placeholder(#c4c1be);
 
 fieldset {
-  margin: 18px 0;
-  padding: 30px;
+  padding: 1em;
   border: 1px solid #D8D8D8;
 }
 
-/* reset */
-textarea,
-input[type='text'],
-input[type='password'],
-input[type='number'],
-input[type='mail'],
-select option {
-  margin: 0;
-  padding: 6px 12px;
+input,
+button,
+select,
+label,
+.label,
+.btn{
+  vertical-align: middle;
   font-size: inherit;
+  font-family: inherit;
 }
 
 label,
 .label {
   display: block;
-  margin: 14px 0 10px 0;
-  padding-right: 10px;
+  margin: 15px 0 10px 0;
   vertical-align: middle;
 }
 
@@ -47,6 +44,7 @@ input[type='password'],
 input[type='number'],
 input[type='mail'],
 textarea {
+  padding: .5em .6em;
   border: @input-border;
   border-radius: @input-border-radius;
   background: @input-backgroud-color;
@@ -59,6 +57,17 @@ input[type='checkbox'] + label {
   width: auto;
   vertical-align: baseline;
   text-align: left;
+}
+
+/* grid
+-------------------------------------------------------------- */
+
+[class^="grid"] input[type='text'],
+[class^="grid"] input[type='password'],
+[class^="grid"] input[type='number'],
+[class^="grid"] input[type='mail'],
+[class^="grid"] textarea {
+  width: 100%;
 }
 
 /* errors
@@ -78,52 +87,5 @@ input[type='checkbox'] + label {
 .ferror-message {
   padding-top: 4px;
   color: darken(@input-error-color, 20%);
-}
-
-/* size
--------------------------------------------------------------- */
-
-.ftiny  { width: 10% !important; };
-.fsmall { width: 25% !important;; };
-.fmedium { width: 50% !important;; };
-.flarge { width: 75% !important;; };
-.fwide { width: 100% !important;; };
-
-
-/* with icons
--------------------------------------------------------------- */
-
-.prefix-input,
-.postfix-input {
-  position: relative;
-  clear: both;
-}
-
-.prefix-input span,
-.postfix-input span{
-  .em(20);
-  position: absolute;
-  display: block;
-  color: #D8D8D8;
-  text-align: center;
-  line-height: inherit;
-}
-
-.prefix-input input {
-  padding-left: 40px;
-}
-
-.prefix-input span {
-  left: 0;
-  border-right: 1px solid #D8D8D8;
-}
-
-.postfix-input span {
-  right: 0;
-  border-left: 1px solid #D8D8D8;
-}
-
-.prefix-input input {
-  margin: 0;
 }
 

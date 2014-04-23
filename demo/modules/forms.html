@@ -22,7 +22,16 @@
     <!-- Fieldset -->
     <fieldset>
         <legend>Un super fieldset</legend>
+
         <!-- ici le formulaire -->
+        <label for="input1">Input 1</label>
+        <input id="input1" name="input1" type="text">
+
+        <label for="input2">Input 2</label>
+        <input id="input2" name="input2" type="text">
+
+        <label for="input3">Input 3</label>
+        <input id="input3" name="input3" type="text">
     </fieldset>
 
     <!-- Input text -->
@@ -71,27 +80,6 @@
         </div>
     </div>
 
-    <!-- largeur des champs -->
-    <div>
-        <label for="tiny">Tiny</label>
-        <input  id="tiny" type="text" class="ftiny">
-    </div>
-    <div>
-        <label for="small">Small</label>
-        <input  id="small" type="text" class="fsmall">
-    </div>
-    <div>
-        <label for="medium">Medium</label>
-        <input  id="medium" type="text" class="fmedium">
-    </div>
-    <div>
-        <label for="large">Large</label>
-        <input  id="large" type="text" class="flarge">
-    </div>
-    <div>
-        <label for="wide">Wide</label>
-        <input  id="wide" type="text" class="fwide">
-    </div>
 
     <!-- Input text important -->
     <div>
@@ -102,9 +90,8 @@
     <!-- Input icon prefix -->
     <div>
         <label for="icon-left">Icon left</label>
-        <div class="prefix-input fsmall">
-            <span class="my_icon">@</span>
-            <input id="icon-left" name="icon left" type="text">
+        <div class="ficon">
+            <input id="icon-left" type="text" class="fa fa-trash-o">
         </div>
     </div>
 
@@ -136,7 +123,7 @@
     <!-- Textarea -->
     <div>
         <label for="text">Un textarea</label>
-        <textarea rows="20" cols="50" id="text">
+        <textarea rows="8" cols="50" id="text">
         </textarea>
     </div>
 
