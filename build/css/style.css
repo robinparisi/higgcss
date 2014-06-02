@@ -43,12 +43,21 @@ h6 {
   margin: 0;
   padding: 0;
 }
+img,
+table,
+td,
+blockquote,
+code,
+pre,
+textarea,
+input,
+video {
+  max-width: 100%;
+}
 img {
+  height: auto;
   border: 0;
   vertical-align: middle;
-}
-a img {
-  border: none;
 }
 /* ----------------------------------------------------------- */
 /* == typography */
