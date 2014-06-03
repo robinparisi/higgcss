@@ -51,8 +51,12 @@
 .grid(2, @gutter, grid-2);
 .grid(3, @gutter, grid-3);
 .grid(4, @gutter, grid-4);
+.grid(5, @gutter, grid-2);
+.grid(6, @gutter, grid-3);
 
-.unequal-grid(3, 1, @gutter, grid-3-1);
+.unequal-grid(1, 2, @gutter, grid-3-1);
+.unequal-grid(2, 1, @gutter, grid-3-1);
+
 
 @media (max-width : @smallscreen) {
   [class^="grid"] > * {

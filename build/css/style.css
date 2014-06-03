@@ -305,7 +305,6 @@ caption {
 .mod {
   overflow: hidden;
 }
-/* blocks that needs to be placed under floats */
 .clear,
 .line,
 .row {
@@ -319,6 +318,9 @@ caption {
   clear: both;
   content: "";
 }
+.inbl {
+  display: inline-block;
+}
 /* table layout
 -------------------------------------------------------------- */
 .row {
@@ -329,9 +331,6 @@ caption {
 .row > *,
 .col {
   display: table-cell;
-}
-.inbl {
-  display: inline-block;
 }
 /* ----------------------------------------------------------- */
 /* == grid */
@@ -365,14 +364,37 @@ caption {
 .grid-4 > *:nth-child(4n) {
   margin-right: 0;
 }
+.grid-2 > * {
+  width: 18.4%;
+  margin: 0 2% 2% 0;
+}
+.grid-2 > *:nth-child(5n) {
+  margin-right: 0;
+}
+.grid-3 > * {
+  width: 15%;
+  margin: 0 2% 2% 0;
+}
+.grid-3 > *:nth-child(6n) {
+  margin-right: 0;
+}
 .grid-3-1 > *:nth-child(1n) {
-  width: 73.5%;
+  width: 32.66666667%;
 }
 .grid-3-1 > *:nth-child(2n) {
   margin-left: 2%;
 }
 .grid-3-1 > *:nth-child(2n) {
-  width: 24.5%;
+  width: 65.33333333%;
+}
+.grid-3-1 > *:nth-child(1n) {
+  width: 65.33333333%;
+}
+.grid-3-1 > *:nth-child(2n) {
+  margin-left: 2%;
+}
+.grid-3-1 > *:nth-child(2n) {
+  width: 32.66666667%;
 }
 @media (max-width: 480px) {
   [class^="grid"] > * {
@@ -1971,7 +1993,9 @@ input[type='checkbox'] + label {
   color: #d2918e;
 }
 table {
-  /* Remove spacing between table cells */
+  width: 100%;
+  max-width: 100%;
+  /* remove spacing between table cells */
   border-collapse: collapse;
   border-spacing: 0;
   border: 1px solid #cbcbcb;
@@ -1989,8 +2013,6 @@ table th {
   border-width: 0 0 0 1px;
   font-size: inherit;
   margin: 0;
-  overflow: visible;
-  /*to make ths where the title is really long work*/
   padding: 0.5em 1em;
   /* cell padding */
 }
@@ -2003,21 +2025,6 @@ table thead {
   color: #000;
   text-align: left;
   vertical-align: bottom;
-}
-/*
-striping:
-   even - #fff (white)
-   odd  - #f2f2f2 (light gray)
-*/
-.pure-table td {
-  background-color: transparent;
-}
-.pure-table-odd td {
-  background-color: #f2f2f2;
-}
-/* nth-child selector for modern browsers */
-.pure-table-striped tr:nth-child(2n-1) td {
-  background-color: #f2f2f2;
 }
 /* ----------------------------- */
 /* == tooltips */

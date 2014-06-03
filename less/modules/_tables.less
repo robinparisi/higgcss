@@ -1,9 +1,12 @@
 table {
-  /* Remove spacing between table cells */
+  width: 100%;
+  max-width: 100%;
+  /* remove spacing between table cells */
   border-collapse: collapse;
   border-spacing: 0;
   border: 1px solid #cbcbcb;
 }
+
 
 table caption {
   color: #000;
@@ -18,7 +21,6 @@ table th {
   border-width: 0 0 0 1px;
   font-size: inherit;
   margin: 0;
-  overflow: visible; /*to make ths where the title is really long work*/
   padding: 0.5em 1em; /* cell padding */
 }
 
@@ -33,21 +35,3 @@ table thead {
   text-align: left;
   vertical-align: bottom;
 }
-
-/*
-striping:
-   even - #fff (white)
-   odd  - #f2f2f2 (light gray)
-*/
-.pure-table td {
-  background-color: transparent;
-}
-.pure-table-odd td {
-  background-color: #f2f2f2;
-}
-
-/* nth-child selector for modern browsers */
-.pure-table-striped tr:nth-child(2n-1) td {
-  background-color: #f2f2f2;
-}
-
