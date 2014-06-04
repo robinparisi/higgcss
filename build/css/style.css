@@ -1807,7 +1807,7 @@ body {
 /* ----------------------------------------------------------- */
 /* titles
 -------------------------------------------------------------- */
-.content h1 {
+.flow h1 {
   /* font size */
   font-size: 2em;
   /* line height */
@@ -1815,7 +1815,7 @@ body {
   /* margin */
   margin-bottom: 0.75em;
 }
-.content h2 {
+.flow h2 {
   /* font size */
   font-size: 1.6em;
   /* line height */
@@ -1823,7 +1823,7 @@ body {
   /* margin */
   margin-bottom: 0.9375em;
 }
-.content h3 {
+.flow h3 {
   /* font size */
   font-size: 1.33333333em;
   /* line height */
