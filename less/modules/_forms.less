@@ -5,18 +5,47 @@
 /* configuration
 -------------------------------------------------------------- */
 
-@input-border-radius   : 2px;
-@input-border          : 1px solid #D8D8D8;
-@input-backgroud-color : #fff;
-@input-hover           : 5%;
-@input-error-color     : #efd8d7;
+@input-border-radius     : 0px;
+@input-border            : 1px solid #D8D8D8;
+@input-backgroud-color   : #fff;
+@input-hover             : 5%;
+@input-error-color       : #efd8d7;
+@input-placeholder-color : #c4c1be;
 
 /* module
 -------------------------------------------------------------- */
 
-.placeholder(#c4c1be);
+.placeholder(@input-placeholder-color);
+
+/* block form
+-------------------------------------------------------------- */
+
+label,
+.label {
+  display: block;
+  margin: 15px 0 5px 0;
+  vertical-align: middle;
+}
+
+/* inline form
+-------------------------------------------------------------- */
+
+/* inline */
+.f-inline label,
+.f-inline .label {
+  display: inline-block;
+  margin: 0;
+}
+
+.f-inline {
+  display: inline-block;
+}
+
+/* basics style
+-------------------------------------------------------------- */
 
 fieldset {
+  margin: 25px 0;
   padding: 1em;
   border: 1px solid #D8D8D8;
 }
@@ -26,28 +55,39 @@ button,
 select,
 label,
 .label,
-.btn{
+.btn {
   vertical-align: middle;
   font-size: inherit;
   font-family: inherit;
 }
 
-label,
-.label {
-  display: block;
-  margin: 15px 0 10px 0;
-  vertical-align: middle;
+select {
+  margin: 0;
+  border: 1px solid #CCC;
+  background-color: #FFF;
+  font-size: 115%;
 }
+
 
 input[type='text'],
 input[type='password'],
 input[type='number'],
-input[type='mail'],
+input[type='email'],
+input[type='url'],
+input[type='date'],
+input[type='month'],
+input[type='time'],
+input[type='datetime'],
+input[type='email'],
+input[type='tel']
 textarea {
-  padding: .5em .6em;
+  margin: 0;
+  padding: .6em .6em;
+  width: 320px;
   border: @input-border;
   border-radius: @input-border-radius;
   background: @input-backgroud-color;
+  box-shadow: inset 0 1px 3px #f2f2f2;
 }
 
 input[type='radio'] + label,
@@ -56,10 +96,9 @@ input[type='checkbox'] + label {
   padding: 0 10px 0 5px;
   width: auto;
   vertical-align: baseline;
-  text-align: left;
 }
 
-/* grid
+/* grid (with grid module)
 -------------------------------------------------------------- */
 
 [class^="grid"] input[type='text'],
@@ -70,6 +109,31 @@ input[type='checkbox'] + label {
   width: 100%;
 }
 
+/* width
+-------------------------------------------------------------- */
+
+input.f-10 {
+  min-width: 80px;
+  width: 10%;
+}
+
+input.f-25 {
+  width: 25%;
+}
+
+input.f-50 {
+  width: 50%;
+}
+
+input.f-75 {
+  width: 75%;
+}
+
+input.f-100 {
+  width: 100%;
+}
+
+
 /* errors
 -------------------------------------------------------------- */
 
@@ -79,8 +143,9 @@ input[type='checkbox'] + label {
 }
 
 .ferror {
-  padding: 8px;
-  border: 1px solid @input-error-color;
+  margin-top: 20px;
+  padding: 5px 10px;
+  border-left: 5px solid @input-error-color;
   background-color: lighten(@input-error-color, 8%);
 }
 
