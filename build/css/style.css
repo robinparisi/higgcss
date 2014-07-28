@@ -1918,7 +1918,7 @@ button,
 input[type='submit'] {
   display: inline-block;
   margin: 0;
-  padding: 0.6em 2em;
+  padding: 0.6em 1.3em;
   border: none;
   border-radius: 0;
   vertical-align: baseline;
@@ -1928,6 +1928,11 @@ input[type='submit'] {
   cursor: pointer;
   -webkit-transition: background-color 0.4s;
           transition: background-color 0.4s;
+}
+/* btn icons
+-------------------------------------------------------------- */
+.btn i.fa {
+  padding: 0 .5em;
 }
 /* colors
 -------------------------------------------------------------- */
