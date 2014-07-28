@@ -8,9 +8,6 @@ module.exports = function(grunt) {
             prod: {
                 options: {
                     compress: false,
-                    sourceMap: true,
-                    sourceMapFilename: '/build/css/style.css.map',
-                    outputSourceFiles: true
                 },
                 files: {
                     "build/css/style.css": "less/style.less"

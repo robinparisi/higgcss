@@ -30,8 +30,7 @@
 *:after,
 *:before {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 body,
 h1,
@@ -575,11 +574,11 @@ caption {
 @keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
+            transform: rotate(359deg);
   }
 }
 .fa-rotate-90 {
@@ -1908,7 +1907,7 @@ input[type='submit'] {
   line-height: normal;
   cursor: pointer;
   -webkit-transition: background-color 0.4s;
-  transition: background-color 0.4s;
+          transition: background-color 0.4s;
 }
 /* colors
 -------------------------------------------------------------- */
@@ -2012,7 +2011,7 @@ input[type='tel'] textarea {
   border-radius: 0px;
   background: #ffffff;
   -webkit-box-shadow: inset 0 1px 3px #f2f2f2;
-  box-shadow: inset 0 1px 3px #f2f2f2;
+          box-shadow: inset 0 1px 3px #f2f2f2;
 }
 input[type='radio'] + label,
 input[type='checkbox'] + label {
