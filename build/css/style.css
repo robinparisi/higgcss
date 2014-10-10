@@ -282,6 +282,24 @@ caption {
 .pl3 {
   padding-left: 30px;
 }
+/* responsive
+-------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .pa0-tablet {
+    padding: 0;
+  }
+  .ma0-tablet {
+    margin: 0;
+  }
+}
+@media (max-width: 480px) {
+  .pa0-smartphone {
+    padding: 0;
+  }
+  .ma0-smartphone {
+    margin: 0;
+  }
+}
 /* ----------------------------------------------------------- */
 /* == layout */
 /* ----------------------------------------------------------- */
@@ -455,16 +473,16 @@ caption {
 /* == rwd */
 /* ----------------------------------------------------------- */
 /* responsive iframe http://www.smashingmagazine.com/2014/02/27/making-embedded-content-work-in-responsive-design/ */
-.video-container {
+.responsive-iframe {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 30px;
   height: 0;
   overflow: hidden;
 }
-.video-container iframe,
-.video-container object,
-.video-container embed {
+.responsive-iframe iframe,
+.responsive-iframe object,
+.responsive-iframe embed {
   position: absolute;
   top: 0;
   left: 0;
