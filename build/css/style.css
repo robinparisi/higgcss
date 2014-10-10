@@ -1945,21 +1945,21 @@ input[type='submit'] {
 -------------------------------------------------------------- */
 .btn-primary {
   background-color: #45b29d;
-  color: #fff;
+  color: #fff !important;
 }
 .btn-primary:hover {
   background-color: #3ea08d;
 }
 .btn-secondary {
   background-color: #efc94c;
-  color: #000;
+  color: #000 !important;
 }
 .btn-secondary:hover {
   background-color: #edc235;
 }
 .btn-danger {
   background-color: #c53a3a;
-  color: #fff;
+  color: #fff !important;
 }
 .btn-danger:hover {
   background-color: #b13434;

@@ -25,11 +25,11 @@
 }
 
 .setColor (@bgColor) when (lightness(@bgColor) > 60%) {
-  color: #000;
+  color: #000 !important;
 }
 
 .setColor (@bgColor) when (lightness(@bgColor) =< 60%) {
-  color: #fff;
+  color: #fff !important;
 }
 
 .placeholder(@color: #ccc) {
