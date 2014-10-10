@@ -1,8 +1,11 @@
-/* ----------------------------- */
-/* == usefuls mixins */
-/* ----------------------------- */
+/* ----------------------------------------------------------- */
+/* == mixins */
+/* ----------------------------------------------------------- */
 
-/* automatic vertical rythm */
+
+/* vertical rythm
+-------------------------------------------------------------- */
+
 .flow(@size, @bf: @base-font, @bh: @line-height) {
 
   /* font size */
@@ -19,10 +22,18 @@
   margin-bottom: unit(@margin-bottom, em);
 }
 
+
+/* emulate rem unit
+-------------------------------------------------------------- */
+
 .em(@size, @bf: @base-font){
   @em: @size / @bf;
   font-size: unit(@em, em);
 }
+
+
+/* automatic color
+-------------------------------------------------------------- */
 
 .setColor (@bgColor) when (lightness(@bgColor) > 60%) {
   color: #000 !important;
@@ -31,6 +42,10 @@
 .setColor (@bgColor) when (lightness(@bgColor) =< 60%) {
   color: #fff !important;
 }
+
+
+/* placeholder color
+-------------------------------------------------------------- */
 
 .placeholder(@color: #ccc) {
   input::-webkit-input-placeholder {
