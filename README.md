@@ -49,12 +49,10 @@ Higgcss en 1 minute
 Higgcss plus en détails
 -----------------------
 
-Higgcss est distribué sous [licence MIT](https://github.com/robinparisi/higgcss/blob/master/LICENSE).
-
 Licence
 -------
 
-
+Higgcss est distribué sous [licence MIT](https://github.com/robinparisi/higgcss/blob/master/LICENSE).
 
 Crédits
 -------
