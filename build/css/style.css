@@ -73,6 +73,9 @@ img {
 /* ----------------------------------------------------------- */
 html {
   font-size: 62.5%;
+  /* IE9-11 calculation fix */
+  font-size: -webkit-calc(0.625em);
+  font-size: calc(0.625em);
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -1882,6 +1885,13 @@ html {
 }
 /* content
 -------------------------------------------------------------- */
+.flow {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.1em, #ba9b9a), color-stop(0.1em, transparent)) !important;
+  background: -webkit-linear-gradient(top, #ba9b9a 0.1em, transparent 0.1em) !important;
+  background: linear-gradient(to bottom, #ba9b9a 0.1em, transparent 0.1em) !important;
+  -webkit-background-size: 100% 1.5em !important;
+          background-size: 100% 1.5em !important;
+}
 /* footer
 -------------------------------------------------------------- */
 /* ----------------------------------------------------------- */
@@ -1912,13 +1922,6 @@ html {
   line-height: 2.1em;
   /* margin */
   margin-bottom: 1.05em;
-}
-.flow {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.1em, #ba9b9a), color-stop(0.1em, transparent)) !important;
-  background: -webkit-linear-gradient(top, #ba9b9a 0.1em, transparent 0.1em) !important;
-  background: linear-gradient(to bottom, #ba9b9a 0.1em, transparent 0.1em) !important;
-  -webkit-background-size: 100% 1.5em !important;
-          background-size: 100% 1.5em !important;
 }
 /* texts
 -------------------------------------------------------------- */
@@ -1960,61 +1963,6 @@ a:hover {
 /* ----------------------------------------------------------- */
 /* == modules */
 /* ----------------------------------------------------------- */
-/**
- * Buttons Module
- * description : fully customizable buttons
- * namespace   : .btn
- */
-/* ----------------------------------------------------------- */
-/* == configuration */
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-/* == module */
-/* ----------------------------------------------------------- */
-.btn,
-button,
-input[type='submit'] {
-  display: inline-block;
-  margin: 0;
-  padding: 0.6em 1.3em;
-  border: none;
-  border-radius: 0;
-  vertical-align: baseline;
-  text-align: center;
-  text-decoration: none !important;
-  line-height: normal;
-  cursor: pointer;
-  -webkit-transition: background-color 0.4s;
-          transition: background-color 0.4s;
-}
-/* btn icons
--------------------------------------------------------------- */
-.btn i.fa {
-  padding: 0 .5em;
-}
-/* colors
--------------------------------------------------------------- */
-.btn--primary {
-  background-color: #45b29d;
-  color: #fff !important;
-}
-.btn--primary:hover {
-  background-color: #3ea08d;
-}
-.btn--secondary {
-  background-color: #efc94c;
-  color: #000 !important;
-}
-.btn--secondary:hover {
-  background-color: #edc235;
-}
-.btn--danger {
-  background-color: #c53a3a;
-  color: #fff !important;
-}
-.btn--danger:hover {
-  background-color: #b13434;
-}
 /**
  * Form Module
  * Description : Easy styling for form elements
@@ -2065,11 +2013,9 @@ fieldset {
   border: 1px solid #D8D8D8;
 }
 input,
-button,
 select,
 label,
-.label,
-.btn {
+.label {
   vertical-align: middle;
   font-size: inherit;
   font-family: inherit;
@@ -2149,6 +2095,67 @@ input.f-100 {
 .ferror-message {
   padding-top: 4px;
   color: #d2918e;
+}
+/**
+ * Buttons Module
+ * description : fully customizable buttons
+ * namespace   : .btn
+ */
+/* ----------------------------------------------------------- */
+/* == configuration */
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* == module */
+/* ----------------------------------------------------------- */
+.btn,
+button {
+  vertical-align: middle;
+  font-size: inherit;
+  font-family: inherit;
+}
+.btn,
+button,
+input[type='submit'] {
+  display: inline-block;
+  margin: 0;
+  padding: 0.6em 1.3em;
+  border: none;
+  border-radius: 0;
+  vertical-align: baseline;
+  text-align: center;
+  text-decoration: none !important;
+  line-height: normal;
+  cursor: pointer;
+  -webkit-transition: background-color 0.4s;
+          transition: background-color 0.4s;
+}
+/* btn icons
+-------------------------------------------------------------- */
+.btn i.fa {
+  padding: 0 .5em;
+}
+/* colors
+-------------------------------------------------------------- */
+.btn--primary {
+  background-color: #45b29d;
+  color: #fff !important;
+}
+.btn--primary:hover {
+  background-color: #3ea08d;
+}
+.btn--secondary {
+  background-color: #efc94c;
+  color: #000 !important;
+}
+.btn--secondary:hover {
+  background-color: #edc235;
+}
+.btn--danger {
+  background-color: #c53a3a;
+  color: #fff !important;
+}
+.btn--danger:hover {
+  background-color: #b13434;
 }
 /**
  * Pagination Module
