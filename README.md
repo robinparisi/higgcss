@@ -51,15 +51,15 @@ Tester Higgcss
 
 1. Installer les dépendances nécessaires au développement
 
-'''
+```
 npm install
-'''
+```
 
 2. Lancement d'un petit serveur en local capable d'écouter les changements
 
-'''
+```
 gulp watch
-'''
+```
 
 Licence
 -------
