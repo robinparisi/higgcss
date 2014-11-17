@@ -9,8 +9,8 @@
 /* ----------------------------------------------------------- */
 
 
-@btn-primary:       @primary-color;
-@btn-secondary:     @secondary-color;
+@btn-primary:       @color-primary;
+@btn-secondary:     @color-secondary;
 @btn-success:       #1cb841;
 @btn-danger:        #c53a3a;
 
@@ -57,21 +57,21 @@ input[type='submit'] {
 -------------------------------------------------------------- */
 
 .btn--primary {
-  background-color: @primary-color;
-  .setColor(@primary-color);
+  background-color: @btn-primary;
+  .setColor(@btn-primary);
 }
 
 .btn--primary:hover {
-  background-color: darken(@primary-color, @btn-hover);
+  background-color: darken(@btn-primary, @btn-hover);
 }
 
 .btn--secondary {
-  background-color: @secondary-color;
-  .setColor(@secondary-color);
+  background-color: @btn-secondary;
+  .setColor(@btn-secondary);
 }
 
 .btn--secondary:hover {
-  background-color: darken(@secondary-color, @btn-hover);
+  background-color: darken(@btn-secondary, @btn-hover);
 }
 
 .btn--danger {
