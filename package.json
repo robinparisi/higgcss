@@ -2,12 +2,10 @@
     "name": "higgcss",
     "version": "0.0.1",
     "devDependencies": {
-        "grunt": "latest",
-        "grunt-contrib-imagemin": "latest",
-        "grunt-contrib-less": "latest",
-        "grunt-contrib-watch": "latest",
-        "grunt-autoprefixer": "latest",
-        "grunt-contrib-clean": "latest",
-        "grunt-contrib-copy": "latest"
+        "bower": "latest",
+        "gulp": "latest",
+        "gulp-less": "latest",
+        "gulp-autoprefixer": "latest",
+        "browser-sync": "latest"
     }
 }
