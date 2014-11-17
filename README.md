@@ -46,8 +46,20 @@ Higgcss en 1 minute
 └── style.less                    // le point d'entrée, c'est le fichier qui gère les imports et respecte la cascade 
 ```
 
-Higgcss plus en détails
+Tester Higgcss
 -----------------------
+
+1. Installer les dépendances nécessaires au développement
+
+'''
+npm install
+'''
+
+2. Lancement d'un petit serveur en local capable d'écouter les changements
+
+'''
+gulp watch
+'''
 
 Licence
 -------
