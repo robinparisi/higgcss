@@ -6,10 +6,10 @@
 
 .responsive-iframe {
   position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 30px;
-  height: 0;
   overflow: hidden;
+  padding-top: 30px;
+  padding-bottom: 56.25%;
+  height: 0;
 }
 
 .responsive-iframe iframe,
@@ -26,39 +26,32 @@
 -------------------------------------------------------------- */
 
 @media (min-width: @desktop) {
-
   .hidden {
     display: none;
   }
-
 }
 
 /* tablet
 -------------------------------------------------------------- */
 
 @media (max-width: @tablet) {
-
   .tablet-hidden {
     display: none;
   }
-
 }
 
 /* mobile
 -------------------------------------------------------------- */
 
 @media (max-width: @smartphone) {
-
   .mod,
   .col {
     display: block !important;
-    width: auto !important;
     float: none !important;
+    width: auto !important;
   }
 
   .smartphone-hidden {
     display: none !important;
   }
-
-
 }
