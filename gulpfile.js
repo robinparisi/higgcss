@@ -1,17 +1,30 @@
 var gulp            = require('gulp');
 var less            = require('gulp-less');
 var autoprefixer    = require('gulp-autoprefixer');
+var csscomb         = require('gulp-csscomb');
 var browserSync     = require('browser-sync');
 var reload          = browserSync.reload;
 
 var paths = {
     less: {
-        source: 'less/style.less',
+        src: 'less/style.less',
         dest: 'demo/',
         watch: 'less/**'
     },
     html: {
         watch: 'demo/**/*.html'
+    },
+    csscomb : {
+        src: [
+            'less/**',
+            '!less/1.base/_00-mixins.less',
+            '!less/1.base/_05-spacing.less',
+            '!less/1.base/_07-width.less',
+            '!less/1.base/_08-grid.less',
+            '!less/2.structure/_02-icons.less',
+            '!less/5.vendors/**'
+        ],
+        dest: 'less/'
     }
 };
 
@@ -24,6 +37,12 @@ gulp.task('less', function () {
         }))
         .pipe(gulp.dest(paths.less.dest))
         .pipe(reload({stream:true}));
+});
+
+gulp.task('csscomb', function () {
+    gulp.src(paths.csscomb.src)
+        .pipe(csscomb())
+        .pipe(gulp.dest(paths.csscomb.dest));
 });
 
 gulp.task('browser-sync', function() {

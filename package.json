@@ -6,6 +6,7 @@
         "gulp": "latest",
         "gulp-less": "latest",
         "gulp-autoprefixer": "latest",
+        "gulp-csscomb": "latest",
         "browser-sync": "latest"
     }
 }
