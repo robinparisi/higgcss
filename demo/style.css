@@ -2025,6 +2025,7 @@ label,
   display: block;
   margin: 15px 0 5px 0;
   vertical-align: middle;
+  cursor: pointer;
 }
 /* inline form
 -------------------------------------------------------------- */
@@ -2254,7 +2255,7 @@ table caption {
 }
 table td,
 table th {
-  overflow: auto;
+  overflow: hidden;
   margin: 0;
   padding: .5em 1em;
   border-width: 0 0 0 1px;
