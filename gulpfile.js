@@ -29,7 +29,7 @@ var paths = {
 };
 
 gulp.task('less', function () {
-    gulp.src(paths.less.source)
+    gulp.src(paths.less.src)
         .pipe(less())
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
