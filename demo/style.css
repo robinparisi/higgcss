@@ -437,7 +437,7 @@ body {
 [class^="grid"] > * {
   float: left;
 }
-/* responsive
+/* some basic grids
 -------------------------------------------------------------- */
 .grid-2 > * {
   width: 49%;
