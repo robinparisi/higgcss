@@ -1925,11 +1925,11 @@ html {
 -------------------------------------------------------------- */
 .flow h1 {
   /* font size */
-  font-size: 2.14285714em;
+  font-size: 2em;
   /* line height */
-  line-height: 1.4em;
+  line-height: 1.5em;
   /* margin */
-  margin-bottom: 0.7em;
+  margin-bottom: 0.75em;
 }
 .flow h2 {
   /* font size */
@@ -1946,6 +1946,14 @@ html {
   line-height: 2.1em;
   /* margin */
   margin-bottom: 1.05em;
+}
+.flow h4 {
+  /* font size */
+  font-size: 1.28571429em;
+  /* line height */
+  line-height: 2.33333333em;
+  /* margin */
+  margin-bottom: 1.16666667em;
 }
 /* texts
 -------------------------------------------------------------- */
