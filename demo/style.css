@@ -165,16 +165,13 @@ body {
 .txtleft {
   text-align: left;
 }
-.vtop,
-.col.vtop {
+.vtop {
   vertical-align: top;
 }
-.vbottom,
-.col.vbottom {
+.vbottom {
   vertical-align: bottom;
 }
-.vmiddle,
-.col.vmiddle {
+.vmiddle {
   vertical-align: middle;
 }
 /* responsive
