@@ -1,0 +1,11 @@
+{
+  "name": "higgcss",
+  "version": "0.0.1",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-less": "latest",
+    "gulp-minify-css": "^0.3.11"
+  }
+}

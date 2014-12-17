@@ -1,0 +1,117 @@
+/* ----------------------------------------------------------- */
+/* == layout */
+/* ----------------------------------------------------------- */
+
+html {
+  background-color: @bg-color;
+  color: @color-dark-text;
+  font-family: @fontstack1;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 10px;
+  max-width: 960px;
+}
+
+
+/* header
+-------------------------------------------------------------- */
+
+.liseret {
+  height: 5px;
+  background-color: @color-secondary;
+}
+
+.header {
+  background-color: @color-primary;
+  padding: 30px 0 50px 0;
+}
+
+.site-title {
+  .em(30);
+}
+
+
+/* navigation
+-------------------------------------------------------------- */
+
+.navigation {
+  .em(18);
+}
+
+.navigation ul {
+  padding-left: 0;
+}
+
+.navigation li {
+  display: inline-block;
+  margin: 10px 10px;
+}
+
+.navigation li:last-child {
+  margin-right: 0;
+}
+
+.navigation li a {
+  display: block;
+  padding: 5px 5px;
+  background-color: @color-primary;
+}
+
+
+.sub-navigation {
+  text-align: left;
+  padding-top: 20px;
+  min-width: 150px;
+}
+
+.sub-navigation ul {
+  padding-left: 20px;
+}
+
+.sub-navigation h4 {
+  .em(15);
+  border-bottom: 1px solid #b0bfc7;
+  margin: 20px 0;
+  padding-left: 10px;
+}
+
+.sub-navigation h4:first-child {
+  margin-top: 0;
+}
+
+/* docs
+-------------------------------------------------------------- */
+
+.docs {
+  position: relative;
+  padding-right: 200px;
+}
+
+.docs_sub-navigation {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 200px;
+}
+
+/* content
+-------------------------------------------------------------- */
+
+.content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px 40px;
+  position: relative;
+  top: -30px;
+  min-height: 700px;
+}
+
+/* footer
+-------------------------------------------------------------- */
+
+.footer {
+  text-align: center;
+}

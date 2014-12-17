@@ -1,0 +1,87 @@
+/**
+ * Buttons Module
+ * description : fully customizable buttons
+ * namespace   : .btn
+ */
+
+/* ----------------------------------------------------------- */
+/* == configuration */
+/* ----------------------------------------------------------- */
+
+
+@btn-primary:       @color-primary;
+@btn-secondary:     @color-secondary;
+@btn-success:       #1cb841;
+@btn-danger:        #c53a3a;
+
+@btn-hover:         5%;
+@btn-radius:        0;
+
+
+/* ----------------------------------------------------------- */
+/* == module */
+/* ----------------------------------------------------------- */
+
+.btn,
+button {
+  vertical-align: middle;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.btn,
+button,
+input[type="submit"] {
+  display: inline-block;
+  margin: 0;
+  padding: .6em 1.3em;
+  border: none;
+  border-radius: @btn-radius;
+  vertical-align: baseline;
+  text-align: center;
+  text-decoration: none !important;
+  line-height: normal;
+  cursor: pointer;
+  transition: background-color .4s;
+}
+
+
+/* btn icons
+-------------------------------------------------------------- */
+
+.btn i.fa {
+  padding: 0 .5em;
+}
+
+/* colors
+-------------------------------------------------------------- */
+
+.btn--primary {
+  background-color: @btn-primary;
+
+  .setColor(@btn-primary);
+}
+
+.btn--primary:hover {
+  background-color: darken(@btn-primary, @btn-hover);
+}
+
+.btn--secondary {
+  background-color: @btn-secondary;
+
+  .setColor(@btn-secondary);
+}
+
+.btn--secondary:hover {
+  background-color: darken(@btn-secondary, @btn-hover);
+}
+
+.btn--danger {
+  background-color: @btn-danger;
+
+  .setColor(@btn-danger);
+}
+
+.btn--danger:hover {
+  background-color: darken(@btn-danger, @btn-hover);
+}
