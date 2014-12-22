@@ -29,14 +29,18 @@
 /* ----------------------------------------------------------- */
 /* == mixins */
 /* ----------------------------------------------------------- */
-/* vertical rythm
--------------------------------------------------------------- */
-/* emulate rem unit
--------------------------------------------------------------- */
-/* automatic color
--------------------------------------------------------------- */
-/* placeholder color
--------------------------------------------------------------- */
+/*
+ * Permet de conserver un rythme vertical harmonieux
+ */
+/*
+ * recalcule la taille de police en fonction de la taille de base (émul l'unité rem)
+ */
+/*
+ * couleur automatique en fonction du fond d'un élément
+ */
+/*
+ * couleur des placeholders
+ */
 /* ----------------------------------------------------------- */
 /* == reset */
 /* ----------------------------------------------------------- */
@@ -570,7 +574,15 @@ body {
 /* ----------------------------------------------------------- */
 /* == debug */
 /* ----------------------------------------------------------- */
-/* debug vertical rythm */
+/*
+ * génère une couleur aléatoire
+ */
+/*
+ * facilite le debug d'un élément
+ */
+/*
+ * affiche une grille pour le rythme vertical
+ */
 /* ----------------------------------------------------------- */
 /* == structure */
 /* ----------------------------------------------------------- */
@@ -2285,35 +2297,23 @@ body {
 /* titles
 -------------------------------------------------------------- */
 .flow h1 {
-  /* font size */
   font-size: 2em;
-  /* line height */
   line-height: 1.5em;
-  /* margin */
   margin-bottom: 0.75em;
 }
 .flow h2 {
-  /* font size */
   font-size: 1.71428571em;
-  /* line height */
   line-height: 1.75em;
-  /* margin */
   margin-bottom: 0.875em;
 }
 .flow h3 {
-  /* font size */
   font-size: 1.42857143em;
-  /* line height */
-  line-height: 2.1em;
-  /* margin */
+  line-height: 1.05em;
   margin-bottom: 1.05em;
 }
 .flow h4 {
-  /* font size */
   font-size: 1.28571429em;
-  /* line height */
-  line-height: 2.33333333em;
-  /* margin */
+  line-height: 1.16666667em;
   margin-bottom: 1.16666667em;
 }
 /* texts

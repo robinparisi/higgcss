@@ -3,37 +3,35 @@
 /* ----------------------------------------------------------- */
 
 
-/* vertical rythm
--------------------------------------------------------------- */
+/*
+ * Permet de conserver un rythme vertical harmonieux
+ */
 
-.flow(@size, @bf: @base-font, @bh: @line-height) {
+.flow(@font-size, @bf: @base-font, @lh: @line-height) {
 
-  /* font size */
-  @em : @size / @bf;
-  font-size: unit(@em, em);
-
-  /* line height */
-  @new-lh : (@bf * @bh / @size) * 2;
+  @coeff : ceil(@font-size / (@base-font * @lh));
+  @new-lh : (@base-font * @lh / @font-size) * @coeff;
   @new-lh-em : unit(@new-lh, em);
-  line-height: @new-lh-em;
+  @margin-bottom: @new-lh / @coeff;
 
-  /* margin */
-  @margin-bottom: @new-lh / 2;
+  font-size: unit(@font-size / @bf, em);
+  line-height: @new-lh-em;
   margin-bottom: unit(@margin-bottom, em);
+
 }
 
-
-/* emulate rem unit
--------------------------------------------------------------- */
+/*
+ * recalcule la taille de police en fonction de la taille de base (émul l'unité rem)
+ */
 
 .em(@size, @bf: @base-font){
   @em: @size / @bf;
   font-size: unit(@em, em);
 }
 
-
-/* automatic color
--------------------------------------------------------------- */
+/*
+ * couleur automatique en fonction du fond d'un élément
+ */
 
 .setColor (@bgColor) when (lightness(@bgColor) > 60%) {
   color: #000 !important;
@@ -43,9 +41,9 @@
   color: #fff !important;
 }
 
-
-/* placeholder color
--------------------------------------------------------------- */
+/*
+ * couleur des placeholders
+ */
 
 .placeholder(@color: #ccc) {
   input::-webkit-input-placeholder {
