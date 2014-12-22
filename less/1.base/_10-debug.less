@@ -2,12 +2,32 @@
 /* == debug */
 /* ----------------------------------------------------------- */
 
-.debug() {
-  border: 1px solid red;
-  background-color: pink;
+/*
+ * génère une couleur aléatoire
+ */
+
+.randomColor () {
+  @red: `Math.floor(Math.random()*222)`;
+  @green: `Math.floor(Math.random()*222)`;
+  @blue: `Math.floor(Math.random()*222)`;
 }
 
-/* debug vertical rythm */
+
+/*
+ * facilite le debug d'un élément
+ */
+
+.debug() {
+  .randomColor();
+  border: 3px dotted rgb(@red, @green, @blue);
+  background-color: rgba(@red, @green, @blue, 30%);
+}
+
+
+/*
+ * affiche une grille pour le rythme vertical
+ */
+
 .debug-rythm(@bh: @line-height) {
   background: linear-gradient(to bottom, #ba9b9a .1em, transparent .1em ) !important;
   background-size: 100% unit(@bh, em) !important;
