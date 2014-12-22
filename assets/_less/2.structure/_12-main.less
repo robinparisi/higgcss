@@ -17,6 +17,10 @@
   .flow(20);
 }
 
+.flow h4 {
+  .flow(18);
+}
+
 /* texts
 -------------------------------------------------------------- */
 
@@ -26,7 +30,7 @@
 
 a,
 a:visited {
-  color: @link;
+  color: @color-tertiary;
   text-decoration: none;
 }
 
@@ -41,12 +45,21 @@ a:hover {
 
 .footer a,
 .footer a:visited {
-  color: @color-light-text;
+  color: @color-secondary;
 }
 
 /* lists
 -------------------------------------------------------------- */
 
-.flow ul {
+.flow ul,
+.flow ol {
   padding-left: 2em;
+}
+
+.flow ul li {
+  list-style-type: square;
+}
+
+.flow ol li {
+  list-style-type: decimal ;
 }

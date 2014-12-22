@@ -25,8 +25,8 @@ html {
 }
 
 .header {
-  background-color: @color-primary;
   padding: 30px 0 50px 0;
+  background-color: @color-primary;
 }
 
 .site-title {
@@ -62,9 +62,9 @@ html {
 
 
 .sub-navigation {
-  text-align: left;
   padding-top: 20px;
   min-width: 150px;
+  text-align: left;
 }
 
 .sub-navigation ul {
@@ -73,9 +73,9 @@ html {
 
 .sub-navigation h4 {
   .em(15);
-  border-bottom: 1px solid #b0bfc7;
   margin: 20px 0;
   padding-left: 10px;
+  border-bottom: 1px solid #b0bfc7;
 }
 
 .sub-navigation h4:first-child {
@@ -92,26 +92,33 @@ html {
 
 .docs_sub-navigation {
   position: absolute;
-  right: 0;
   top: 0;
+  right: 0;
   width: 200px;
+}
+
+.docs_sub-navigation li {
+  margin: 3px 0;
+  .em(15);
 }
 
 /* content
 -------------------------------------------------------------- */
 
 .content {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 40px 40px;
   position: relative;
   top: -30px;
+  padding: 40px 40px;
   min-height: 700px;
+  border-radius: 10px;
+  background-color: #fff;
 }
+
 
 /* footer
 -------------------------------------------------------------- */
 
 .footer {
+  margin-bottom: 20px;
   text-align: center;
 }
