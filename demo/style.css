@@ -96,17 +96,17 @@ body {
   font-family: helvetica, arial, sans-serif;
   line-height: 1.5;
 }
-.flow p,
-.flow ul,
-.flow ol,
-.flow dl,
-.flow blockquote,
-.flow pre,
-.flow td,
-.flow th,
-.flow label,
-.flow textarea,
-.flow caption {
+p,
+ul,
+ol,
+dl,
+blockquote,
+pre,
+td,
+th,
+label,
+textarea,
+caption {
   margin: 0 0 1.5em 0;
   font-size: 1em;
   line-height: 1.5em;
@@ -2296,22 +2296,22 @@ body {
 /* ----------------------------------------------------------- */
 /* titles
 -------------------------------------------------------------- */
-.flow h1 {
+h1 {
   font-size: 2em;
   line-height: 1.5em;
   margin-bottom: 0.75em;
 }
-.flow h2 {
+h2 {
   font-size: 1.71428571em;
   line-height: 1.75em;
   margin-bottom: 0.875em;
 }
-.flow h3 {
+h3 {
   font-size: 1.42857143em;
   line-height: 1.05em;
   margin-bottom: 1.05em;
 }
-.flow h4 {
+h4 {
   font-size: 1.28571429em;
   line-height: 1.16666667em;
   margin-bottom: 1.16666667em;
@@ -2335,11 +2335,6 @@ a:hover {
 .footer a,
 .footer a:visited {
   color: #fcfcfc;
-}
-/* lists
--------------------------------------------------------------- */
-.flow ul {
-  padding-left: 2em;
 }
 /* ----------------------------------------------------------- */
 /* == rwd -> tablet */
