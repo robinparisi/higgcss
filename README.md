@@ -69,5 +69,5 @@ Higgcss est distribué sous [licence MIT](https://github.com/robinparisi/higgcss
 Crédits
 -------
 
-* @raphaelgoetter et son excellent framework KNACSS dont Higgcss s'est largement inspiré
-* (Font Awesome)[http://fortawesome.github.io/Font-Awesome/]
+* [Raphael Goetter](http://http://www.goetter.fr/) et son excellent framework [KNACSS](http://www.knacss.com/) qui a inspiré Higgcss
+* [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
