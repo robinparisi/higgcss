@@ -30,7 +30,8 @@
 label,
 .label {
   display: block;
-  margin: 15px 0 5px 0;
+  margin-top: 1.3em;
+  margin-bottom: .8em;
   vertical-align: middle;
   cursor: pointer;
 }
@@ -38,16 +39,26 @@ label,
 /* inline form
 -------------------------------------------------------------- */
 
-/* inline */
 .f-inline label,
 .f-inline .label {
   display: inline-block;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .f-inline {
   display: inline-block;
 }
+
+.f-inline input,
+.f-inline .btn {
+  height: 40px;
+}
+
+.f-inline .btn {
+  vertical-align: middle;
+}
+
 
 /* basics style
 -------------------------------------------------------------- */
@@ -71,47 +82,45 @@ select {
   margin: 0;
   border: 1px solid #ccc;
   background-color: #fff;
-  font-size: 115%;
 }
 
-
-input[type="text"],
-input[type="search"],
-input[type="password"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="datetime"],
-input[type="email"],
-input[type="tel"]
 textarea {
+  padding: .4em;
+  min-width: 320px;
+  min-height: 8em;
+  vertical-align: top;
+  font-size: inherit;
+  font-family: inherit;
+  resize: vertical;
+}
+
+input {
   margin: 0;
   padding: .6em .6em;
   width: 320px;
   border: @input-border;
   border-radius: @input-border-radius;
   background: @input-backgroud-color;
-  box-shadow: inset 0 1px 3px #f2f2f2;
+  box-shadow: inset 0 1px 3px #f6f6f6;
 }
 
 input[type="radio"] + label,
 input[type="checkbox"] + label {
   display: inline-block;
-  padding: 0 10px 0 5px;
-  width: auto;
+  margin-right: 10px;
   vertical-align: baseline;
 }
 
-/* grid (with grid module)
+input[type="radio"],
+input[type="checkbox"] {
+  padding: 0;
+  width: inherit;
+}
+
+/* grid (need grid module)
 -------------------------------------------------------------- */
 
-[class^="grid"] input[type="text"],
-[class^="grid"] input[type="password"],
-[class^="grid"] input[type="number"],
-[class^="grid"] input[type="mail"],
+[class^="grid"] input,
 [class^="grid"] textarea {
   width: 100%;
 }
@@ -119,24 +128,24 @@ input[type="checkbox"] + label {
 /* width
 -------------------------------------------------------------- */
 
-input.f-10 {
+.f-10 {
   min-width: 80px;
   width: 10%;
 }
 
-input.f-25 {
+.f-25 {
   width: 25%;
 }
 
-input.f-50 {
+.f-50 {
   width: 50%;
 }
 
-input.f-75 {
+.f-75 {
   width: 75%;
 }
 
-input.f-100 {
+.f-100 {
   width: 100%;
 }
 

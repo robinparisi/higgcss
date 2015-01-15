@@ -2281,7 +2281,7 @@ body {
 }
 .navigation li a {
   padding: 10px 5px;
-  background-color: #45b29d;
+  background-color: #3498db;
 }
 /* content
 -------------------------------------------------------------- */
@@ -2322,11 +2322,11 @@ h4 {
 -------------------------------------------------------------- */
 a,
 a:visited {
-  color: #45b29d;
+  color: #3498db;
   text-decoration: none;
 }
 a:hover {
-  color: #66c4b2;
+  color: #5faee3;
 }
 .header a,
 .header a:visited {
@@ -2373,20 +2373,28 @@ textarea:-moz-placeholder {
 label,
 .label {
   display: block;
-  margin: 15px 0 5px 0;
+  margin-top: 1.3em;
+  margin-bottom: .8em;
   vertical-align: middle;
   cursor: pointer;
 }
 /* inline form
 -------------------------------------------------------------- */
-/* inline */
 .f-inline label,
 .f-inline .label {
   display: inline-block;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .f-inline {
   display: inline-block;
+}
+.f-inline input,
+.f-inline .btn {
+  height: 40px;
+}
+.f-inline .btn {
+  vertical-align: middle;
 }
 /* basics style
 -------------------------------------------------------------- */
@@ -2407,60 +2415,58 @@ select {
   margin: 0;
   border: 1px solid #ccc;
   background-color: #fff;
-  font-size: 115%;
 }
-input[type="text"],
-input[type="search"],
-input[type="password"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="datetime"],
-input[type="email"],
-input[type="tel"] textarea {
+textarea {
+  padding: .4em;
+  min-width: 320px;
+  min-height: 8em;
+  vertical-align: top;
+  font-size: inherit;
+  font-family: inherit;
+  resize: vertical;
+}
+input {
   margin: 0;
   padding: .6em .6em;
   width: 320px;
   border: 1px solid #d8d8d8;
   border-radius: 0px;
   background: #ffffff;
-  box-shadow: inset 0 1px 3px #f2f2f2;
+  box-shadow: inset 0 1px 3px #f6f6f6;
 }
 input[type="radio"] + label,
 input[type="checkbox"] + label {
   display: inline-block;
-  padding: 0 10px 0 5px;
-  width: auto;
+  margin-right: 10px;
   vertical-align: baseline;
 }
-/* grid (with grid module)
+input[type="radio"],
+input[type="checkbox"] {
+  padding: 0;
+  width: inherit;
+}
+/* grid (need grid module)
 -------------------------------------------------------------- */
-[class^="grid"] input[type="text"],
-[class^="grid"] input[type="password"],
-[class^="grid"] input[type="number"],
-[class^="grid"] input[type="mail"],
+[class^="grid"] input,
 [class^="grid"] textarea {
   width: 100%;
 }
 /* width
 -------------------------------------------------------------- */
-input.f-10 {
+.f-10 {
   min-width: 80px;
   width: 10%;
 }
-input.f-25 {
+.f-25 {
   width: 25%;
 }
-input.f-50 {
+.f-50 {
   width: 50%;
 }
-input.f-75 {
+.f-75 {
   width: 75%;
 }
-input.f-100 {
+.f-100 {
   width: 100%;
 }
 /* errors
@@ -2502,36 +2508,34 @@ input[type="submit"] {
   display: inline-block;
   margin: 0;
   padding: .6em 1.3em;
+  width: inherit;
   border: none;
-  border-radius: 0;
+  border-radius: 2px;
+  background-color: #3498db;
+  box-shadow: none;
   vertical-align: baseline;
   text-align: center;
   text-decoration: none !important;
   line-height: normal;
   cursor: pointer;
+  color: #fff !important;
   transition: background-color 0.4s;
-}
-/* btn icons
--------------------------------------------------------------- */
-.btn .fa,
-.btn .icon {
-  margin: 0 .5em;
 }
 /* colors
 -------------------------------------------------------------- */
 .btn--primary {
-  background-color: #45b29d;
+  background-color: #3498db;
   color: #fff !important;
 }
 .btn--primary:hover {
-  background-color: #3ea08d;
+  background-color: #258cd1;
 }
 .btn--secondary {
-  background-color: #efc94c;
-  color: #000 !important;
+  background-color: #1abc9c;
+  color: #fff !important;
 }
 .btn--secondary:hover {
-  background-color: #edc235;
+  background-color: #17a689;
 }
 .btn--danger {
   background-color: #c53a3a;
@@ -2573,10 +2577,10 @@ input[type="submit"] {
   border-radius: 2px;
 }
 .pagination li a:hover {
-  color: #efc94c;
+  color: #1abc9c;
 }
 .pagination li.current a {
-  background-color: #45b29d;
+  background-color: #3498db;
   color: #ffffff;
 }
 /**
