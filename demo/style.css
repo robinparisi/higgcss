@@ -354,7 +354,7 @@ caption {
 /* ----------------------------------------------------------- */
 /* BFC to the rescue */
 .mod {
-  overflow: hidden;
+  overflow: auto;
 }
 .clear,
 .line,
