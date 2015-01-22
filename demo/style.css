@@ -2281,7 +2281,7 @@ body {
 }
 .navigation li a {
   padding: 10px 5px;
-  background-color: #3498db;
+  display: inline-block;
 }
 /* content
 -------------------------------------------------------------- */
@@ -2320,15 +2320,14 @@ h4 {
 -------------------------------------------------------------- */
 /* links
 -------------------------------------------------------------- */
-a,
-a:visited {
+a {
   color: #3498db;
   text-decoration: none;
 }
+a:focus,
 a:hover {
   color: #5faee3;
 }
-.header a,
 .header a:visited {
   color: #fcfcfc;
 }
@@ -2520,10 +2519,6 @@ input[type="submit"] {
   cursor: pointer;
   color: #fff;
   transition: background-color 0.4s;
-}
-.btn:hover,
-.btn:visited {
-  color: #fff;
 }
 /* colors
 -------------------------------------------------------------- */
