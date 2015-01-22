@@ -2518,28 +2518,32 @@ input[type="submit"] {
   text-decoration: none !important;
   line-height: normal;
   cursor: pointer;
-  color: #fff !important;
+  color: #fff;
   transition: background-color 0.4s;
+}
+.btn:hover,
+.btn:visited {
+  color: #fff;
 }
 /* colors
 -------------------------------------------------------------- */
 .btn--primary {
   background-color: #3498db;
-  color: #fff !important;
+  color: #fff;
 }
 .btn--primary:hover {
   background-color: #258cd1;
 }
 .btn--secondary {
   background-color: #1abc9c;
-  color: #fff !important;
+  color: #fff;
 }
 .btn--secondary:hover {
   background-color: #17a689;
 }
 .btn--danger {
   background-color: #c53a3a;
-  color: #fff !important;
+  color: #fff;
 }
 .btn--danger:hover {
   background-color: #b13434;
