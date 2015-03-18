@@ -148,6 +148,9 @@ caption {
   width: auto;
   height: auto;
 }
+.hidden {
+  display: none;
+}
 /* states
 -------------------------------------------------------------- */
 .is-disabled {
@@ -551,7 +554,7 @@ caption {
 /* desktop
 -------------------------------------------------------------- */
 @media (min-width: 1280px) {
-  .hidden {
+  .desktop-hidden {
     display: none;
   }
 }
