@@ -8,6 +8,8 @@
 -------------------------------------------------------------- */
 /* texts
 -------------------------------------------------------------- */
+/* links
+-------------------------------------------------------------- */
 /* grey
 -------------------------------------------------------------- */
 /* brand
@@ -16,8 +18,6 @@
 /* == config */
 /* ----------------------------------------------------------- */
 /* base
--------------------------------------------------------------- */
-/* links
 -------------------------------------------------------------- */
 /* responsive
 -------------------------------------------------------------- */
@@ -31,15 +31,19 @@
 /* ----------------------------------------------------------- */
 /*
  * Permet de conserver un rythme vertical harmonieux
+ *
  */
 /*
- * recalcule la taille de police en fonction de la taille de base (émul l'unité rem)
+ * Recalcule la taille de police en fonction de la taille de base (émul l'unité rem)
+ *
  */
 /*
- * couleur automatique en fonction du fond d'un élément
+ * Couleur automatique en fonction du fond d'un élément
+ *
  */
-/*
- * couleur des placeholders
+/**
+ * Couleur des placeholders
+ *
  */
 /* ----------------------------------------------------------- */
 /* == reset */
@@ -588,8 +592,7 @@ caption {
 /* ----------------------------------------------------------- */
 /**
  * Form Module
- * Description : Easy styling for form elements
- * Namespace   : .form
+ * Namespace : .form
  */
 /* ----------------------------------------------------------- */
 /* == configuration */
@@ -728,8 +731,7 @@ input[type="checkbox"] {
 }
 /**
  * Buttons Module
- * description : fully customizable buttons
- * namespace   : .btn
+ * namespace : .btn
  */
 /* ----------------------------------------------------------- */
 /* == configuration */
@@ -787,8 +789,7 @@ input[type="submit"] {
 }
 /**
  * Pagination Module
- * description : Provide pagination links
- * namespace   : .pagination
+ * namespace : .pagination
  */
 /* ----------------------------------------------------------- */
 /* == configuration */
@@ -826,8 +827,7 @@ input[type="submit"] {
 }
 /**
  * Table Module
- * description : better responsive and default style for tables
- * namespace   : .table
+ * namespace : .table
  */
 /* ----------------------------------------------------------- */
 /* == configuration */
@@ -873,8 +873,7 @@ table thead {
 }
 /**
  * Tooltip Module
- * description : tooltip using pure css
- * namespace   : .tooltip
+ * namespace : .tooltip
  */
 /* ----------------------------------------------------------- */
 /* == configuration */

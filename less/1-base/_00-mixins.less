@@ -5,6 +5,7 @@
 
 /*
  * Permet de conserver un rythme vertical harmonieux
+ *
  */
 
 .flow(@font-size, @bf: @base-font, @lh: @line-height) {
@@ -21,7 +22,8 @@
 }
 
 /*
- * recalcule la taille de police en fonction de la taille de base (émul l'unité rem)
+ * Recalcule la taille de police en fonction de la taille de base (émul l'unité rem)
+ *
  */
 
 .em(@size, @bf: @base-font){
@@ -30,7 +32,8 @@
 }
 
 /*
- * couleur automatique en fonction du fond d'un élément
+ * Couleur automatique en fonction du fond d'un élément
+ *
  */
 
 .setColor (@bgColor) when (lightness(@bgColor) > 60%) {
@@ -41,8 +44,9 @@
   color: #fff;
 }
 
-/*
- * couleur des placeholders
+/**
+ * Couleur des placeholders
+ *
  */
 
 .placeholder(@color: #ccc) {
