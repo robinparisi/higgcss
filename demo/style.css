@@ -686,10 +686,10 @@ input[type="checkbox"] {
   padding: 0;
   width: inherit;
 }
-/* grid (need grid module)
+/* grid (grid module is required)
 -------------------------------------------------------------- */
-[class^="grid"] input,
-[class^="grid"] textarea {
+[class^="grid"] > input,
+[class^="grid"] > textarea {
   width: 100%;
 }
 /* width
