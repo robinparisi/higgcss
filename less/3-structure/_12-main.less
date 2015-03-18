@@ -29,22 +29,35 @@ h4 {
 -------------------------------------------------------------- */
 
 a {
-  color: @link;
+  color: @color-link;
   text-decoration: none;
   &:focus,
   &:hover {
-    color: @link-hover;
+    color: @color-link-hover;
   }
 }
 
-.header a:visited {
-  color: @color-light-text;
+.header a {
+  &,
+  &:hover,
+  &:visited {
+    color: @color-link;
+  }
 }
 
 .footer a,
 .footer a:visited {
-  color: @color-light-text;
+  &,
+  &:hover,
+  &:visited {
+    color: @color-link;
+  }
 }
 
 /* lists
 -------------------------------------------------------------- */
+
+ul {
+  padding-left: 2em;
+  list-style-type: square;
+}
