@@ -699,7 +699,9 @@ input[type="checkbox"] {
 /* grid (grid module is required)
 -------------------------------------------------------------- */
 [class^="grid"] > input,
-[class^="grid"] > textarea {
+[class^="grid"] > textarea,
+[class^="grid"] > div > input,
+[class^="grid"] > div > textarea {
   width: 100%;
 }
 /* width
@@ -722,17 +724,20 @@ input[type="checkbox"] {
 }
 /* errors
 -------------------------------------------------------------- */
-.required {
+.f-required {
   color: red;
   font-weight: bold;
 }
-.ferror {
+.f-error {
   margin-top: 20px;
   padding: 5px 10px;
   border-left: 5px solid #efd8d7;
   background-color: #fbf4f4;
 }
-.ferror-message {
+.f-error input {
+  border: 1px solid red;
+}
+.f-error-message {
   padding-top: 4px;
   color: #d2918e;
 }
@@ -2664,6 +2669,21 @@ h4 {
 }
 /* texts
 -------------------------------------------------------------- */
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: bold;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.lowercase {
+  text-transform: lowercase;
+}
 /* links
 -------------------------------------------------------------- */
 a {

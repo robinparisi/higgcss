@@ -120,7 +120,9 @@ input[type="checkbox"] {
 -------------------------------------------------------------- */
 
 [class^="grid"] > input,
-[class^="grid"] > textarea {
+[class^="grid"] > textarea,
+[class^="grid"] > div > input,
+[class^="grid"] > div > textarea {
   width: 100%;
 }
 
@@ -152,19 +154,23 @@ input[type="checkbox"] {
 /* errors
 -------------------------------------------------------------- */
 
-.required {
+.f-required {
   color: red;
   font-weight: bold;
 }
 
-.ferror {
+.f-error {
   margin-top: 20px;
   padding: 5px 10px;
   border-left: 5px solid @input-error-color;
   background-color: lighten(@input-error-color, 8%);
 }
 
-.ferror-message {
+.f-error input {
+  border: 1px solid red;
+}
+
+.f-error-message {
   padding-top: 4px;
   color: darken(@input-error-color, 20%);
 }
