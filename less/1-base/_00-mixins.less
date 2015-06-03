@@ -31,19 +31,6 @@
   font-size: unit(@em, em);
 }
 
-/*
- * Couleur automatique en fonction du fond d'un élément
- *
- */
-
-.setColor (@bgColor) when (lightness(@bgColor) > 60%) {
-  color: #000;
-}
-
-.setColor (@bgColor) when (lightness(@bgColor) =< 60%) {
-  color: #fff;
-}
-
 /**
  * Couleur des placeholders
  *

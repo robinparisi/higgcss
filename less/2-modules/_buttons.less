@@ -1,7 +1,7 @@
 /**
- * Buttons Module
- * namespace : .btn
- */
+* Buttons Module
+* namespace : .btn
+*/
 
 /* ----------------------------------------------------------- */
 /* == configuration */
@@ -33,50 +33,66 @@ button,
 input[type="submit"] {
   display: inline-block;
   margin: 0;
-  padding: .6em 1.3em;
-  width: inherit;
+  padding: 1rem 2rem;
   border: none;
   border-radius: @btn-radius;
   background-color: @btn-primary;
   box-shadow: none;
-  vertical-align: baseline;
+  color: #fff;
   text-align: center;
   text-decoration: none !important;
   line-height: normal;
   cursor: pointer;
-  .setColor(@btn-primary);
   transition: background-color .4s;
+
 }
 
 /* colors
 -------------------------------------------------------------- */
 
-.btn--primary {
+.btn--primary,
+.btn--primary:link,
+.btn--primary:visited  {
   background-color: @btn-primary;
-
-  .setColor(@btn-primary);
+  color: #fff;
 }
 
-.btn--primary:hover {
+.btn--primary:hover,
+.btn--primary:active,
+.btn--primary:focus {
   background-color: darken(@btn-primary, @btn-hover);
 }
 
-.btn--secondary {
+.btn--secondary,
+.btn--secondary:link,
+.btn--secondary:visited  {
   background-color: @btn-secondary;
-
-  .setColor(@btn-secondary);
+  color: #fff;
 }
 
-.btn--secondary:hover {
+.btn--secondary:hover,
+.btn--secondary:active,
+.btn--secondary:focus {
   background-color: darken(@btn-secondary, @btn-hover);
 }
 
-.btn--danger {
+.btn--danger,
+.btn--danger:link,
+.btn--danger:visited {
   background-color: @btn-danger;
-
-  .setColor(@btn-danger);
+  color: #fff;
 }
 
-.btn--danger:hover {
+
+.btn--danger:hover,
+.btn--danger:active,
+.btn--danger:focus {
   background-color: darken(@btn-danger, @btn-hover);
+}
+
+/* size
+-------------------------------------------------------------- */
+
+.btn--big {
+  font-size: @base-font + 4;
 }
