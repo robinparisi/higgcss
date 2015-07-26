@@ -1,0 +1,39 @@
+{
+  "name": "static-kit",
+  "version": "0.0.0",
+  "description": "Static site kit based on Gulp and Jekyll.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robin Parisi",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^1.3.7",
+    "gulp": "^3.8.8",
+    "gulp-autoprefixer": "1.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^0.7.3",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "imagemin-pngquant": "^4.1.2",
+    "less": "^2.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "jekyll",
+    "gulp",
+    "less"
+  ],
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}
