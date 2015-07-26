@@ -7,23 +7,23 @@
 
 
 /* ----------------------------------------------------------- */
-/* == base */
+/* == core */
 /* ----------------------------------------------------------- */
 
-@import "1-base/_00-mixins";
-@import "1-base/_01-reset";
-@import "1-base/_02-typography";
-@import "1-base/_03-helpers";
-@import "1-base/_04-alignment";
-@import "1-base/_05-spacing";
-@import "1-base/_06-layout";
-@import "1-base/_07-width";
-@import "1-base/_08-grid";
-@import "1-base/_09-rwd";
-@import "1-base/_10-debug";
+@import "1-core/_00-mixins";
+@import "1-core/_01-reset";
+@import "1-core/_02-typography";
+@import "1-core/_03-helpers";
+@import "1-core/_04-alignment";
+@import "1-core/_05-spacing";
+@import "1-core/_06-layout";
+@import "1-core/_07-width";
+@import "1-core/_08-grid";
+@import "1-core/_09-rwd";
+@import "1-core/_10-debug";
 
 /* ----------------------------------------------------------- */
-/* == modules */
+/* == components */
 /* ----------------------------------------------------------- */
 
 @import "2-modules/_forms";
@@ -33,7 +33,7 @@
 @import "2-modules/_tooltips";
 
 /* ----------------------------------------------------------- */
-/* == structure */
+/* == core */
 /* ----------------------------------------------------------- */
 
 @import "3-structure/_01-fonts";
@@ -41,10 +41,23 @@
 @import "3-structure/_11-layout";
 @import "3-structure/_12-main";
 @import "3-structure/_13-modules";
-@import "3-structure/_21-rwd";
-@import "3-structure/_22-rwd-tablet";
-@import "3-structure/_23-rwd-smartphone";
+
+/* ----------------------------------------------------------- */
+/* == pages */
+/* ----------------------------------------------------------- */
+
+// @import "4-pages/...";
 
 /* ----------------------------------------------------------- */
 /* == vendors */
 /* ----------------------------------------------------------- */
+
+// @import "5-vendors/...";
+
+/* ----------------------------------------------------------- */
+/* == rwd */
+/* ----------------------------------------------------------- */
+
+@import "6-rwd/_01-rwd.less";
+@import "6-rwd/_02-rwd-tablet.less";
+@import "6-rwd/_03-rwd-smartphone.less";
