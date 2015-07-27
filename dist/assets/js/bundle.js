@@ -1,0 +1,1 @@
+var APP=function(t,n,i,e){"use strict";function o(){}t(i).ready(function(){APP.init()});return{init:o}}("function"==typeof Zepto?Zepto:jQuery,this,this.document);

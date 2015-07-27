@@ -1,0 +1,8 @@
+name: Site name
+description: Site description
+markdown: redcarpet
+highlighter: pygments # or rouge or null
+exclude: ["node_modules", "gulpfile.js", "package.json"]
+source: ./src
+destination: ./dist
+keep_files: [assets]

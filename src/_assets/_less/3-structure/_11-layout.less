@@ -1,0 +1,98 @@
+/* ----------------------------------------------------------- */
+/* == layout */
+/* ----------------------------------------------------------- */
+
+body {
+  color: @color-dark-text;
+  background-color: @bg-color;
+
+  font-family: @fontstack1;
+}
+
+.container {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 10px;
+}
+
+/* header
+-------------------------------------------------------------- */
+
+.header {
+  padding: 20px 0;
+  margin-bottom: 15px;
+}
+
+.header ul,
+.header li {
+  margin: 0;
+  padding: 0;
+}
+
+/* navigation
+-------------------------------------------------------------- */
+
+.navigation {
+  float: right;
+  .em(17);
+  margin-top: 20px;
+}
+
+.navigation a {
+  display: inline-block;
+
+  margin-left: 10px;
+  padding: 10px 15px;
+}
+
+.navigation-sub {
+  border: 1px solid @color-border;
+  border-radius: 2px;
+  overflow: hidden;
+  .em(16);
+}
+
+.navigation-sub a {
+  display: block;
+  border-bottom: 1px solid @color-border;
+  padding: 10px;
+}
+
+.navigation-sub .primary {
+  border-left: 6px solid @color-primary;
+}
+
+.navigation-sub .secondary {
+  border-left: 6px solid @color-secondary;
+}
+
+.navigation-sub .tertiary {
+  border-left: 6px solid @color-tertiary;
+}
+
+.navigation-sub .quaternary {
+  border-left: 6px solid @color-quaternary;
+}
+
+/* content
+-------------------------------------------------------------- */
+
+.content {
+  padding-left: 40px;
+}
+
+/* footer
+-------------------------------------------------------------- */
+
+.footer {
+  padding: 20px 0;
+
+  text-align: center;
+}
+
+.footer ul,
+.footer li {
+  margin: 0;
+  padding: 0;
+}
