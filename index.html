@@ -1,37 +1,55 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Site name</title>
+    <meta name="viewport" content="width=device-width">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/assets/css/style.css">
 
-<div class="content flow">
+</head>
+<body>
 
-    <h1 class="page-heading txtcenter">Higgcss, le micro framework CSS modulaire</h1>
+    <div class="container">
 
-    <div class="overview">
-        <p class="txtcenter">
-            Higgcss est un micro framework CSS bénéficiant d'une approche modulaire rendant facile son appropriation.
-            Il vous encourage à ne garder que ce dont vous avez réellement besoin tout en proposant une structure de base
-            simple et évolutive.
-        </p>
-        <p class="txtcenter">
-            <a href="https://github.com/robinparisi/higgcss" class="btn btn--primary mr1"><i class="fa fa-github"></i> Voir sur Github</a>
-            <a href="https://github.com/robinparisi/higgcss/archive/master.zip" class="btn btn--secondary"><i class="fa fa-download"></i> Télécharger Higgcss</a>
-        </p>
+        <header class="header">
+            <img src="/assets/img/logo.svg" alt="Higgcss">
+            <nav class="navigation">
+                <a href="#">Documentation</a>
+                <a href="#">Conventions</a>
+                <a href="#">A propos</a>
+                <a href="#">Github</a>
+            </nav>
+        </header>
+
+        <div class="line">
+            <div class="mod left w25">
+                <nav class="navigation-sub">
+                    <a href="#" class="primary">Lien 1</a>
+                    <a href="#" class="primary">Lien 1</a>
+                    <a href="#" class="secondary">Lien 1</a>
+                    <a href="#" class="secondary">Lien 1</a>
+                    <a href="#" class="tertiary">Lien 1</a>
+                    <a href="#" class="tertiary">Lien 1</a>
+                    <a href="#" class="quaternary">Lien 1</a>
+                    <a href="#" class="quaternary">Lien 1</a>
+                </nav>
+            </div>
+            <div class="mod left w75">
+                <section class="content">
+                    <h1>Documentation</h1>
+
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+<h2>Titre 2</h2>
+
+<h3>Titre 3</h3>
+
+                </content>
+            </div>
+        </div>
+
     </div>
-
-    <h2>Ce que propose Higgcss</h2>
-    <ul>
-        <li>une structure de travail légère et évolutive (basée sur Less)</li>
-        <li>des conventions d'écriture et d'organisation (CSSComb)</li>
-        <li>un système de configuration simple</li>
-        <li>un reset minimaliste</li>
-        <li>quelques mixins</li>
-        <li>des classes réutilisable (OOCSS)</li>
-        <li>des helpers</li>
-        <li>une aide à la typographie (respect du rythme vertical)</li>
-        <li>une aide à la construction de layout (float, table, inline-block)</li>
-        <li>des grilles entièrement configurables</li>
-        <li>une gestion simple du responsive</li>
-        <li>des modules optionnels (tableau, formulaire, boutons, tooltip, pagination) </li>
-    </ul>
-
-</div>
+</body>
+</html>
