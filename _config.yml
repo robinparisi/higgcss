@@ -1,5 +1,7 @@
 name: Site name
 description: Site description
+baseurl: "/higgcss" # the subpath of your site, e.g. /blog/
+url: "http://robinparisi.github.io" # the base hostname & protocol for your site
 markdown: redcarpet
 highlighter: pygments # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]

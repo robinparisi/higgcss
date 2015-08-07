@@ -9,6 +9,7 @@ var imagemin      = require('gulp-imagemin');
 var pngquant      = require('imagemin-pngquant');
 var uglify        = require('gulp-uglify');
 var concat        = require('gulp-concat');
+var ghPages       = require('gulp-gh-pages');
 
 var reload        = browserSync.reload;
 
@@ -73,8 +74,21 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 */
 gulp.task('browser-sync', ['less', 'imagemin', 'concat', 'uglify', 'jekyll-build'], function() {
     browserSync({
+        files: 'dist/**',
+        rewriteRules: [
+            {
+                match: /\/higgcss/g,
+                fn: function (match) {
+                    console.log(match);
+                    return '';
+                }
+            }
+        ],
         server: {
-            baseDir: 'dist'
+            baseDir: 'dist',
+            routes: {
+                "/assets": "/higgcss/assets"
+            }
         }
     });
 });
@@ -112,8 +126,8 @@ gulp.task('imagemin', function () {
 });
 
 /**
- * Minify JS files with UglifyJS
- */
+* Minify JS files with UglifyJS
+*/
 gulp.task('uglify', function() {
     return gulp.src([PATHS.js.src, "!" + PATHS.jsBundle.src])
     .pipe(plumber())
@@ -128,8 +142,8 @@ gulp.task('uglify', function() {
 });
 
 /**
- * Concat JS files
- */
+* Concat JS files
+*/
 gulp.task('concat', function() {
     console.log(PATHS.jsBundle.src);
     return gulp.src(PATHS.jsBundle.src)
@@ -146,6 +160,14 @@ gulp.task('concat', function() {
 });
 
 /**
+* Deploy static site to Github
+*/
+gulp.task('deploy', function() {
+    return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
+
+/**
 * Watch files for changes & recompile
 * Watch html/md files, run jekyll & reload BrowserSync
 */
@@ -155,7 +177,7 @@ gulp.task('watch', function () {
     gulp.watch(PATHS.jsBundle.watch, ['concat']);
     gulp.watch(PATHS.img.watch, ['imagemin']);
 
-    gulp.watch(['src/index.html', 'src/_layouts/*.html', 'src/*.md', 'src/_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['src/index.html', 'src/_layouts/*.html', 'src/**/*.md', 'src/_posts/*'], ['jekyll-rebuild']);
 });
 
 /**

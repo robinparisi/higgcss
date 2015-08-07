@@ -9,10 +9,11 @@
   "author": "Robin Parisi",
   "license": "MIT",
   "devDependencies": {
-    "browser-sync": "^1.3.7",
+    "browser-sync": "^2.0.0",
     "gulp": "^3.8.8",
     "gulp-autoprefixer": "1.0.0",
     "gulp-concat": "^2.6.0",
+    "gulp-gh-pages": "^0.5.2",
     "gulp-imagemin": "^2.3.0",
     "gulp-less": "^3.0.3",
     "gulp-minify-css": "^1.2.0",

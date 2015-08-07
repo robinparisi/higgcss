@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Site name</title>
+    <title>Débuter sur Higgcss</title>
     <meta name="viewport" content="width=device-width">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/higgcss/assets/css/style.css">
 
 </head>
 <body>
@@ -26,30 +26,62 @@
         <div class="line">
             <div class="mod left w25">
                 <nav class="navigation-sub">
-                    <a href="#" class="primary">Lien 1</a>
-                    <a href="#" class="primary">Lien 1</a>
-                    <a href="#" class="secondary">Lien 1</a>
-                    <a href="#" class="secondary">Lien 1</a>
-                    <a href="#" class="tertiary">Lien 1</a>
-                    <a href="#" class="tertiary">Lien 1</a>
-                    <a href="#" class="quaternary">Lien 1</a>
-                    <a href="#" class="quaternary">Lien 1</a>
+                    <a href="/" class="secondary">Débuter sur Higgcss</a>
+                    <a href="/documentation/structure-et-base.html" class="secondary">Structure & base</a>
+                    <a href="#" class="secondary">Conventions</a>
+                    <a href="#" class="tertiary">Configuration</a>
+                    <a href="#" class="tertiary">Couleurs</a>
+                    <a href="#" class="tertiary">LESS & Mixins</a>
+                    <a href="#" class="primary">Reset & Typographie</a>
+                    <a href="#" class="primary">Helpers</a>
+                    <a href="#" class="primary">Layout</a>
+                    <a href="#" class="primary">Grilles</a>
+                    <a href="#" class="primary">Debug</a>
+                    <a href="#" class="primary">Responsive</a>
+                    <a href="/boutons.html" class="quaternary">Boutons</a>
+                    <a href="#" class="quaternary">Formulaires</a>
+                    <a href="#" class="quaternary">Pagination</a>
+                    <a href="#" class="quaternary">Tableaux</a>
+                    <a href="#" class="quaternary">Tooltips</a>
                 </nav>
             </div>
             <div class="mod left w75">
                 <section class="content">
-                    <h1>Documentation</h1>
+                    <h1>Débuter sur Higgcss</h1>
 
-<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+<p>Higgcss est un micro framework CSS bénéficiant d&#39;une approche modulaire rendant facile son appropriation. Il vous encourage à ne garder que ce dont vous avez réellement besoin tout en proposant une structure de base simple et évolutive.</p>
 
-<h2>Titre 2</h2>
+<h2>Installation</h2>
 
-<h3>Titre 3</h3>
+<p>Un exemple de tâche gulp pour compiler Higgcss :</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">less</span>            <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gulp-less&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">minifyCSS</span>       <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gulp-minify-css&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">autoprefixer</span>    <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gulp-autoprefixer&#39;</span><span class="p">);</span>
+
+<span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;less&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="s1">&#39;less/style.less&#39;</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">less</span><span class="p">())</span>
+        <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">autoprefixer</span><span class="p">({</span>
+            <span class="nx">browsers</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;last 2 versions&#39;</span><span class="p">],</span>
+            <span class="nx">cascade</span><span class="o">:</span> <span class="kc">false</span>
+        <span class="p">}))</span>
+        <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">minifyCSS</span><span class="p">())</span>
+        <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="s1">&#39;dist/css/style.css&#39;</span><span class="p">));</span>
+<span class="p">});</span></code></pre></div>
+
+<h2>Gestion des préfixes vendeurs</h2>
+
+<p>Les préfixes vendeurs doivent être gérés au travers d&#39;un outil (pré/post processeur) et ne sont pas intégrés au framework (pour des raisons de lisibilité du code).</p>
 
                 </content>
             </div>
         </div>
 
     </div>
+
+    <footer class="footer">
+        Higgcss par <a href="https://twitter.com/robin_parisi" target="_blank">@robin_parisi</a>.
+    </footer>
 </body>
 </html>
