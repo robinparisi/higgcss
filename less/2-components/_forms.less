@@ -21,7 +21,21 @@
 /* == module */
 /* ----------------------------------------------------------- */
 
-.placeholder(@input-placeholder-color);
+/* placeholders
+-------------------------------------------------------------- */
+
+input::-webkit-input-placeholder {
+  color: @input-placeholder-color;
+}
+input:-moz-placeholder {
+  color: @input-placeholder-color;
+}
+textarea::-webkit-input-placeholder {
+  color: @input-placeholder-color;
+}
+textarea:-moz-placeholder {
+  color: @input-placeholder-color;
+}
 
 /* block form
 -------------------------------------------------------------- */
