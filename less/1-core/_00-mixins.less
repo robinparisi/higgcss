@@ -1,13 +1,9 @@
-/* ----------------------------------------------------------- */
-/* == mixins */
-/* ----------------------------------------------------------- */
+// --------------------------------------------------------------
+// == mixins */
+// --------------------------------------------------------------
 
 
-/*
- * Permet de conserver un rythme vertical harmonieux
- *
- */
-
+// Permet de conserver un rythme vertical harmonieux
 .flow(@font-size, @bf: @base-font, @lh: @line-height) {
 
   @coeff : ceil(@font-size / (@base-font * @lh));
@@ -21,11 +17,7 @@
 
 }
 
-/*
- * Recalcule la taille de police en fonction de la taille de base (émul l'unité rem)
- *
- */
-
+// Recalcule la taille de police en fonction de la taille de base (émul l'unité rem)
 .em(@size, @bf: @base-font){
   @em: @size / @bf;
   font-size: unit(@em, em);
