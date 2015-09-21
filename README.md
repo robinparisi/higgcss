@@ -13,7 +13,7 @@ Higgcss en 1 minute
 ```
 ├── 1.base
 │   ├── _00-mixins.less           // quelques mixins utiles
-│   ├── _01-reset.less            // reset minimaliste 
+│   ├── _01-reset.less            // reset minimaliste
 │   ├── _02-typography.less       // permet d'assurer le rythme vertical
 │   ├── _03-helpers.less          // helpers divers (accessibilité, ux, etc...)
 │   ├── _04-alignment.less        // alignement du texte et des blocs (OOCSS)
@@ -40,10 +40,10 @@ Higgcss en 1 minute
 │   └── _23-rwd-smartphone.less   // ce qui s'applique aux mobiles
 ├── 4.pages
 │   └── empty                     // styles spécifiques par page (ex: une page de login)
-├── 5.vendors 
+├── 5.vendors
 │   └── empty                     // style en rapport avec tout ce qui vient de l'extérieur
 ├── _config.less                  // quelques variables de configurations bien utiles qui agissent aussi sur les modules
-└── style.less                    // le point d'entrée, c'est le fichier qui gère les imports et respecte la cascade 
+└── style.less                    // le point d'entrée, c'est le fichier qui gère les imports et respecte la cascade
 ```
 
 Tester Higgcss
@@ -65,6 +65,11 @@ Licence
 -------
 
 Higgcss est distribué sous [licence MIT](https://github.com/robinparisi/higgcss/blob/master/LICENSE).
+
+Références
+-------
+
+* http://www.paulirish.com/2012/box-sizing-border-box-ftw/
 
 Crédits
 -------
