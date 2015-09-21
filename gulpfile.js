@@ -10,8 +10,10 @@ var pngquant      = require('imagemin-pngquant');
 var uglify        = require('gulp-uglify');
 var concat        = require('gulp-concat');
 var ghPages       = require('gulp-gh-pages');
+var read          = require('read-yaml');
 
 var reload        = browserSync.reload;
+var config        = read.sync('_config.yml');
 
 /* config
 ---------------------------------------------------- */
@@ -25,7 +27,7 @@ var env = {
 }
 
 var srcFolder =  'src';
-var distFolder = 'dist';
+var distFolder = config.destination;
 
 var PATHS = {
     less: {
@@ -74,21 +76,8 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 */
 gulp.task('browser-sync', ['less', 'imagemin', 'concat', 'uglify', 'jekyll-build'], function() {
     browserSync({
-        files: 'dist/**',
-        rewriteRules: [
-            {
-                match: /\/higgcss/g,
-                fn: function (match) {
-                    console.log(match);
-                    return '';
-                }
-            }
-        ],
         server: {
-            baseDir: 'dist',
-            routes: {
-                "/assets": "/higgcss/assets"
-            }
+            baseDir: 'dist'
         }
     });
 });
@@ -163,7 +152,7 @@ gulp.task('concat', function() {
 * Deploy static site to Github
 */
 gulp.task('deploy', function() {
-    return gulp.src('./dist/**/*')
+    return gulp.src(distFolder + '/**/*')
     .pipe(ghPages());
 });
 
