@@ -2,6 +2,19 @@
 /* == main */
 /* ----------------------------------------------------------- */
 
+body {
+  background-color: @bg-color;
+  color: @color-dark-text;
+  font-family: @fontstack1;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 10px;
+  max-width: 1024px;
+}
+
 /* titles
 -------------------------------------------------------------- */
 
@@ -51,35 +64,18 @@ h4 {
 
 a {
   color: @color-link;
-  text-decoration: none;
-  &:focus,
-  &:hover {
-    color: @color-link-hover;
-  }
 }
 
-.header a {
-  &,
-  &:hover,
-  &:visited {
-    color: @color-link;
-  }
+a:hover,
+a:visited,
+a:focus {
+  color: lighten(@color-link, 10%);
 }
-
-.footer a,
-.footer a:visited {
-  &,
-  &:hover,
-  &:visited {
-    color: @color-link;
-  }
-}
-
 
 /* lists
 -------------------------------------------------------------- */
 
 ul {
   padding-left: 2em;
-  list-style-type: square;
+  list-style-type: circle;;
 }
