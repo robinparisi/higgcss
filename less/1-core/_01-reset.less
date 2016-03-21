@@ -43,7 +43,15 @@ video {
 }
 
 img {
-  height: auto;
   border: 0;
   vertical-align: middle;
+}
+
+img:not([src$=".svg"]) {
+  height: auto;
+}
+
+/* fix for IE */
+img[src$=".svg"] {
+  width: 100%;
 }
