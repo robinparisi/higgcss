@@ -9,21 +9,8 @@ html {
 *:before {
   box-sizing: inherit;
 }
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-ol,
-li {
+body {
   margin: 0;
-  padding: 0;
-}
-ul {
-  list-style-type: none;
 }
 img,
 table,
@@ -46,6 +33,12 @@ img:not([src$=".svg"]) {
 /* fix for IE */
 img[src$=".svg"] {
   width: 100%;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
 /* ----------------------------------------------------------- */
 /* == typography */
@@ -611,8 +604,6 @@ select,
 label,
 .label {
   vertical-align: middle;
-  font-size: inherit;
-  font-family: inherit;
 }
 select {
   margin: 0;
@@ -624,8 +615,6 @@ textarea {
   min-width: 320px;
   min-height: 8em;
   vertical-align: top;
-  font-size: inherit;
-  font-family: inherit;
   resize: vertical;
 }
 input {
@@ -706,8 +695,6 @@ input[type="checkbox"] {
 .btn,
 button {
   vertical-align: middle;
-  font-size: inherit;
-  font-family: inherit;
 }
 .btn,
 button,
