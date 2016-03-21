@@ -1,0 +1,42 @@
+/* ----------------------------------------------------------- */
+/* == helpers */
+/* ----------------------------------------------------------- */
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+/* font size
+-------------------------------------------------------------- */
+
+.txtsmaller {
+  .flow(@base-font - 4);
+}
+
+.txtsmall {
+  .flow(@base-font - 2);
+}
+
+.txtbig {
+  .flow(@base-font + 2);
+}
+
+.txtbigger {
+  .flow(@base-font + 4);
+}
