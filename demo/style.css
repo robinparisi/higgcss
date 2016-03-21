@@ -48,12 +48,10 @@ html {
   font-size: 62.5%;
   /* IE9-11 calculation fix */
   font-size: calc(0.625em);
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
 }
 body {
-  font-size: 14px;
-  font-family: helvetica, arial, sans-serif;
+  font-size: 1.4em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.5;
 }
 p,
@@ -68,13 +66,6 @@ label,
 textarea,
 caption {
   margin: 0 0 1.5em 0;
-  font-size: 1em;
-  line-height: 1.5em;
-}
-/* useful
--------------------------------------------------------------- */
-.uppercase {
-  text-transform: uppercase;
 }
 /* ----------------------------------------------------------- */
 /* == helpers */
@@ -767,7 +758,7 @@ input[type="submit"] {
 /* size
 -------------------------------------------------------------- */
 .btn--big {
-  font-size: 18px;
+  font-size: 18;
 }
 /**
  * Pagination Module
@@ -895,6 +886,50 @@ table thead {
 /* == fonts */
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
+/* == helpers */
+/* ----------------------------------------------------------- */
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: bold;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+/* font size
+-------------------------------------------------------------- */
+.txtsmaller {
+  /*font-size: unit(@font-size / @bf, em);*/
+  font-size: 1rem;
+  line-height: 2.1;
+  margin-bottom: 2.1em;
+}
+.txtsmall {
+  /*font-size: unit(@font-size / @bf, em);*/
+  font-size: 1.2rem;
+  line-height: 1.75;
+  margin-bottom: 1.75em;
+}
+.txtbig {
+  /*font-size: unit(@font-size / @bf, em);*/
+  font-size: 1.6rem;
+  line-height: 1.3125;
+  margin-bottom: 1.3125em;
+}
+.txtbigger {
+  /*font-size: unit(@font-size / @bf, em);*/
+  font-size: 1.8rem;
+  line-height: 1.16666667;
+  margin-bottom: 1.16666667em;
+}
+/* ----------------------------------------------------------- */
 /* == main */
 /* ----------------------------------------------------------- */
 body {
@@ -911,41 +946,28 @@ body {
 /* titles
 -------------------------------------------------------------- */
 h1 {
-  font-size: 2em;
-  line-height: 1.5em;
-  margin-bottom: 0.75em;
+  /*font-size: unit(@font-size / @bf, em);*/
+  font-size: 2.6rem;
+  line-height: 1.61538462;
+  margin-bottom: 0.80769231em;
 }
 h2 {
-  font-size: 1.71428571em;
-  line-height: 1.75em;
-  margin-bottom: 0.875em;
+  /*font-size: unit(@font-size / @bf, em);*/
+  font-size: 2.2rem;
+  line-height: 1.90909091;
+  margin-bottom: 0.95454545em;
 }
 h3 {
-  font-size: 1.42857143em;
-  line-height: 1.05em;
-  margin-bottom: 1.05em;
-}
-h4 {
-  font-size: 1.28571429em;
-  line-height: 1.16666667em;
+  /*font-size: unit(@font-size / @bf, em);*/
+  font-size: 1.8rem;
+  line-height: 1.16666667;
   margin-bottom: 1.16666667em;
 }
-/* texts
--------------------------------------------------------------- */
-.italic {
-  font-style: italic;
-}
-.bold {
-  font-weight: bold;
-}
-.uppercase {
-  text-transform: uppercase;
-}
-.capitalize {
-  text-transform: capitalize;
-}
-.lowercase {
-  text-transform: lowercase;
+h4 {
+  /*font-size: unit(@font-size / @bf, em);*/
+  font-size: 1.6rem;
+  line-height: 1.3125;
+  margin-bottom: 1.3125em;
 }
 /* links
 -------------------------------------------------------------- */
@@ -960,7 +982,7 @@ a:focus {
 /* lists
 -------------------------------------------------------------- */
 ul {
-  padding-left: 2em;
+  padding-left: 2rem;
   list-style-type: circle;
 }
 /* ----------------------------------------------------------- */
