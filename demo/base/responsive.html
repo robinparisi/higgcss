@@ -6,17 +6,40 @@
     <title>Responsive</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
     <link rel="stylesheet" href="/style.css" media="all">
+
+    <style>
+
+    .box {
+        margin: 20px 0;
+        padding: 1rem;
+    }
+
+    .large {
+        background-color: #4fc1e9;
+    }
+
+    .medium {
+        background-color: #8cc152;
+    }
+
+    .small {
+        background-color: #ffce54;
+    }
+
+    .xsmall {
+        background-color: #ed5565;
+    }
+    </style>
+
 
 </head>
 <body>
-
-<div class="container">
-
-</div>
-
+    <div class="container">
+        <div class="box large">large</div>
+        <div class="box medium m-hidden">medium</div>
+        <div class="box small s-hidden">small</div>
+        <div class="box xsmall xs-hidden">xsmall</div>
+    </div>
 </body>
 </html>
