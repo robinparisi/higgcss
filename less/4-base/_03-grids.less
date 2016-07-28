@@ -2,14 +2,16 @@
 /* == grids */
 /* ----------------------------------------------------------- */
 
+@base-gutter: 2rem;
+
 .grid-3 {
-  .grid(3);
+  .grid(3, @base-gutter);
 }
 
 .grid-4 {
-  .grid(4, 2rem);
+  .grid(4, @base-gutter);
 }
 
-.grid-2-5 {
-  .unequalGrid(2, 5, 2rem);
+.grid-1-3 {
+  .unequalGrid(1, 3, @base-gutter);
 }
