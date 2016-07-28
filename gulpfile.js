@@ -1,7 +1,6 @@
 var gulp            = require('gulp');
 var less            = require('gulp-less');
 var autoprefixer    = require('gulp-autoprefixer');
-var csscomb         = require('gulp-csscomb');
 var browserSync     = require('browser-sync');
 var reload          = browserSync.reload;
 
@@ -39,11 +38,6 @@ gulp.task('less', function () {
         .pipe(reload({stream:true}));
 });
 
-gulp.task('csscomb', function () {
-    gulp.src(paths.csscomb.src)
-        .pipe(csscomb())
-        .pipe(gulp.dest(paths.csscomb.dest));
-});
 
 gulp.task('browser-sync', function() {
     browserSync({
@@ -59,7 +53,6 @@ gulp.task('bs-reload', function () {
 });
 
 
-
 gulp.task('watch', ['browser-sync'], function () {
     gulp.watch(paths.less.watch, ['less']);
     gulp.watch(paths.html.watch, ['bs-reload']);
@@ -67,4 +60,3 @@ gulp.task('watch', ['browser-sync'], function () {
 });
 
 gulp.task('default', ['less']);
-
