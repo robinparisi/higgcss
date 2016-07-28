@@ -1,0 +1,70 @@
+/* ----------------------------------------------------------- */
+/* == main */
+/* ----------------------------------------------------------- */
+
+body {
+  background-color: #f1f2f4;
+  color: @color-dark-text;
+  font-family: @fontstack1;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 10px;
+  max-width: 1024px;
+}
+
+/* titles
+-------------------------------------------------------------- */
+
+h1 {
+  .flow(26);
+}
+
+h2 {
+  .flow(22);
+}
+
+h3 {
+  .flow(18);
+}
+
+h4 {
+  .flow(16);
+}
+
+
+/* links
+-------------------------------------------------------------- */
+
+a {
+  color: @color-link;
+  text-decoration: none;
+}
+
+a:hover,
+a:visited,
+a:focus {
+  color: lighten(@color-link, 10%);
+}
+
+/* lists
+-------------------------------------------------------------- */
+
+ul {
+  padding-left: 2rem;
+  list-style-type: circle;
+}
+
+/* divers
+-------------------------------------------------------------- */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}

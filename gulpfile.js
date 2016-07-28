@@ -1,19 +1,16 @@
-var gulp          = require('gulp');
-var browserSync   = require('browser-sync');
-var autoprefixer  = require('gulp-autoprefixer');
-var cp            = require('child_process');
-var plumber       = require('gulp-plumber');
-var less          = require('gulp-less');
-var minifyCSS     = require('gulp-minify-css');
-var imagemin      = require('gulp-imagemin');
-var pngquant      = require('imagemin-pngquant');
-var uglify        = require('gulp-uglify');
-var concat        = require('gulp-concat');
-var ghPages       = require('gulp-gh-pages');
-var read          = require('read-yaml');
+const gulp          = require('gulp');
+const autoprefixer  = require('gulp-autoprefixer');
+const cp            = require('child_process');
+const plumber       = require('gulp-plumber');
+const less          = require('gulp-less');
+const cleanCSS      = require('gulp-clean-css');
+const imagemin      = require('gulp-imagemin');
+const pngquant      = require('imagemin-pngquant');
+const uglify        = require('gulp-uglify');
+const concat        = require('gulp-concat');
 
-var reload        = browserSync.reload;
-var config        = read.sync('_config.yml');
+const browserSync   = require('browser-sync');
+const reload        = browserSync.reload;
 
 /* config
 ---------------------------------------------------- */
@@ -27,7 +24,7 @@ var env = {
 }
 
 var srcFolder =  'src';
-var distFolder = config.destination;
+var distFolder = 'dist';
 
 var PATHS = {
     less: {
@@ -74,7 +71,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
 * Wait for jekyll-build, then launch the Server
 */
-gulp.task('browser-sync', ['less', 'imagemin', 'concat', 'uglify', 'jekyll-build'], function() {
+gulp.task('browser-sync', function() {
     browserSync({
         server: {
             baseDir: 'dist'
@@ -96,7 +93,7 @@ gulp.task('less', function () {
         browsers: ['> 1%', 'last 3 versions'],
         cascade: false
     }))
-    .pipe(env.PROD ? minifyCSS() : gutil.noop())
+    .pipe(cleanCSS())
     .pipe(gulp.dest(PATHS.less.dest))
     .pipe(reload({stream:true}));
 });
@@ -134,7 +131,6 @@ gulp.task('uglify', function() {
 * Concat JS files
 */
 gulp.task('concat', function() {
-    console.log(PATHS.jsBundle.src);
     return gulp.src(PATHS.jsBundle.src)
     .pipe(plumber())
     .pipe(concat('bundle.js'))
@@ -149,27 +145,19 @@ gulp.task('concat', function() {
 });
 
 /**
-* Deploy static site to Github
-*/
-gulp.task('deploy', function() {
-    return gulp.src(distFolder + '/**/*')
-    .pipe(ghPages());
-});
-
-/**
 * Watch files for changes & recompile
 * Watch html/md files, run jekyll & reload BrowserSync
 */
-gulp.task('watch', function () {
+gulp.task('watch', ['browser-sync'], function () {
     gulp.watch(PATHS.less.watch, ['less']);
     gulp.watch(PATHS.js.watch, ['uglify']);
     gulp.watch(PATHS.jsBundle.watch, ['concat']);
     gulp.watch(PATHS.img.watch, ['imagemin']);
 
-    gulp.watch(['src/index.html', 'src/_layouts/*.html', 'src/**/*.md', 'src/_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['src/index.html', 'src/_layouts/*.html', 'src/_posts/*', '_config.yml'], ['jekyll-rebuild']);
 });
 
 /**
 * Compile the jekyll site, launch BrowserSync & watch files.
 */
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['jekyll-build', 'less', 'uglify', 'concat', 'imagemin']);

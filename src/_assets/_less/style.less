@@ -1,58 +1,84 @@
-/* ----------------------------------------------------------- */
-/* == config */
-/* ----------------------------------------------------------- */
+// --------------------------------------------------------------
+// == config */
+// --------------------------------------------------------------
 
-@import "_colors";
-@import "_config";
+@import '_colors';
+@import '_config';
+
+// --------------------------------------------------------------
+// == core */
+// --------------------------------------------------------------
+
+@import '1-core/_00-mixins';
+@import '1-core/_01-reset';
+@import '1-core/_02-typography';
+@import '1-core/_03-helpers';
+@import '1-core/_04-alignment';
+@import '1-core/_05-spacing';
+@import '1-core/_06-layout';
+@import '1-core/_07-width';
+// floating grid are deprecated and will be removed in v1.0
+//@import '1-core/_08-grid';
+@import '1-core/_08-flexbox';
+@import '1-core/_09-rwd';
+@import '1-core/_10-debug';
 
 
-/* ----------------------------------------------------------- */
-/* == base */
-/* ----------------------------------------------------------- */
+// --------------------------------------------------------------
+// == elements */
+// --------------------------------------------------------------
 
-@import "1-base/_00-mixins";
-@import "1-base/_01-reset";
-@import "1-base/_02-typography";
-@import "1-base/_03-helpers";
-@import "1-base/_04-alignment";
-@import "1-base/_05-spacing";
-@import "1-base/_06-layout";
-@import "1-base/_07-width";
-@import "1-base/_08-grid";
-@import "1-base/_09-rwd";
-@import "1-base/_10-debug";
+@import '2-components/_forms';
+@import '2-components/_buttons';
+@import '2-components/_pagination';
+@import '2-components/_tables';
+@import '2-components/_tooltips';
 
-/* ----------------------------------------------------------- */
-/* == modules */
-/* ----------------------------------------------------------- */
 
-@import "2-modules/_forms";
-@import "2-modules/_buttons";
-@import "2-modules/_pagination";
-@import "2-modules/_tables";
-@import "2-modules/_tooltips";
+// --------------------------------------------------------------
+// == base */
+// --------------------------------------------------------------
 
-/* ----------------------------------------------------------- */
-/* == structure */
-/* ----------------------------------------------------------- */
+@import '3-base/_fonts';
+@import '3-base/_helpers';
+@import '3-base/_grids.less';
+@import '3-base/_main.less';
+@import '3-base/_header.less';
+@import '3-base/_navigation.less';
+@import '3-base/_content.less';
+@import '3-base/_footer.less';
 
-@import "3-structure/_01-fonts";
-@import "3-structure/_02-icons";
-@import "3-structure/_11-layout";
-@import "3-structure/_12-main";
-@import "3-structure/_13-modules";
-@import "3-structure/_21-rwd";
-@import "3-structure/_22-rwd-tablet";
-@import "3-structure/_23-rwd-smartphone";
 
-/* ----------------------------------------------------------- */
-/* == pages */
-/* ----------------------------------------------------------- */
+// --------------------------------------------------------------
+// == modules */
+// --------------------------------------------------------------
 
-@import "4-pages/_documentation.less";
+//@import '4-modules/...';
 
-/* ----------------------------------------------------------- */
-/* == vendors */
-/* ----------------------------------------------------------- */
 
-@import "5-vendors/_friendly.less";
+// --------------------------------------------------------------
+// == pages */
+// --------------------------------------------------------------
+
+// @import '5-pages/...';
+
+
+// --------------------------------------------------------------
+// == vendors */
+// --------------------------------------------------------------
+//
+// Tips: load vendor from your package manager and override CSS here (e.g. o-vendor-name.less)
+// In this context, "o" means "override" and you can use it as a convention.
+
+// @import '6-vendors/o-vendor.less';
+
+
+// --------------------------------------------------------------
+// == rwd */
+// --------------------------------------------------------------
+
+@import '7-rwd/_rwd-large';
+@import '7-rwd/_rwd-medium';
+@import '7-rwd/_rwd-small';
+@import '7-rwd/_rwd-xsmall';
+@import '7-rwd/_rwd';

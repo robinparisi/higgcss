@@ -6,89 +6,64 @@
     <title>Boutons</title>
     <meta name="viewport" content="width=device-width">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/higgcss/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 
 </head>
 <body>
 
-    <div class="container">
 
-        <header class="header">
-            <img src="/assets/img/logo.svg" alt="Higgcss">
+    <header class="header">
+        <div class="container header-flex">
+            <img src="/assets/img/logo.svg" alt="Higgcss" class="header__logo">
             <nav class="navigation">
-                <a href="#">Documentation</a>
+                <a href="">Documentation</a>
                 <a href="#">Conventions</a>
-                <a href="#">A propos</a>
-                <a href="#">Github</a>
+                <a href="#">Télécharger</a>
             </nav>
-        </header>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+            <h1 id="les-boutons">Les boutons</h1>
 
-        <div class="line">
-            <div class="mod left w25">
-                <nav class="navigation-sub">
-                    <a href="/" class="secondary">Débuter sur Higgcss</a>
-                    <a href="/documentation/structure-et-base.html" class="secondary">Structure & base</a>
-                    <a href="#" class="secondary">Conventions</a>
-                    <a href="#" class="tertiary">Configuration</a>
-                    <a href="#" class="tertiary">Couleurs</a>
-                    <a href="#" class="tertiary">LESS & Mixins</a>
-                    <a href="#" class="primary">Reset & Typographie</a>
-                    <a href="#" class="primary">Helpers</a>
-                    <a href="#" class="primary">Layout</a>
-                    <a href="#" class="primary">Grilles</a>
-                    <a href="#" class="primary">Debug</a>
-                    <a href="#" class="primary">Responsive</a>
-                    <a href="/boutons.html" class="quaternary">Boutons</a>
-                    <a href="#" class="quaternary">Formulaires</a>
-                    <a href="#" class="quaternary">Pagination</a>
-                    <a href="#" class="quaternary">Tableaux</a>
-                    <a href="#" class="quaternary">Tooltips</a>
-                </nav>
-            </div>
-            <div class="mod left w75">
-                <section class="content">
-                    <h1>Les boutons</h1>
-
-<p>Pour créer un bouton, ajoutez la classe <em>.btn</em> à  n&#39;importe quel élément de type a, button ou input[type=&quot;submit&quot;].</p>
+<p>Pour créer un bouton, ajoutez la classe <em>.btn</em> à  n’importe quel élément de type a, button ou input[type=”submit”].</p>
 
 <div class="doc-p">
-    <div class="doc-p__preview">
-        <button class="btn btn--primary">Bouton 1</button>
-        <button class="btn btn--secondary">Bouton 2</button>
-        <button class="btn btn--danger">Bouton danger</button>
-    </div>
-    <div class="doc-p__code">
+	<div class="doc-p__preview">
+		<button class="btn btn--primary">Bouton 1</button>
+		<button class="btn btn--secondary">Bouton 2</button>
+		<button class="btn btn--danger">Bouton danger</button>
+	</div>
+	<div class="doc-p__code">
+		
+<figure class="highlight"><pre><code class="language-css" data-lang="css">		<span class="o">&lt;</span><span class="nt">button</span> <span class="nt">class</span><span class="o">=</span><span class="s1">"btn btn--primary"</span><span class="o">&gt;</span><span class="nt">Bouton</span> <span class="nt">1</span><span class="o">&lt;/</span><span class="nt">button</span><span class="o">&gt;</span>
+		<span class="o">&lt;</span><span class="nt">button</span> <span class="nt">class</span><span class="o">=</span><span class="s1">"btn btn--secondary"</span><span class="o">&gt;</span><span class="nt">Bouton</span> <span class="nt">2</span><span class="o">&lt;/</span><span class="nt">button</span><span class="o">&gt;</span>
+		<span class="o">&lt;</span><span class="nt">button</span> <span class="nt">class</span><span class="o">=</span><span class="s1">"btn btn--danger"</span><span class="o">&gt;</span><span class="nt">Bouton</span> <span class="nt">danger</span><span class="o">&lt;/</span><span class="nt">button</span><span class="o">&gt;</span>
+		</code></pre></figure>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">&lt;</span><span class="nt">button</span> <span class="nt">class</span><span class="o">=</span><span class="s2">&quot;btn btn--primary&quot;</span><span class="o">&gt;</span><span class="nt">Bouton</span> <span class="nt">1</span><span class="o">&lt;/</span><span class="nt">button</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="nt">button</span> <span class="nt">class</span><span class="o">=</span><span class="s2">&quot;btn btn--secondary&quot;</span><span class="o">&gt;</span><span class="nt">Bouton</span> <span class="nt">2</span><span class="o">&lt;/</span><span class="nt">button</span><span class="o">&gt;</span>
-        <span class="o">&lt;</span><span class="nt">button</span> <span class="nt">class</span><span class="o">=</span><span class="s2">&quot;btn btn--danger&quot;</span><span class="o">&gt;</span><span class="nt">Bouton</span> <span class="nt">danger</span><span class="o">&lt;/</span><span class="nt">button</span><span class="o">&gt;</span></code></pre></div>
-
-    </div>
+	</div>
 </div>
 
-<h2>Taille des boutons</h2>
+<h2 id="taille-des-boutons">Taille des boutons</h2>
 
 <p>Pour jouer sur la taille des boutons :</p>
 
 <div class="doc-p">
-    <div class="doc-p__preview">
-        <button class="btn btn--primary btn--big">.btn .btn--primary .btn--big</button>
-    </div>
-    <div class="doc-p__code">
+	<div class="doc-p__preview">
+		<button class="btn btn--primary btn--big">.btn .btn--primary .btn--big</button>
+	</div>
+	<div class="doc-p__code">
+		
+<figure class="highlight"><pre><code class="language-css" data-lang="css">		<span class="o">&lt;</span><span class="nt">button</span> <span class="nt">class</span><span class="o">=</span><span class="s1">"btn btn--primary btn--big"</span><span class="o">&gt;</span><span class="nt">Ici</span> <span class="nt">un</span> <span class="nt">gros</span> <span class="nt">bouton</span><span class="o">&lt;/</span><span class="nt">button</span><span class="o">&gt;</span>
+		</code></pre></figure>
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">&lt;</span><span class="nt">button</span> <span class="nt">class</span><span class="o">=</span><span class="s2">&quot;btn btn--primary btn--big&quot;</span><span class="o">&gt;</span><span class="nt">Ici</span> <span class="nt">un</span> <span class="nt">gros</span> <span class="nt">bouton</span><span class="o">&lt;/</span><span class="nt">button</span><span class="o">&gt;</span></code></pre></div>
-
-    </div>
+	</div>
 </div>
 
-                </content>
-            </div>
         </div>
-
     </div>
 
-    <footer class="footer">
-        Higgcss par <a href="https://twitter.com/robin_parisi" target="_blank">@robin_parisi</a>.
-    </footer>
+
 </body>
 </html>
