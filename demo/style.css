@@ -102,6 +102,143 @@ caption {
   cursor: not-allowed;
 }
 /* ----------------------------------------------------------- */
+/* == layout */
+/* ----------------------------------------------------------- */
+/* BFC to the rescue */
+.mod {
+  overflow: hidden;
+}
+.clear,
+.line,
+.row {
+  clear: both;
+}
+/* blocks that must contain floats */
+.clearfix:after,
+.line:after,
+.mod:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+.inbl {
+  display: inline-block;
+}
+/* table layout
+-------------------------------------------------------------- */
+.row {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.row > *,
+.col {
+  display: table-cell;
+}
+[class*="grid-"] {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+[class*="grid-"] > * {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: block;
+  /* IE fix */
+}
+/* vertical align
+-------------------------------------------------------------- */
+[class*="grid-top"] {
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+[class*="grid-bottom"] {
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+[class*="grid-middle"] {
+  -ms-flex-align: center;
+  align-items: center;
+}
+/* ----------------------------------------------------------- */
+/* == rwd */
+/* ----------------------------------------------------------- */
+/* responsive iframe http://www.smashingmagazine.com/2014/02/27/making-embedded-content-work-in-responsive-design/ */
+.responsive-iframe {
+  position: relative;
+  overflow: hidden;
+  padding-top: 30px;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.responsive-iframe iframe,
+.responsive-iframe object,
+.responsive-iframe embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* large
+-------------------------------------------------------------- */
+@media (max-width: 1280px) {
+  .l-hidden {
+    display: none !important;
+  }
+}
+/* medium
+-------------------------------------------------------------- */
+@media (max-width: 960px) {
+  .m-hidden {
+    display: none !important;
+  }
+}
+/* small
+-------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .s-hidden {
+    display: none !important;
+  }
+}
+/* xsmall
+-------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .mod,
+  .col {
+    display: block !important;
+    float: none !important;
+    width: auto !important;
+  }
+  .xs-hidden {
+    display: none !important;
+  }
+}
+/* ----------------------------------------------------------- */
+/* == debug */
+/* ----------------------------------------------------------- */
+/*
+ * Generates a random color
+ *
+ */
+/*
+ * Easily debug an element
+ *
+ */
+/*
+ * Display grid for vertical rhythm
+ *
+ */
+.debug-rythm {
+  background: linear-gradient(to bottom, #ba9b9a 0.1em, transparent 0.1em) !important;
+  background-size: 100% 1.5em !important;
+}
+/* ----------------------------------------------------------- */
 /* == alignment */
 /* ----------------------------------------------------------- */
 /* block
@@ -135,6 +272,15 @@ caption {
 }
 .vmiddle {
   vertical-align: middle;
+}
+/* ----------------------------------------------------------- */
+/* == colors */
+/* ----------------------------------------------------------- */
+.color-primary {
+  color: #3498db;
+}
+.color-secondary {
+  color: #1abc9c;
 }
 /* ----------------------------------------------------------- */
 /* == spacings */
@@ -260,38 +406,50 @@ caption {
   padding-left: 30px;
 }
 /* ----------------------------------------------------------- */
-/* == layout */
+/* == text */
 /* ----------------------------------------------------------- */
-/* BFC to the rescue */
-.mod {
-  overflow: hidden;
+.bold {
+  font-weight: bold;
 }
-.clear,
-.line,
-.row {
-  clear: both;
+.italic {
+  font-style: italic;
 }
-/* blocks that must contain floats */
-.clearfix:after,
-.line:after,
-.mod:after {
-  display: table;
-  clear: both;
-  content: "";
-}
-.inbl {
-  display: inline-block;
-}
-/* table layout
+/* font size
 -------------------------------------------------------------- */
-.row {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
+.txtsmaller {
+  /*font-size: unit(@font-size / @bf, em);*/
+  font-size: 1rem;
+  line-height: 2.1;
+  margin-bottom: 2.1em;
 }
-.row > *,
-.col {
-  display: table-cell;
+.txtsmall {
+  /*font-size: unit(@font-size / @bf, em);*/
+  font-size: 1.2rem;
+  line-height: 1.75;
+  margin-bottom: 1.75em;
+}
+.txtbig {
+  /*font-size: unit(@font-size / @bf, em);*/
+  font-size: 1.6rem;
+  line-height: 1.3125;
+  margin-bottom: 1.3125em;
+}
+.txtbigger {
+  /*font-size: unit(@font-size / @bf, em);*/
+  font-size: 1.8rem;
+  line-height: 1.16666667;
+  margin-bottom: 1.16666667em;
+}
+/* transformations
+-------------------------------------------------------------- */
+.uppercase {
+  text-transform: uppercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.lowercase {
+  text-transform: lowercase;
 }
 /* ----------------------------------------------------------- */
 /* == width */
@@ -337,117 +495,6 @@ caption {
 }
 .w100 {
   width: 100%;
-}
-[class*="grid-"] {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-[class*="grid-"] > * {
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  display: block;
-  /* IE fix */
-}
-/* vertical align
--------------------------------------------------------------- */
-[class*="grid-top"] {
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-}
-[class*="grid-bottom"] {
-  -webkit-align-items: flex-end;
-  -ms-flex-align: end;
-  align-items: flex-end;
-}
-[class*="grid-middle"] {
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-/* ----------------------------------------------------------- */
-/* == rwd */
-/* ----------------------------------------------------------- */
-/* responsive iframe http://www.smashingmagazine.com/2014/02/27/making-embedded-content-work-in-responsive-design/ */
-.responsive-iframe {
-  position: relative;
-  overflow: hidden;
-  padding-top: 30px;
-  padding-bottom: 56.25%;
-  height: 0;
-}
-.responsive-iframe iframe,
-.responsive-iframe object,
-.responsive-iframe embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-/* large
--------------------------------------------------------------- */
-@media (max-width: 1280px) {
-  .l-hidden {
-    display: none !important;
-  }
-}
-/* medium
--------------------------------------------------------------- */
-@media (max-width: 960px) {
-  .m-hidden {
-    display: none !important;
-  }
-}
-/* small
--------------------------------------------------------------- */
-@media (max-width: 768px) {
-  .s-hidden {
-    display: none !important;
-  }
-}
-/* xsmall
--------------------------------------------------------------- */
-@media (max-width: 480px) {
-  .mod,
-  .col {
-    display: block !important;
-    float: none !important;
-    width: auto !important;
-  }
-  .xs-hidden {
-    display: none !important;
-  }
-}
-/* ----------------------------------------------------------- */
-/* == debug */
-/* ----------------------------------------------------------- */
-/*
- * Generates a random color
- *
- */
-/*
- * Easily debug an element
- *
- */
-/*
- * Display grid for vertical rhythm
- *
- */
-.debug-rythm {
-  background: linear-gradient(to bottom, #ba9b9a 0.1em, transparent 0.1em) !important;
-  background-size: 100% 1.5em !important;
 }
 /**
  * Form Module
@@ -532,7 +579,7 @@ input {
   width: 320px;
   border: 1px solid #d8d8d8;
   border-radius: 0px;
-  background: #ffffff;
+  background: #fff;
   box-shadow: inset 0 1px 3px #f6f6f6;
 }
 input[type="radio"] + label,
@@ -698,7 +745,7 @@ input[type="submit"] {
 }
 .pagination li.current a {
   background-color: #3498db;
-  color: #ffffff;
+  color: #fff;
 }
 /**
  * Table Module
@@ -770,7 +817,7 @@ table thead {
   padding: .5em 1em;
   border-radius: 0.5em;
   background: rgba(0, 0, 0, 0.8);
-  color: #ffffff;
+  color: #fff;
   content: attr(data-tooltip);
   white-space: nowrap;
 }
@@ -787,50 +834,6 @@ table thead {
 /* ----------------------------------------------------------- */
 /* == fonts */
 /* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-/* == helpers */
-/* ----------------------------------------------------------- */
-.italic {
-  font-style: italic;
-}
-.bold {
-  font-weight: bold;
-}
-.uppercase {
-  text-transform: uppercase;
-}
-.capitalize {
-  text-transform: capitalize;
-}
-.lowercase {
-  text-transform: lowercase;
-}
-/* font size
--------------------------------------------------------------- */
-.txtsmaller {
-  /*font-size: unit(@font-size / @bf, em);*/
-  font-size: 1rem;
-  line-height: 2.1;
-  margin-bottom: 2.1em;
-}
-.txtsmall {
-  /*font-size: unit(@font-size / @bf, em);*/
-  font-size: 1.2rem;
-  line-height: 1.75;
-  margin-bottom: 1.75em;
-}
-.txtbig {
-  /*font-size: unit(@font-size / @bf, em);*/
-  font-size: 1.6rem;
-  line-height: 1.3125;
-  margin-bottom: 1.3125em;
-}
-.txtbigger {
-  /*font-size: unit(@font-size / @bf, em);*/
-  font-size: 1.8rem;
-  line-height: 1.16666667;
-  margin-bottom: 1.16666667em;
-}
 /* ----------------------------------------------------------- */
 /* == grids */
 /* ----------------------------------------------------------- */
@@ -850,19 +853,19 @@ table thead {
   margin-left: 2rem;
   margin-bottom: 2rem;
 }
-.grid-2-5 > :nth-child(odd) {
-  width: calc(28.571428571428573% - 1rem);
+.grid-1-3 > :nth-child(odd) {
+  width: calc(25% - 1rem);
 }
-.grid-2-5 > :nth-child(even) {
-  width: calc(71.42857142857143% - 1rem );
+.grid-1-3 > :nth-child(even) {
+  width: calc(75% - 1rem );
   margin-left: 2rem;
 }
 /* ----------------------------------------------------------- */
 /* == main */
 /* ----------------------------------------------------------- */
 body {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #fff;
+  color: #000;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .container {
@@ -937,20 +940,6 @@ hr {
   color: #3498db;
 }
 /* ----------------------------------------------------------- */
-/* == navigation */
-/* ----------------------------------------------------------- */
-.navigation ul {
-  padding-left: 0;
-}
-.navigation li {
-  display: inline-block;
-  margin: 10px 0;
-}
-.navigation li a {
-  display: inline-block;
-  padding: 10px 5px;
-}
-/* ----------------------------------------------------------- */
 /* == content */
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
@@ -968,6 +957,20 @@ hr {
 .footer a:hover,
 .footer a:visited {
   color: #3498db;
+}
+/* ----------------------------------------------------------- */
+/* == navigation */
+/* ----------------------------------------------------------- */
+.navigation ul {
+  padding-left: 0;
+}
+.navigation li {
+  display: inline-block;
+  margin: 10px 0;
+}
+.navigation li a {
+  display: inline-block;
+  padding: 10px 5px;
 }
 /* ----------------------------------------------------------- */
 /* == rwd -> large */
