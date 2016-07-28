@@ -25,14 +25,3 @@ Licence
 -------
 
 Higgcss est distribué sous [licence MIT](https://github.com/robinparisi/higgcss/blob/master/LICENSE).
-
-Références
--------
-
-* http://www.paulirish.com/2012/box-sizing-border-box-ftw/
-
-Crédits
--------
-
-* [Raphael Goetter](http://http://www.goetter.fr/) et son excellent framework [KNACSS](http://www.knacss.com/) qui a inspiré Higgcss
-* [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
