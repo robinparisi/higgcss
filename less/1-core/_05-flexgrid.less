@@ -1,3 +1,5 @@
+// important: nth-child(n) is used to keep same specificity between grid (equal and unequal)
+
 [class*="grid-"] {
   display: flex;
   flex-direction: row;
@@ -10,49 +12,65 @@
   display: block; /* IE fix */
 }
 
-// equal grid no gutter (when gutter = 0)
-.grid(@number:@number, @gutter:@gutter) when (@gutter = 0) {
-  & > * {
+// equal grid with gutter (avoid percentage since it doesn't work well with margin bottom)
+.grid(@number:@number, @gutter:@default-gutter, @mb:@gutter) when (@number > 1) {
+  & {
+    margin-left: -@gutter;
+    margin-bottom: -@mb; /* avoid unwanted margin on last line */
+  }
+
+  & > *:nth-child(n) {
+    width: ~'calc(100% * 1 / @{number} - @{gutter})';
+    margin-left: @gutter;
+    margin-bottom: @mb;
+  }
+
+}
+
+// one column mode
+.grid(@number:@number, @gutter:@default-gutter, @mb:@gutter) when (@number = 1) {
+  & {
+    margin-left: 0;
+    margin-bottom: -@mb;
+  }
+
+  & > *:nth-child(n) {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: @mb;
+  }
+}
+
+// equal grid no gutter
+.grid(@number:@number, @gutter:@default-gutter) when (@gutter = 0) {
+  & > *:nth-child(n) {
     width: ~'calc(100% * 1 / @{number})';
   }
 }
 
-// equal grid with gutter (avoid percentage since it doesn't work for margin bottom)
-.grid(@number:@number, @gutter:@gutter) {
-  & {
-    margin-left: -@gutter;
-  }
-
-  & > * {
-    width: ~'calc(100% * 1 / @{number} - @{gutter})';
-    margin-left: @gutter;
-    margin-bottom: @gutter
-  }
-}
-
-// unqual grid no gutter (when gutter = 0)
-.unequalGrid(@column1, @column2, @gutter:@gutter) when (@gutter = 0) {
-  & > :nth-child(odd) {
+// unequal grid no gutter (when gutter = 0)
+.unequalGrid(@column1, @column2, @gutter:@default-gutter) when (@gutter = 0) {
+  & > *:nth-child(odd) {
     @size : (@column1 * 100%) / (@column1 + @column2);
     width: ~'calc(@{size})';
   }
 
-  & > :nth-child(even) {
+  & > *:nth-child(even) {
     @size : (@column2 * 100%) / (@column1 + @column2);
     width: ~'calc(@{size})';
   }
 }
 
-// equal grid with gutter
-.unequalGrid(@column1, @column2, @gutter:@gutter) {
+// unequal grid with gutter
+.unequalGrid(@column1, @column2, @gutter:@default-gutter) {
   @g : @gutter / 2;
 
-  & > :nth-child(odd) {
+  & > *:nth-child(odd) {
     @size : (@column1 * 100%) / (@column1 + @column2);
     width: ~'calc(@{size} - @{g})';
   }
 
-  & > :nth-child(even) {
+  & > *:nth-child(even) {
     @size : (@column2 * 100%) / (@column1 + @column2);
     width: ~'calc(@{size} - @{g} )';
     margin-left: @gutter;
@@ -70,6 +88,13 @@
   align-items: flex-end;
 }
 
-[class*="grid-middle"] {
+[class*="grid-center"] {
   align-items: center;
+}
+
+/* helpers
+-------------------------------------------------------------- */
+
+[class*="grid-"].grid-noMargin > * {
+  margin-bottom: 0;
 }
