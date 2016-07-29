@@ -4,6 +4,18 @@
 
 @base-gutter: 2rem;
 
+.grid-1 {
+  .grid(1, @base-gutter);
+}
+
+.grid-2 {
+  .grid(2, @base-gutter);
+}
+
+.grid-2-noGutter {
+  .grid(2, 0);
+}
+
 .grid-3 {
   .grid(3, @base-gutter);
 }
@@ -14,4 +26,14 @@
 
 .grid-1-3 {
   .unequalGrid(1, 3, @base-gutter);
+}
+
+@media (max-width: @xsmall) {
+  .grid-1-xs {
+    .grid(1);
+  }
+
+  .grid-2-xs {
+    .grid(2);
+  }
 }
