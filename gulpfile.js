@@ -1,10 +1,12 @@
-var gulp            = require('gulp');
-var less            = require('gulp-less');
-var autoprefixer    = require('gulp-autoprefixer');
-var browserSync     = require('browser-sync');
-var reload          = browserSync.reload;
+"use strict";
 
-var paths = {
+const gulp = require('gulp');
+const less = require('gulp-less');
+const autoprefixer = require('gulp-autoprefixer');
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
+
+const paths = {
     less: {
         src: 'less/style.less',
         dest: 'demo/',
@@ -12,18 +14,6 @@ var paths = {
     },
     html: {
         watch: 'demo/**/*.html'
-    },
-    csscomb : {
-        src: [
-            'less/**',
-            '!less/1.base/_00-mixins.less',
-            '!less/1.base/_05-spacing.less',
-            '!less/1.base/_07-width.less',
-            '!less/1.base/_08-grid.less',
-            '!less/2.structure/_02-icons.less',
-            '!less/5.vendors/**'
-        ],
-        dest: 'less/'
     }
 };
 
