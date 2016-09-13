@@ -20,7 +20,7 @@
   }
 
   & > *:nth-child(n) {
-    width: ~'calc(100% * 1 / @{number} - @{gutter})';
+    width: ~'calc(100% * 1 / @{number} - @{gutter} - .01px)'; // .01px = @bugfix IE
     margin-left: @gutter;
     margin-bottom: @mb;
   }
@@ -67,12 +67,12 @@
 
   & > *:nth-child(odd) {
     @size : (@column1 * 100%) / (@column1 + @column2);
-    width: ~'calc(@{size} - @{g})';
+    width: ~'calc(@{size} - @{g} - .01px)'; // .01px = @bugfix IE
   }
 
   & > *:nth-child(even) {
     @size : (@column2 * 100%) / (@column1 + @column2);
-    width: ~'calc(@{size} - @{g} )';
+    width: ~'calc(@{size} - @{g} - .01px)'; // .01px = @bugfix IE
     margin-left: @gutter;
   }
 }
