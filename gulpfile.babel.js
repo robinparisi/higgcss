@@ -1,9 +1,10 @@
 "use strict";
 
-const gulp = require('gulp');
-const less = require('gulp-less');
-const autoprefixer = require('gulp-autoprefixer');
-const browserSync = require('browser-sync');
+import gulp from 'gulp';
+import less from 'gulp-less';
+import autoprefixer from 'gulp-autoprefixer';
+import browserSync from 'browser-sync';
+
 const reload = browserSync.reload;
 
 const paths = {
@@ -17,7 +18,7 @@ const paths = {
     }
 };
 
-gulp.task('less', function () {
+gulp.task('less', () => {
     gulp.src(paths.less.src)
         .pipe(less())
         .pipe(autoprefixer({
@@ -29,7 +30,7 @@ gulp.task('less', function () {
 });
 
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', () => {
     browserSync({
         server: {
             baseDir: "demo",
@@ -38,12 +39,12 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('bs-reload', function () {
+gulp.task('bs-reload', () => {
     browserSync.reload();
 });
 
 
-gulp.task('watch', ['browser-sync'], function () {
+gulp.task('watch', ['browser-sync'], () => {
     gulp.watch(paths.less.watch, ['less']);
     gulp.watch(paths.html.watch, ['bs-reload']);
 
