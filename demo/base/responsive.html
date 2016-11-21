@@ -30,16 +30,147 @@
     .xsmall {
         background-color: #ed5565;
     }
+
+    .container {
+        margin-top: 30px;
+    }
+
+    .visible {
+        background-color: #2ecc71;
+    }
+
+    .hide {
+        background-color: #e74c3c;
+    }
+
+    .test {
+        background-color: #34495e;
+    }
+
+    table {
+        border: none;
+    }
+
+    table thead {
+        background-color: transparent;
+    }
+
+    table tr {
+        border-bottom: 2px solid #fff;
+    }
+
+    table td,
+    table th {
+        border-right: 2px solid #fff;
+    }
+
+    table td {
+        color: #fff;
+        text-align: center;
+    }
+
     </style>
 
 
 </head>
 <body>
     <div class="container">
-        <div class="box large">large</div>
-        <div class="box medium m-hidden">medium</div>
-        <div class="box small s-hidden">small</div>
-        <div class="box xsmall xs-hidden">xsmall</div>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Extra Small (xs)</th>
+                    <th>Small (s)</th>
+                    <th>Medium (m)</th>
+                    <th>Desktop (l)</th>
+                    <th>Visible</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>hidden-xs</th>
+                    <td class="hide"></td>
+                    <td class="visible"></td>
+                    <td class="visible"></td>
+                    <td class="visible"></td>
+                    <td class="test"><span class="hidden-xs">yes</span></td>
+
+                </tr>
+                <tr>
+                    <th>hidden-xs-s</th>
+                    <td class="hide"></td>
+                    <td class="hide"></td>
+                    <td class="visible"></td>
+                    <td class="visible"></td>
+                    <td class="test"><span class="hidden-xs-s">yes</span></td>
+                </tr>
+                <tr>
+                    <th>hidden-xs-s-m</th>
+                    <td class="hide"></td>
+                    <td class="hide"></td>
+                    <td class="hide"></td>
+                    <td class="visible"></td>
+                    <td class="test"><span class="hidden-xs-s-m-l">yes</span></td>
+                </tr>
+                <tr>
+                    <th>hidden</th>
+                    <td class="hide"></td>
+                    <td class="hide"></td>
+                    <td class="hide"></td>
+                    <td class="hide"></td>
+                    <td class="test"><span class="hidden">yes</span></td>
+                </tr>
+                <tr>
+                    <th>hidden-xs-s-m-l-l+</th>
+                    <td class="hide"></td>
+                    <td class="hide"></td>
+                    <td class="hide"></td>
+                    <td class="hide"></td>
+                    <td class="test"><span class="hidden-xs-s-m-l-l+">yes</span></td>
+                </tr>
+                <tr>
+                    <th>hidden-xs-m</th>
+                    <td class="hide"></td>
+                    <td class="visible"></td>
+                    <td class="hide"></td>
+                    <td class="visible"></td>
+                    <td class="test"><span class="hidden-xs-m">yes</span></td>
+                </tr>
+                <tr>
+                    <th>hidden-m</th>
+                    <td class="visible"></td>
+                    <td class="visible"></td>
+                    <td class="hide"></td>
+                    <td class="visible"></td>
+                    <td class="test"><span class="hidden-m">yes</span></td>
+                </tr>
+                <tr>
+                    <th>hidden-xs-up</th>
+                    <td class="visible"></td>
+                    <td class="hide"></td>
+                    <td class="hide"></td>
+                    <td class="hide"></td>
+                    <td class="test"><span class="hidden-xs-up">yes</span></td>
+                </tr>
+
+                <tr>
+                    <th>hidden-s-up</th>
+                    <td class="visible"></td>
+                    <td class="visible"></td>
+                    <td class="hide"></td>
+                    <td class="hide"></td>
+                    <td class="test"><span class="hidden-s-up">yes</span></td>
+                </tr>
+                <tr>
+                    <th>hidden-m-l+</th>
+                    <td class="visible"></td>
+                    <td class="visible"></td>
+                    <td class="hide"></td>
+                    <td class="hide"></td>
+                    <td class="test"><span class="hidden-m-l+">yes</span></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>

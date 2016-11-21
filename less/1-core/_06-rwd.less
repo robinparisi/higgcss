@@ -23,53 +23,63 @@
 }
 
 
-/* large
+/* utilities
 -------------------------------------------------------------- */
 
-@media (max-width: @large) {
-
-  .l-hidden {
-    display: none !important;
-  }
-
+.hidden {
+  display: none;
 }
 
-/* medium
--------------------------------------------------------------- */
-
-@media (max-width: @medium) {
-
-  .m-hidden {
+@media (min-width: (@large + 1)) {
+  [class*="-l+"][class*="hidden-"]:not([class*="up"]) {
     display: none !important;
   }
-
 }
 
-/* small
--------------------------------------------------------------- */
-
-@media (max-width: @small) {
-
-  .s-hidden {
+@media (min-width: (@medium + 1)) and (max-width: @large) {
+  [class*="-l"][class*="hidden-"]:not([class*="up"]) {
     display: none !important;
   }
+}
 
+@media (min-width: (@small + 1)) and (max-width: @medium) {
+  [class*="-m"][class*="hidden-"]:not([class*="up"]) {
+    display: none !important;
+  }
+}
+
+@media (min-width: (@xsmall + 1)) and (max-width: @small) {
+  [class*="-s"][class*="hidden-"]:not([class*="up"]) {
+    display: none !important;
+  }
+}
+
+@media ( max-width: @xsmall) {
+  [class*="-xs"][class*="hidden-"]:not([class*="up"]) {
+    display: none !important;
+  }
+}
+
+@media ( min-width: @small) {
+  .hidden-s-up {
+    display: none !important;
+  }
+}
+
+@media ( min-width: @xsmall) {
+  .hidden-xs-up {
+    display: none !important;
+  }
 }
 
 /* xsmall
 -------------------------------------------------------------- */
 
 @media (max-width: @xsmall) {
-
   .mod,
   .col {
     display: block !important;
     float: none !important;
     width: auto !important;
   }
-
-  .xs-hidden {
-    display: none !important;
-  }
-
 }
