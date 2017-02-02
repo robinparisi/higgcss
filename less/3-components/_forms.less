@@ -10,7 +10,7 @@
 
 
 @input-border-radius     : 0px;
-@input-border            : 1px solid #d8d8d8;
+@input-border            : .1rem solid #d8d8d8;
 @input-backgroud-color   : #fff;
 @input-hover             : 5%;
 @input-error-color       : #efd8d7;
@@ -65,7 +65,7 @@ label,
 
 .f-inline input,
 .f-inline .btn {
-  height: 40px;
+  height: 4rem;
 }
 
 .f-inline .btn {
@@ -77,9 +77,9 @@ label,
 -------------------------------------------------------------- */
 
 fieldset {
-  margin: 25px 0;
+  margin: 2.5rem 0;
   padding: 1em;
-  border: 1px solid #d8d8d8;
+  border: .1rem solid #d8d8d8;
 }
 
 input,
@@ -91,13 +91,13 @@ label,
 
 select {
   margin: 0;
-  border: 1px solid #ccc;
+  border: .1rem solid #ccc;
   background-color: #fff;
 }
 
 textarea {
   padding: .4em;
-  min-width: 320px;
+  min-width: 32rem;
   min-height: 8em;
   vertical-align: top;
   resize: vertical;
@@ -106,7 +106,7 @@ textarea {
 input {
   margin: 0;
   padding: .6em .6em;
-  width: 320px;
+  width: 32rem;
   border: @input-border;
   border-radius: @input-border-radius;
   background: @input-backgroud-color;
@@ -116,7 +116,7 @@ input {
 input[type="radio"] + label,
 input[type="checkbox"] + label {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 1rem;
   vertical-align: baseline;
 }
 
@@ -140,7 +140,7 @@ input[type="checkbox"] {
 -------------------------------------------------------------- */
 
 .f-10 {
-  min-width: 80px;
+  min-width: 8rem;
   width: 10%;
 }
 
@@ -170,17 +170,17 @@ input[type="checkbox"] {
 }
 
 .f-error {
-  margin-top: 20px;
-  padding: 5px 10px;
-  border-left: 5px solid @input-error-color;
+  margin-top: 2rem;
+  padding: .5rem 1rem;
+  border-left: .5rem solid @input-error-color;
   background-color: lighten(@input-error-color, 8%);
 }
 
 .f-error input {
-  border: 1px solid red;
+  border: .1rem solid red;
 }
 
 .f-error-message {
-  padding-top: 4px;
+  padding-top: .4rem;
   color: darken(@input-error-color, 20%);
 }
