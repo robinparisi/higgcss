@@ -78,10 +78,10 @@ caption {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
-  margin: -1px;
+  margin: -0.1rem;
   padding: 0;
-  width: 1px;
-  height: 1px;
+  width: .1rem;
+  height: .2rem;
   border: 0;
 }
 .visually-hidden.focusable:active,
@@ -174,7 +174,7 @@ caption {
 .responsive-iframe {
   position: relative;
   overflow: hidden;
-  padding-top: 30px;
+  padding-top: 3rem;
   padding-bottom: 56.25%;
   height: 0;
 }
@@ -310,118 +310,118 @@ caption {
   padding: 0;
 }
 .ma1 {
-  margin: 10px;
+  margin: 1rem;
 }
 .ma2 {
-  margin: 20px;
+  margin: 2rem;
 }
 .ma3 {
-  margin: 30px;
+  margin: 3rem;
 }
 .pa1 {
-  padding: 10px;
+  padding: 1rem;
 }
 .pa2 {
-  padding: 20px;
+  padding: 2rem;
 }
 .pa3 {
-  padding: 30px;
+  padding: 3rem;
 }
 .mt0 {
   margin-top: 0;
 }
 .mt1 {
-  margin-top: 10px;
+  margin-top: 1rem;
 }
 .mt2 {
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 .mt3 {
-  margin-top: 30px;
+  margin-top: 3rem;
 }
 .mr0 {
   margin-right: 0;
 }
 .mr1 {
-  margin-right: 10px;
+  margin-right: 1rem;
 }
 .mr2 {
-  margin-right: 20px;
+  margin-right: 2rem;
 }
 .mr3 {
-  margin-right: 30px;
+  margin-right: 3rem;
 }
 .mb0 {
   margin-bottom: 0;
 }
 .mb1 {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 .mb2 {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 .mb3 {
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
 .ml0 {
   margin-left: 0;
 }
 .ml1 {
-  margin-left: 10px;
+  margin-left: 1rem;
 }
 .ml2 {
-  margin-left: 20px;
+  margin-left: 2rem;
 }
 .ml3 {
-  margin-left: 30px;
+  margin-left: 3rem;
 }
 .pt0 {
   padding-top: 0;
 }
 .pt1 {
-  padding-top: 10px;
+  padding-top: 1rem;
 }
 .pt2 {
-  padding-top: 20px;
+  padding-top: 2rem;
 }
 .pt3 {
-  padding-top: 30px;
+  padding-top: 3rem;
 }
 .pr0 {
   padding-right: 0;
 }
 .pr1 {
-  padding-right: 10px;
+  padding-right: 1rem;
 }
 .pr2 {
-  padding-right: 20px;
+  padding-right: 2rem;
 }
 .pr3 {
-  padding-right: 30px;
+  padding-right: 3rem;
 }
 .pb0 {
   padding-bottom: 0;
 }
 .pb1 {
-  padding-bottom: 10px;
+  padding-bottom: 1rem;
 }
 .pb2 {
-  padding-bottom: 20px;
+  padding-bottom: 2rem;
 }
 .pb3 {
-  padding-bottom: 30px;
+  padding-bottom: 3rem;
 }
 .pl0 {
   padding-left: 0;
 }
 .pl1 {
-  padding-left: 10px;
+  padding-left: 1rem;
 }
 .pl2 {
-  padding-left: 20px;
+  padding-left: 2rem;
 }
 .pl3 {
-  padding-left: 30px;
+  padding-left: 3rem;
 }
 /* ----------------------------------------------------------- */
 /* == text */
@@ -561,7 +561,7 @@ label,
 }
 .f-inline input,
 .f-inline .btn {
-  height: 40px;
+  height: 4rem;
 }
 .f-inline .btn {
   vertical-align: middle;
@@ -569,9 +569,9 @@ label,
 /* basics style
 -------------------------------------------------------------- */
 fieldset {
-  margin: 25px 0;
+  margin: 2.5rem 0;
   padding: 1em;
-  border: 1px solid #d8d8d8;
+  border: .1rem solid #d8d8d8;
 }
 input,
 select,
@@ -581,12 +581,12 @@ label,
 }
 select {
   margin: 0;
-  border: 1px solid #ccc;
+  border: .1rem solid #ccc;
   background-color: #fff;
 }
 textarea {
   padding: .4em;
-  min-width: 320px;
+  min-width: 32rem;
   min-height: 8em;
   vertical-align: top;
   resize: vertical;
@@ -594,8 +594,8 @@ textarea {
 input {
   margin: 0;
   padding: .6em .6em;
-  width: 320px;
-  border: 1px solid #d8d8d8;
+  width: 32rem;
+  border: 0.1rem solid #d8d8d8;
   border-radius: 0px;
   background: #fff;
   box-shadow: inset 0 1px 3px #f6f6f6;
@@ -603,7 +603,7 @@ input {
 input[type="radio"] + label,
 input[type="checkbox"] + label {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 1rem;
   vertical-align: baseline;
 }
 input[type="radio"],
@@ -622,7 +622,7 @@ input[type="checkbox"] {
 /* width
 -------------------------------------------------------------- */
 .f-10 {
-  min-width: 80px;
+  min-width: 8rem;
   width: 10%;
 }
 .f-25 {
@@ -644,16 +644,16 @@ input[type="checkbox"] {
   font-weight: bold;
 }
 .f-error {
-  margin-top: 20px;
-  padding: 5px 10px;
-  border-left: 5px solid #efd8d7;
+  margin-top: 2rem;
+  padding: .5rem 1rem;
+  border-left: 0.5rem solid #efd8d7;
   background-color: #fbf4f4;
 }
 .f-error input {
-  border: 1px solid red;
+  border: .1rem solid red;
 }
 .f-error-message {
-  padding-top: 4px;
+  padding-top: .4rem;
   color: #d2918e;
 }
 /**
@@ -677,7 +677,7 @@ input[type="submit"] {
   margin: 0;
   padding: 1rem 2rem;
   border: none;
-  border-radius: 2px;
+  border-radius: 0.2rem;
   background-color: #3498db;
   box-shadow: none;
   color: #fff;
@@ -739,8 +739,8 @@ input[type="submit"] {
 /* ----------------------------------------------------------- */
 .pagination {
   display: inline-block;
-  margin: 20px 0;
-  border-radius: 4px;
+  margin: 2rem 0;
+  border-radius: .4rem;
 }
 .pagination,
 .pagination li {
@@ -749,14 +749,14 @@ input[type="submit"] {
 }
 .pagination li {
   display: inline-block;
-  margin: 0 3px 1em;
+  margin: 0 .3rem 1em;
   list-style-type: none;
 }
 .pagination li a,
 .pagination li > span {
   padding: .3em .6em;
-  border: 1px solid grey;
-  border-radius: 2px;
+  border: 0.1rem solid grey;
+  border-radius: 0.2rem;
 }
 .pagination li a:hover {
   color: #1abc9c;
@@ -778,7 +778,7 @@ input[type="submit"] {
 table {
   max-width: 100%;
   width: 100%;
-  border: 1px solid #cbcbcb;
+  border: .1rem solid #cbcbcb;
   border-spacing: 0;
   border-collapse: collapse /* remove spacing between table cells */;
   table-layout: fixed /* http://css-tricks.com/fixing-tables-long-strings */;
@@ -794,8 +794,8 @@ table th {
   overflow: hidden;
   margin: 0;
   padding: .5em 1em;
-  border-width: 0 0 0 1px;
-  border-left: 1px solid #cbcbcb;
+  border-width: 0 0 0 .1rem;
+  border-left: .1rem solid #cbcbcb;
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: break-word;
@@ -946,8 +946,8 @@ body {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding: 0 10px;
-  max-width: 1024px;
+  padding: 0 1rem;
+  max-width: 102.4rem;
 }
 /* titles
 -------------------------------------------------------------- */
@@ -995,9 +995,9 @@ ul {
 -------------------------------------------------------------- */
 hr {
   display: block;
-  height: 1px;
+  height: .1rem;
   border: 0;
-  border-top: 1px solid #cccccc;
+  border-top: .1rem solid #cccccc;
   margin: 1em 0;
   padding: 0;
 }
@@ -1021,7 +1021,7 @@ hr {
 /* == footer */
 /* ----------------------------------------------------------- */
 .footer {
-  padding: 20px 0;
+  padding: 2rem 0;
 }
 .footer ul,
 .footer li {
@@ -1041,17 +1041,17 @@ hr {
 }
 .navigation li {
   display: inline-block;
-  margin: 10px 0;
+  margin: 1rem 0;
 }
 .navigation li a {
   display: inline-block;
-  padding: 10px 5px;
+  padding: 1rem .5rem;
 }
 /* ----------------------------------------------------------- */
 /* == rwd -> large */
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
-/* == rwd -> meidum */
+/* == rwd -> medium */
 /* ----------------------------------------------------------- */
 /* ----------------------------------------------------------- */
 /* == rwd -> small */
