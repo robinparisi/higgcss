@@ -42,6 +42,11 @@ img[src$=".svg"] {
   width: 100%;
 }
 
+/* fix input no style on Safari */
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
 button,
 input,
 select,
