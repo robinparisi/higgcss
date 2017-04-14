@@ -9,7 +9,7 @@
 /* ----------------------------------------------------------- */
 
 
-@input-border-radius     : 0px;
+@input-border-radius     : .4rem;
 @input-border            : .1rem solid #d8d8d8;
 @input-background-color  : #fff;
 @input-hover             : 5%;
@@ -105,13 +105,13 @@ textarea {
 }
 
 input {
-  margin: 0;
-  padding: .6em .6em;
-  width: 32rem;
+  padding: .8em;
+  max-width: 32rem;
+  width: 100%;
   border: @input-border;
   border-radius: @input-border-radius;
   background: @input-background-color;
-  box-shadow: inset 0 1px 3px #f6f6f6;
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, .08);
 }
 
 input[type="radio"] + label,
@@ -137,30 +137,32 @@ input[type="checkbox"] {
   width: 100%;
 }
 
-/* width
+/* size
 -------------------------------------------------------------- */
 
-.f-10 {
-  min-width: 8rem;
-  width: 10%;
+.f-size-1 {
+  max-width: 10rem;
 }
 
-.f-25 {
-  width: 25%;
+.f-size-2 {
+  max-width: 20rem;
 }
 
-.f-50 {
-  width: 50%;
+.f-size-3 {
+  max-width: 30rem;
 }
 
-.f-75 {
-  width: 75%;
+.f-size-4 {
+  max-width: 40rem;
 }
 
-.f-100 {
-  width: 100%;
+.f-size-5 {
+  max-width: 50rem;
 }
 
+.f-size-full {
+  max-width: 100%;
+}
 
 /* errors
 -------------------------------------------------------------- */
@@ -171,7 +173,7 @@ input[type="checkbox"] {
 }
 
 .f-error input {
-  margin-bottom: .5rem;
+  margin-bottom: .8rem;
   border: .1rem solid @input-error;
 }
 
