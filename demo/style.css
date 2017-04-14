@@ -52,7 +52,7 @@ textarea {
 html {
   font-size: 62.5%;
   /* IE9-11 calculation fix */
-  font-size: calc(0.625em);
+  font-size: calc(1em * .625);
 }
 body {
   font-size: 1.4em;
