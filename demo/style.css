@@ -655,21 +655,15 @@ input[type="checkbox"] {
 /* errors
 -------------------------------------------------------------- */
 .f-required {
-  color: red;
+  color: #ff3860;
   font-weight: bold;
 }
-.f-error {
-  margin-top: 2rem;
-  padding: .5rem 1rem;
-  border-left: 0.5rem solid #efd8d7;
-  background-color: #fbf4f4;
-}
 .f-error input {
-  border: .1rem solid red;
+  margin-bottom: .5rem;
+  border: 0.1rem solid #ff3860;
 }
 .f-error-message {
-  padding-top: .4rem;
-  color: #d2918e;
+  color: #ff3860;
 }
 /**
 * Button Module
