@@ -14,7 +14,7 @@
 /* == module */
 /* ----------------------------------------------------------- */
 
-table {
+.table {
   max-width: 100%;
   width: 100%;
   border: .1rem solid #cbcbcb;
@@ -23,15 +23,15 @@ table {
   table-layout: fixed /* http://css-tricks.com/fixing-tables-long-strings */;
 }
 
-table caption {
+.table caption {
   padding: 1em 0;
   color: #000;
   text-align: center;
   font: italic 85%/1 arial, sans-serif;
 }
 
-table td,
-table th {
+.table td,
+.table th {
   overflow: hidden;
   margin: 0;
   padding: .5em 1em;
@@ -43,12 +43,12 @@ table th {
   font-size: inherit;
 }
 
-table td:first-child,
-table th:first-child {
+.table td:first-child,
+.table th:first-child {
   border-left-width: 0;
 }
 
-table thead {
+.table thead {
   background: #e0e0e0;
   color: #000;
   vertical-align: bottom;

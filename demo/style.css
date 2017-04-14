@@ -673,7 +673,7 @@ input[type="checkbox"] {
   color: #d2918e;
 }
 /**
-* Buttons Module
+* Button Module
 * namespace : .btn
 */
 /* ----------------------------------------------------------- */
@@ -682,21 +682,15 @@ input[type="checkbox"] {
 /* ----------------------------------------------------------- */
 /* == module */
 /* ----------------------------------------------------------- */
-.btn,
-button {
-  vertical-align: middle;
-}
-.btn,
-button,
-input[type="submit"] {
+.btn {
   display: inline-block;
-  margin: 0;
-  padding: 1rem 2rem;
+  padding: .8em 1.6em;
   border: none;
   border-radius: 0.2rem;
   background-color: #3498db;
   box-shadow: none;
   color: #fff;
+  vertical-align: middle;
   text-align: center;
   text-decoration: none !important;
   line-height: normal;
@@ -791,7 +785,7 @@ input[type="submit"] {
 /* ----------------------------------------------------------- */
 /* == module */
 /* ----------------------------------------------------------- */
-table {
+.table {
   max-width: 100%;
   width: 100%;
   border: .1rem solid #cbcbcb;
@@ -799,14 +793,14 @@ table {
   border-collapse: collapse /* remove spacing between table cells */;
   table-layout: fixed /* http://css-tricks.com/fixing-tables-long-strings */;
 }
-table caption {
+.table caption {
   padding: 1em 0;
   color: #000;
   text-align: center;
   font: italic 85%/1 arial, sans-serif;
 }
-table td,
-table th {
+.table td,
+.table th {
   overflow: hidden;
   margin: 0;
   padding: .5em 1em;
@@ -817,11 +811,11 @@ table th {
   word-wrap: break-word;
   font-size: inherit;
 }
-table td:first-child,
-table th:first-child {
+.table td:first-child,
+.table th:first-child {
   border-left-width: 0;
 }
-table thead {
+.table thead {
   background: #e0e0e0;
   color: #000;
   vertical-align: bottom;
