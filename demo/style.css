@@ -626,13 +626,30 @@ input[type="checkbox"] {
   padding: 0;
   width: inherit;
 }
-/* grid (grid module is required)
+/* autogrid
 -------------------------------------------------------------- */
-[class^="grid"] > input,
-[class^="grid"] > textarea,
-[class^="grid"] > div > input,
-[class^="grid"] > div > textarea {
-  width: 100%;
+[class^="f-grid"] {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+[class^="f-grid"] > * {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: 2rem;
+  -ms-flex: 1 0 0;
+  flex: 1 0 0;
+}
+[class^="f-grid"] > *:first-child {
+  margin-left: 0;
+}
+[class^="f-grid"] input {
+  max-width: 100%;
 }
 /* size
 -------------------------------------------------------------- */

@@ -127,14 +127,30 @@ input[type="checkbox"] {
   width: inherit;
 }
 
-/* grid (grid module is required)
+/* autogrid
 -------------------------------------------------------------- */
 
-[class^="grid"] > input,
-[class^="grid"] > textarea,
-[class^="grid"] > div > input,
-[class^="grid"] > div > textarea {
-  width: 100%;
+[class^="f-grid"] {
+  display: flex;
+
+  align-items: flex-end;
+  flex-wrap: nowrap;
+}
+
+[class^="f-grid"] > * {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+
+  flex: 1 0 0;
+}
+
+[class^="f-grid"] > *:first-child {
+  margin-left: 0;
+}
+
+[class^="f-grid"] input {
+  max-width: 100%;
 }
 
 /* size
