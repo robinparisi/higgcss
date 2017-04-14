@@ -147,10 +147,10 @@ caption {
   align-items: stretch;
 }
 [class*="grid-"] > * {
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
   display: block;
   /* IE fix */
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 /* vertical align
 -------------------------------------------------------------- */
@@ -860,83 +860,77 @@ table thead {
 /* == grids */
 /* ----------------------------------------------------------- */
 .grid-1 {
-  margin-left: 0;
   margin-bottom: -2rem;
+  margin-left: 0;
 }
 .grid-1 > *:nth-child(n) {
-  width: 100%;
-  margin-left: 0;
   margin-bottom: 2rem;
+  margin-left: 0;
+  width: 100%;
 }
 .grid-2 {
-  margin-left: -2rem;
   margin-bottom: -2rem;
   /* avoid unwanted margin on last line */
+  margin-left: -2rem;
 }
 .grid-2 > *:nth-child(n) {
-  width: calc(100% * 1 / 2 - 2rem - .01px);
-  margin-left: 2rem;
   margin-bottom: 2rem;
+  margin-left: 2rem;
+  width: calc(100% * 1 / 2 - 2rem - .01px);
 }
 .grid-2-noGutter {
-  margin-left: 0;
-  margin-bottom: 0;
-  /* avoid unwanted margin on last line */
-}
-.grid-2-noGutter > *:nth-child(n) {
-  width: calc(100% * 1 / 2 - 0 - .01px);
-  margin-left: 0;
   margin-bottom: 0;
 }
 .grid-2-noGutter > *:nth-child(n) {
-  width: calc(100% * 1 / 2);
+  margin-bottom: 0;
+  width: calc(100% * 1 / 2 - .01px);
 }
 .grid-3 {
-  margin-left: -2rem;
   margin-bottom: -2rem;
   /* avoid unwanted margin on last line */
+  margin-left: -2rem;
 }
 .grid-3 > *:nth-child(n) {
-  width: calc(100% * 1 / 3 - 2rem - .01px);
-  margin-left: 2rem;
   margin-bottom: 2rem;
+  margin-left: 2rem;
+  width: calc(100% * 1 / 3 - 2rem - .01px);
 }
 .grid-4 {
-  margin-left: -2rem;
   margin-bottom: -2rem;
   /* avoid unwanted margin on last line */
+  margin-left: -2rem;
 }
 .grid-4 > *:nth-child(n) {
-  width: calc(100% * 1 / 4 - 2rem - .01px);
-  margin-left: 2rem;
   margin-bottom: 2rem;
+  margin-left: 2rem;
+  width: calc(100% * 1 / 4 - 2rem - .01px);
 }
 .grid-1-3 > *:nth-child(odd) {
   width: calc(25% - 1rem - .01px);
 }
 .grid-1-3 > *:nth-child(even) {
-  width: calc(75% - 1rem - .01px);
   margin-left: 2rem;
+  width: calc(75% - 1rem - .01px);
 }
 @media (max-width: 480px) {
   .grid-1-xs {
-    margin-left: 0;
     margin-bottom: -2rem;
+    margin-left: 0;
   }
   .grid-1-xs > *:nth-child(n) {
-    width: 100%;
-    margin-left: 0;
     margin-bottom: 2rem;
+    margin-left: 0;
+    width: 100%;
   }
   .grid-2-xs {
-    margin-left: -2rem;
     margin-bottom: -2rem;
     /* avoid unwanted margin on last line */
+    margin-left: -2rem;
   }
   .grid-2-xs > *:nth-child(n) {
-    width: calc(100% * 1 / 2 - 2rem - .01px);
-    margin-left: 2rem;
     margin-bottom: 2rem;
+    margin-left: 2rem;
+    width: calc(100% * 1 / 2 - 2rem - .01px);
   }
 }
 /* ----------------------------------------------------------- */
