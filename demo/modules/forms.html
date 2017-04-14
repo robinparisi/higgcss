@@ -11,155 +11,157 @@
     <![endif]-->
     <link rel="stylesheet" href="/style.css" media="all">
     <style>
-        .container {
-            padding: 10px;
-        }
+    .container {
+        padding: 10px;
+    }
     </style>
 </head>
 <body>
-<div class="container">
+    <div class="container">
 
-    <!-- Fieldset -->
-    <fieldset>
-        <legend>Formulaire de base</legend>
-        <!-- ici le formulaire -->
+        <!-- Fieldset -->
+        <fieldset>
+            <legend>Formulaire de base</legend>
+            <!-- ici le formulaire -->
+            <div>
+                <label for="select">Civilité</label>
+                <select name="select" id="select">
+                    <option>Monsieur</option>
+                    <option>Madame</option>
+                </select>
+            </div>
+            <div>
+                <label for="input1">Nom</label>
+                <input id="input1" name="input1" type="text" class="large-input" placeholder="votre nom">
+            </div>
+            <div>
+                <label for="input2">Prénom</label>
+                <input id="input2" name="input2" type="text">
+            </div>
+            <div>
+                <label for="username">Nom d'utilisateur <span class="f-required">*</span></label>
+                <input id="username" name="username" type="text">
+            </div>
+            <div class="mt2">
+                <input id="input3" name="input3" type="submit" class="btn btn-secondary">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Formulaire inline</legend>
+            <div class="grid-2">
+                <div class="f-inline">
+                    <label for="user">User</label>
+                    <input id="user" name="user" type="text">
+                    <button class="btn btn--primary">Valider</button>
+                </div>
+            </div>
+
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Formulaire inline boutons</legend>
+            <button class="btn btn--primary">Bouton 1</button>
+            <button class="btn btn--secondary">Bouton 2</button>
+            <button class="btn btn--danger">Bouton 3</button>
+
+        </fieldset>
+
+        <fieldset class="mt3">
+            <legend>Formulaire grid</legend>
+
+            <div class="grid-3">
+                <div>
+                    <label for="adress">Adresse</label>
+                    <input id="adress" name="adress" type="text" class="large-input">
+                </div>
+                <div>
+                    <label for="town">Ville</label>
+                    <input id="town" name="town" type="text">
+                </div>
+                <div>
+                    <label for="zipcode">Code postal</label>
+                    <input id="zipcode" name="zipcode" type="text">
+                </div>
+            </div>
+
+            <div class="grid-1-3">
+                <div>
+                    <label for="note">Note</label>
+                    <input id="note" name="note" type="text" class="large-input">
+                </div>
+                <div>
+                    <label for="phone">Numéro de téléphone</label>
+                    <input id="phone" name="phone" type="text">
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Différentes tailles</legend>
+            <div>
+                <input name="" type="text" class="f-10" placeholder="f-10">
+            </div>
+            <div>
+                <input name="" type="text" class="f-25" placeholder="f-25">
+            </div>
+            <div>
+                <input name="" type="text" class="f-50" placeholder="f-50">
+            </div>
+            <div>
+                <input name="" type="text" class="f-75" placeholder="f-75">
+            </div>
+            <div>
+                <input name="" type="text" class="f-100" placeholder="f-100">
+            </div>
+        </fieldset>
+
+        <!-- Input error -->
         <div>
-            <label for="select">Civilité</label>
-            <select name="select" id="select">
-                <option>Monsieur</option>
-                <option>Madame</option>
+            <div class="f-error">
+                <label for="email">Entrez une adresse e-mail</label>
+                <input id="email" name="email" type="text">
+                <div class="f-error-message">Une adresse email valide est requise</div>
+            </div>
+        </div>
+
+        <!-- Input select -->
+        <div>
+            <label for="fruits">Select box</label>
+            <select id="fruits">
+                <option value="banane">Banane</option>
+                <option value="fraise">Fraise</option>
+                <option value="poire">Poire</option>
             </select>
         </div>
+
+        <!-- Textarea -->
         <div>
-            <label for="input1">Nom</label>
-            <input id="input1" name="input1" type="text" class="large-input" placeholder="votre nom">
+            <label for="text">Un textarea</label>
+            <textarea id="text" class="f-100"></textarea>
         </div>
+
+        <!--- Radio groupe -->
         <div>
-            <label for="input2">Prénom</label>
-            <input id="input2" name="input2" type="text">
-        </div>
-        <div>
-            <label for="username">Nom d'utilisateur <span class="f-required">*</span></label>
-            <input id="username" name="username" type="text">
-        </div>
-        <div class="mt2">
-            <input id="input3" name="input3" type="submit" class="btn btn-secondary">
-        </div>
-    </fieldset>
-
-    <fieldset>
-        <legend>Formulaire inline</legend>
-        <div class="f-inline">
-            <label for="user">User</label>
-            <input id="user" name="user" type="text">
-            <button class="btn btn--primary">Valider</button>
-        </div>
-
-    </fieldset>
-
-
-    <fieldset>
-        <legend>Formulaire inline boutons</legend>
-        <button class="btn btn--primary">Bouton 1</button>
-        <button class="btn btn--secondary">Bouton 2</button>
-        <button class="btn btn--danger">Bouton 3</button>
-
-    </fieldset>
-
-    <fieldset class="mt3">
-        <legend>Formulaire grid</legend>
-
-        <div class="grid-3">
-            <div>
-                <label for="adress">Adresse</label>
-                <input id="adress" name="adress" type="text" class="large-input">
-            </div>
-            <div>
-                <label for="town">Ville</label>
-                <input id="town" name="town" type="text">
-            </div>
-            <div>
-                <label for="zipcode">Code postal</label>
-                <input id="zipcode" name="zipcode" type="text">
+            <div class="ferror">
+                <span class="label">Un groupe de radio : </span>
+                <input name="radio" type="radio" id="radio1" value="starwars">
+                <label for="radio1">Star Wars</label>
+                <input name="radio" type="radio" id="radio2" value="startreck">
+                <label for="radio2">Star Trek</label>
+                <div class="ferror-message">Message d'erreur</div>
             </div>
         </div>
 
-        <div class="grid-3-1">
-            <div>
-                <label for="note">Note</label>
-                <input id="note" name="note" type="text" class="large-input">
-            </div>
-            <div>
-                <label for="phone">Numéro de téléphone</label>
-                <input id="phone" name="phone" type="text">
-            </div>
-        </div>
-    </fieldset>
-
-    <fieldset>
-        <legend>Différentes tailles</legend>
+        <!-- Checkboxes groupe -->
         <div>
-            <input name="" type="text" class="f-10" placeholder="f-10">
-        </div>
-        <div>
-            <input name="" type="text" class="f-25" placeholder="f-25">
-        </div>
-        <div>
-            <input name="" type="text" class="f-50" placeholder="f-50">
-        </div>
-        <div>
-            <input name="" type="text" class="f-75" placeholder="f-75">
-        </div>
-        <div>
-            <input name="" type="text" class="f-100" placeholder="f-100">
-        </div>
-    </fieldset>
-
-    <!-- Input error -->
-    <div>
-        <div class="f-error">
-            <label for="email">Entrez une adresse e-mail</label>
-            <input id="email" name="email" type="text">
-            <div class="f-error-message">Une adresse email valide est requise</div>
+            <span class="label">Un groupe de checkbox :</span>
+            <input type="checkbox" name="frites" id="frites" /> <label for="frites">bleu</label>
+            <input type="checkbox" name="steak" id="steak" /> <label for="steak">vert</label>
+            <input type="checkbox" name="epinards" id="epinards" /> <label for="epinards">jaune</label>
+            <input type="checkbox" name="huitres" id="huitres" /> <label for="huitres">rouge</label>
         </div>
     </div>
-
-    <!-- Input select -->
-    <div>
-        <label for="fruits">Select box</label>
-        <select id="fruits">
-            <option value="banane">Banane</option>
-            <option value="fraise">Fraise</option>
-            <option value="poire">Poire</option>
-        </select>
-    </div>
-
-    <!-- Textarea -->
-    <div>
-        <label for="text">Un textarea</label>
-        <textarea id="text" class="f-100"></textarea>
-    </div>
-
-    <!--- Radio groupe -->
-    <div>
-        <div class="ferror">
-            <span class="label">Un groupe de radio : </span>
-            <input name="radio" type="radio" id="radio1" value="starwars">
-            <label for="radio1">Star Wars</label>
-            <input name="radio" type="radio" id="radio2" value="startreck">
-            <label for="radio2">Star Trek</label>
-            <div class="ferror-message">Message d'erreur</div>
-        </div>
-    </div>
-
-    <!-- Checkboxes groupe -->
-    <div>
-        <span class="label">Un groupe de checkbox :</span>
-        <input type="checkbox" name="frites" id="frites" /> <label for="frites">bleu</label>
-        <input type="checkbox" name="steak" id="steak" /> <label for="steak">vert</label>
-        <input type="checkbox" name="epinards" id="epinards" /> <label for="epinards">jaune</label>
-        <input type="checkbox" name="huitres" id="huitres" /> <label for="huitres">rouge</label>
-    </div>
-</div>
 </body>
 </html>
