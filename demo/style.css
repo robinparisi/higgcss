@@ -569,8 +569,7 @@ label,
 .f-inline label,
 .f-inline .label {
   display: inline-block;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0 1rem;
 }
 .f-inline {
   display: inline-block;
@@ -859,6 +858,32 @@ input[type="checkbox"] {
   border-color: rgba(0, 0, 0, 0.8) transparent;
   content: "";
 }
+/**
+ * Notification module
+ * Namespace : .notif
+ */
+/* ----------------------------------------------------------- */
+/* == configuration */
+/* ----------------------------------------------------------- */
+/* ----------------------------------------------------------- */
+/* == module */
+/* ----------------------------------------------------------- */
+.notif {
+  padding: 1em;
+  border-radius: 4px;
+}
+.notif--success {
+  background-color: #00d1b2;
+  color: #fff;
+}
+.notif--warning {
+  background-color: #ffdd57;
+  color: #fff;
+}
+.notif--error {
+  background-color: #ff3860;
+  color: #fff;
+}
 /* ----------------------------------------------------------- */
 /* == custom fonts */
 /* ----------------------------------------------------------- */
@@ -960,9 +985,9 @@ body {
 -------------------------------------------------------------- */
 h1 {
   /*font-size: unit(@font-size / @bf, em);*/
-  font-size: 2.6rem;
-  line-height: 1.61538462;
-  margin-bottom: 0.80769231em;
+  font-size: 5rem;
+  line-height: 1.26;
+  margin-bottom: 0.42em;
 }
 h2 {
   /*font-size: unit(@font-size / @bf, em);*/
@@ -1002,11 +1027,11 @@ ul {
 -------------------------------------------------------------- */
 hr {
   display: block;
-  height: .1rem;
-  border: 0;
-  border-top: .1rem solid #cccccc;
   margin: 1em 0;
   padding: 0;
+  height: .1rem;
+  border: 0;
+  border-top: .1rem solid #ccc;
 }
 /* ----------------------------------------------------------- */
 /* == header */
