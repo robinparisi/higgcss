@@ -24,22 +24,15 @@ code,
 pre,
 textarea,
 input,
-video {
+video,
+svg {
   max-width: 100%;
 }
 
 img {
-  border: 0;
-  vertical-align: middle;
-}
-
-img:not([src$=".svg"]) {
   height: auto;
-}
-
-/* fix for IE */
-img[src$=".svg"] {
-  width: 100%;
+  border-style: none;
+  vertical-align: middle;
 }
 
 /* fix input no style on Safari */
