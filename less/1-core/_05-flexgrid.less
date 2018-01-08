@@ -1,6 +1,6 @@
 // important: nth-child(n) is used to keep same specificity between grid (equal and unequal)
 
-[class*="grid-"] {
+.grid {
   display: flex;
   flex-direction: row;
 
@@ -8,7 +8,7 @@
   align-items: stretch;
 }
 
-[class*="grid-"] > * {
+.grid > * {
   display: block; /* IE fix */
 
   flex: 0 0 auto;
@@ -70,8 +70,12 @@
 }
 
 // unequal grid with gutter
-.unequalGrid(@column1, @column2, @gutter:@default-gutter) {
+.unequalGrid(@column1, @column2, @gutter:@default-gutter, @mb:@gutter) {
   @g: @gutter / 2;
+
+  & > * {
+    margin-bottom: @mb;
+  }
 
   & > *:nth-child(odd) {
     width: ~'calc(@{size} - @{g} - .01px)'; // .01px = @bugfix IE
