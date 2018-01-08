@@ -35,18 +35,17 @@ h4 {
   .flow(16);
 }
 
-
 /* links
 -------------------------------------------------------------- */
 
-a {
+a,
+a:visited {
   color: @color-link;
+  text-decoration: none;
 }
 
-a:hover,
-a:visited,
-a:focus {
-  color: lighten(@color-link, 10%);
+a:hover {
+  text-decoration: underline;
 }
 
 /* lists
@@ -54,7 +53,7 @@ a:focus {
 
 ul {
   padding-left: 2rem;
-  list-style-type: circle;
+  list-style-type: disc;
 }
 
 /* divers
