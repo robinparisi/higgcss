@@ -3,24 +3,13 @@
 // --------------------------------------------------------------
 
 .flow(@font-size, @bf: @base-font, @lh: @line-height) {
-
-  @lh-value : @base-font * @lh;
-
-  @coeff : ceil(@font-size / @lh-value);
-  @new-lh : (@lh-value / @font-size) * @coeff;
-  @margin-bottom: @new-lh / @coeff;
-
+  margin-bottom: unit(@margin-bottom, em);
   /*font-size: unit(@font-size / @bf, em);*/
   font-size: unit(@font-size/10, rem);
   line-height: @new-lh;
-  margin-bottom: unit(@margin-bottom, em);
+
+  @lh-value: @base-font * @lh;
+  @coeff: ceil(@font-size / @lh-value);
+  @new-lh: (@lh-value / @font-size) * @coeff;
+  @margin-bottom: @new-lh / @coeff;
 }
-
-.em(@size, @bf: @base-font){
-  @em: @size / @bf;
-  font-size: unit(@em, em);
-}
-
-
-/* grids
--------------------------------------------------------------- */
