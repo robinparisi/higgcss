@@ -1,7 +1,11 @@
 /* ----------------------------------------------------------- */
-/* == rwd -> medium */
+/* == colors */
 /* ----------------------------------------------------------- */
 
-@media (max-width: @medium) {
+.color-primary {
+  color: $color-primary;
+}
 
+.color-secondary {
+  color: $color-secondary;
 }

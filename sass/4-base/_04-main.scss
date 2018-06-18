@@ -4,8 +4,8 @@
 
 body {
   background-color: #fff;
-  color: @color-dark-text;
-  font-family: @fontstack1;
+  color: $color-dark-text;
+  font-family: $fontstack1;
 }
 
 .container {
@@ -20,19 +20,19 @@ body {
 -------------------------------------------------------------- */
 
 h1 {
-  .flow(50);
+  @include flow(50);
 }
 
 h2 {
-  .flow(22);
+  @include flow(22);
 }
 
 h3 {
-  .flow(18);
+  @include flow(18);
 }
 
 h4 {
-  .flow(16);
+  @include flow(16);
 }
 
 /* links
@@ -40,7 +40,7 @@ h4 {
 
 a,
 a:visited {
-  color: @color-link;
+  color: $color-link;
   text-decoration: none;
 }
 

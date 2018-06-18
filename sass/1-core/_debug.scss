@@ -7,10 +7,10 @@
  *
  */
 
-.randomColor () {
-  @red: `Math.floor(Math.random()*222)`;
-  @green: `Math.floor(Math.random()*222)`;
-  @blue: `Math.floor(Math.random()*222)`;
+@mixin randomColor {
+  $red: round(random()*222);
+  $green: round(random()*222);
+  $blue: round(random()*222);
 }
 
 
@@ -19,10 +19,10 @@
  *
  */
 
-.debug() {
-  .randomColor();
-  border: .3rem dotted rgb(@red, @green, @blue);
-  background-color: rgba(@red, @green, @blue, 30%);
+@mixin debug() {
+  @include randomColor;
+  border: .3rem dotted rgb($red, $green, $blue);
+  background-color: rgba($red, $green, $blue, 30%);
 }
 
 
@@ -31,11 +31,11 @@
  *
  */
 
-.debug-rythm(@bh: @line-height) {
+@mixin debug-rythm($bh: $line-height) {
   background: linear-gradient(to bottom, #ba9b9a .1em, transparent .1em ) !important;
-  background-size: 100% unit(@bh, em) !important;
+  background-size: 100% ($bh + em) !important;
 }
 
 .debug-rythm {
-  .debug-rythm();
+  @include debug-rythm();
 }

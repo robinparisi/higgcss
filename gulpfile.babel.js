@@ -1,34 +1,33 @@
 "use strict";
 
 import gulp from 'gulp';
-import less from 'gulp-less';
+import sass from'gulp-sass';
 import autoprefixer from 'gulp-autoprefixer';
 import browserSync from 'browser-sync';
 
 const reload = browserSync.reload;
 
 const paths = {
-    less: {
-        src: 'less/style.less',
+    sass: {
+        src: 'sass/style.scss',
         dest: 'demo/',
-        watch: 'less/**'
+        watch: 'sass/**'
     },
     html: {
         watch: 'demo/**/*.html'
     }
 };
 
-gulp.task('less', () => {
-    gulp.src(paths.less.src)
-        .pipe(less())
+gulp.task('sass', () => {
+    gulp.src(paths.sass.src)
+        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
-        .pipe(gulp.dest(paths.less.dest))
+        .pipe(gulp.dest(paths.sass.dest))
         .pipe(reload({stream:true}));
 });
-
 
 gulp.task('browser-sync', () => {
     browserSync({
@@ -45,9 +44,8 @@ gulp.task('bs-reload', () => {
 
 
 gulp.task('watch', ['browser-sync'], () => {
-    gulp.watch(paths.less.watch, ['less']);
+    gulp.watch(paths.sass.watch, ['sass']);
     gulp.watch(paths.html.watch, ['bs-reload']);
-
 });
 
-gulp.task('default', ['less']);
+gulp.task('default', ['sass']);
