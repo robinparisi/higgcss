@@ -15,10 +15,7 @@ Tester Higgcss
 ```
 npm install
 ```
-ou
-```
-yarn install
-```
+
 
 2) Lancement d'un petit serveur en local capable d'écouter les changements
 
