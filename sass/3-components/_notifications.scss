@@ -7,9 +7,9 @@
 /* == configuration */
 /* ----------------------------------------------------------- */
 
-@notif-success : #00d1b2;
-@notif-warning : #ffdd57;
-@notif-error   : #ff3860;
+$notif-success: #00d1b2;
+$notif-warning: #ffdd57;
+$notif-error: #ff3860;
 
 /* ----------------------------------------------------------- */
 /* == module */
@@ -21,16 +21,16 @@
 }
 
 .notif--success {
-  background-color: @notif-success;
+  background-color: $notif-success;
   color: #fff;
 }
 
 .notif--warning {
-  background-color: @notif-warning;
+  background-color: $notif-warning;
   color: #fff;
 }
 
 .notif--error {
-  background-color: @notif-error;
+  background-color: $notif-error;
   color: #fff;
 }

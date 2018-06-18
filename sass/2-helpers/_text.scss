@@ -14,19 +14,19 @@
 -------------------------------------------------------------- */
 
 .txtsmaller {
-  .flow(@base-font - 4);
+  @include flow($base-font - 4);
 }
 
 .txtsmall {
-  .flow(@base-font - 2);
+  @include flow($base-font - 2);
 }
 
 .txtbig {
-  .flow(@base-font + 2);
+  @include flow($base-font + 2);
 }
 
 .txtbigger {
-  .flow(@base-font + 4);
+  @include flow($base-font + 4);
 }
 
 /* transformations

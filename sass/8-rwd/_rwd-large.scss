@@ -1,11 +1,6 @@
 /* ----------------------------------------------------------- */
-/* == colors */
+/* == rwd -> large */
 /* ----------------------------------------------------------- */
 
-.color-primary {
-  color: @color-primary;
-}
-
-.color-secondary {
-  color: @color-secondary;
+@media (max-width: $large) {
 }
