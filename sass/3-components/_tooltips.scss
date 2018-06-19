@@ -9,9 +9,9 @@
 /* ----------------------------------------------------------- */
 
 
-@tooltip-bg      : rgba(0, 0, 0, .80);
-@tooltip-color   : #fff;
-@tooltip-radius  : .5em;
+$tooltip-bg: rgba(0, 0, 0, .80);
+$tooltip-color: #fff;
+$tooltip-radius: .5em;
 
 
 /* ----------------------------------------------------------- */
@@ -32,9 +32,9 @@
   bottom: 1.35em;
   left: 1em;
   padding: .5em 1em;
-  border-radius: @tooltip-radius;
-  background: @tooltip-bg;
-  color: @tooltip-color;
+  border-radius: $tooltip-radius;
+  background: $tooltip-bg;
+  color: $tooltip-color;
   content: attr(data-tooltip);
   white-space: nowrap;
 }
@@ -46,6 +46,6 @@
   display: block;
   border: solid;
   border-width: .4em .4em 0 .4em;
-  border-color: @tooltip-bg transparent;
+  border-color: $tooltip-bg transparent;
   content: "";
 }
