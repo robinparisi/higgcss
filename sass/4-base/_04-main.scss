@@ -48,6 +48,12 @@ a:hover {
   text-decoration: underline;
 }
 
+a:focus {
+  outline: none;
+  border-radius: .3rem;
+  box-shadow: $focus-ring;
+}
+
 /* lists
 -------------------------------------------------------------- */
 
