@@ -141,17 +141,15 @@ input[type="checkbox"] {
 
 [class^="f-grid"] {
   display: flex;
-
-  align-items: flex-end;
   flex-wrap: nowrap;
+  align-items: flex-end;
 }
 
 [class^="f-grid"] > * {
   display: flex;
   flex-direction: column;
-  margin-left: 2rem;
-
   flex: 1 0 0;
+  margin-left: 2rem;
 }
 
 [class^="f-grid"] > *:first-child {

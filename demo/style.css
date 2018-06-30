@@ -754,11 +754,11 @@ input[type="checkbox"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
 }
 
 [class^="f-grid"] > * {
@@ -769,10 +769,10 @@ input[type="checkbox"] {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-left: 2rem;
   -webkit-box-flex: 1;
   -ms-flex: 1 0 0px;
   flex: 1 0 0;
+  margin-left: 2rem;
 }
 
 [class^="f-grid"] > *:first-child {
@@ -823,6 +823,140 @@ input[type="checkbox"] {
 
 .f-error-message {
   color: #ff3860;
+}
+
+/**
+  * Radiobox Module
+  * Namespace: .radiobox
+  */
+/* ----------------------------------------------------------- */
+/* == module */
+/* ----------------------------------------------------------- */
+.switch[type="checkbox"] {
+  position: relative;
+  margin-top: -.05em;
+  width: 4rem;
+  height: 2rem;
+  outline: none;
+  border: 0.1rem solid #d8d8d8;
+  border-radius: 42rem;
+  background-color: white;
+  -webkit-box-shadow: inset -2rem 0 0 0.1rem rgba(192, 192, 192, 0.5);
+  box-shadow: inset -2rem 0 0 0.1rem rgba(192, 192, 192, 0.5);
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.switch[type="checkbox"]::-ms-check {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+/* Checked state
+-------------------------------------------------------------- */
+.switch[type="checkbox"]:checked {
+  border-color: #3498db;
+  -webkit-box-shadow: inset 2rem 0 0 0.1rem rgba(52, 152, 219, 0.7);
+  box-shadow: inset 2rem 0 0 0.1rem rgba(52, 152, 219, 0.7);
+}
+
+/* Focus state
+-------------------------------------------------------------- */
+.switch[type="checkbox"]:active,
+.switch[type="checkbox"]:focus {
+  -webkit-box-shadow: inset -2rem 0 0 0.1rem rgba(192, 192, 192, 0.5), 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
+  box-shadow: inset -2rem 0 0 0.1rem rgba(192, 192, 192, 0.5), 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
+}
+
+.switch[type="checkbox"]:checked:active,
+.switch[type="checkbox"]:checked:focus {
+  -webkit-box-shadow: inset 2rem 0 0 0.1rem rgba(52, 152, 219, 0.7), 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
+  box-shadow: inset 2rem 0 0 0.1rem rgba(52, 152, 219, 0.7), 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
+}
+
+/**
+ * Radiobox Module
+ * Namespace : .radiobox
+ */
+/* ----------------------------------------------------------- */
+/* == module */
+/* ----------------------------------------------------------- */
+.radiobox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: .2rem;
+  max-width: 32rem;
+  width: 100%;
+  border: 0.1rem solid #d8d8d8;
+  border-radius: 0.4rem;
+}
+
+.radiobox--full {
+  max-width: 100%;
+  width: 100%;
+}
+
+.radiobox input {
+  position: absolute;
+  left: -9999px;
+}
+
+.radiobox input + label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin: 0;
+  padding: 1rem 1.8rem;
+  min-height: 4rem;
+  width: 50%;
+  text-align: center;
+  font-weight: normal;
+  -webkit-transition: all .05s ease-in;
+  transition: all .05s ease-in;
+}
+
+.radiobox input:first-child + label {
+  border-radius: 0.2rem 0 0 0.2rem;
+}
+
+.radiobox label:last-child {
+  border-radius: 0 0.2rem 0.2rem 0;
+}
+
+/* Checked state */
+.radiobox input:checked + label {
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* Focus state */
+.radiobox input:focus + label {
+  -webkit-box-shadow: 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
+  box-shadow: 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
+}
+
+.radiobox:active,
+.radiobox:focus-within {
+  -webkit-box-shadow: 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
+  box-shadow: 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
+}
+
+.radiobox:focus-within input:focus + label {
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 /**

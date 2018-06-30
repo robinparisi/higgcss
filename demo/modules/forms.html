@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="/style.css" media="all">
     <style>
         .container {
-            padding: 10px;
+          padding: 10px;
         }
+
     </style>
 </head>
 <body>
@@ -132,51 +133,82 @@
             <input name="" type="text" class="f-size-full" placeholder="f-size-full">
         </fieldset>
 
-        <!-- Input error -->
-        <div>
-            <div class="f-error">
-                <label for="email">Entrez une adresse e-mail</label>
-                <input id="email" name="email" type="text">
-                <div class="f-error-message">Une adresse email valide est requise</div>
+        <fieldset>
+            <legend>Les éléments de formulaire</legend>
+
+            <!-- Input error -->
+            <div>
+                <div class="f-error">
+                    <label for="email">Entrez une adresse e-mail</label>
+                    <input id="email" name="email" type="text">
+                    <div class="f-error-message">Une adresse email valide est requise</div>
+                </div>
             </div>
-        </div>
-
-        <!-- Input select -->
-        <div>
-            <label for="fruits">Select box</label>
-            <select id="fruits">
-                <option value="banane">Banane</option>
-                <option value="fraise">Fraise</option>
-                <option value="poire">Poire</option>
-            </select>
-        </div>
-
-        <!-- Textarea -->
-        <div>
-            <label for="text">Un textarea</label>
-            <textarea id="text" class="f-100"></textarea>
-        </div>
-
-        <!--- Radio groupe -->
-        <div>
-            <div class="ferror">
-                <span class="label">Un groupe de radio : </span>
-                <input name="radio" type="radio" id="radio1" value="starwars">
-                <label for="radio1">Star Wars</label>
-                <input name="radio" type="radio" id="radio2" value="startreck">
-                <label for="radio2">Star Trek</label>
-                <div class="ferror-message">Message d'erreur</div>
+            
+            <!-- Input select -->
+            <div>
+                <label for="fruits">Select box</label>
+                <select id="fruits">
+                    <option value="banane">Banane</option>
+                    <option value="fraise">Fraise</option>
+                    <option value="poire">Poire</option>
+                </select>
             </div>
-        </div>
+            
+            <!-- Textarea -->
+            <div>
+                <label for="text">Un textarea</label>
+                <textarea id="text" class="f-100"></textarea>
+            </div>
+            
+            <!--- Radio groupe -->
+            <div>
+                <div class="ferror">
+                    <span class="label">Un groupe de radio : </span>
+                    <input name="radio" type="radio" id="radio1" value="starwars">
+                    <label for="radio1">Star Wars</label>
+                    <input name="radio" type="radio" id="radio2" value="startreck">
+                    <label for="radio2">Star Trek</label>
+                    <div class="f-error-message">Message d'erreur</div>
+                </div>
+            </div>
+            
+            <!-- Checkboxes groupe -->
+            <div>
+                <span class="label">Un groupe de checkbox :</span>
+                <input type="checkbox" name="frites" id="frites" />
+                <label for="frites">bleu</label>
+                <input type="checkbox" name="steak" id="steak" />
+                <label for="steak">vert</label>
+                <input type="checkbox" name="epinards" id="epinards" />
+                <label for="epinards">jaune</label>
+                <input type="checkbox" name="huitres" id="huitres" />
+                <label for="huitres">rouge</label>
+            </div>
+            
+            <!-- Switch groupe -->
+            <div>
+                <span class="label">Un groupe de switch :</span>
+                <input class="switch" type="checkbox" name="ketchup" id="ketchup" checked/>
+                <label for="ketchup">Sauce ketchup</label>
+                <input class="switch" type="checkbox" name="frite_sup" id="frite_sup" />
+                <label for="frite_sup">Supplément frites</label>
+            </div>
+            
+            <!-- Radiobox groupe -->
+            <div>
+                <span class="label">Une radiobox :</span>
+            
+                <div class="radiobox">
+                    <input name="whatdo" id="work" value="work" type="radio">
+                    <label for="work">Travailler /o\</label>
+                    <input name="whatdo" id="play" value="play" type="radio" checked>
+                    <label for="play">Jouer \o/</label>
+                </div>
+            </div>
 
-        <!-- Checkboxes groupe -->
-        <div>
-            <span class="label">Un groupe de checkbox :</span>
-            <input type="checkbox" name="frites" id="frites" /> <label for="frites">bleu</label>
-            <input type="checkbox" name="steak" id="steak" /> <label for="steak">vert</label>
-            <input type="checkbox" name="epinards" id="epinards" /> <label for="epinards">jaune</label>
-            <input type="checkbox" name="huitres" id="huitres" /> <label for="huitres">rouge</label>
-        </div>
+        </fieldset>
+
     </div>
 </body>
 </html>
