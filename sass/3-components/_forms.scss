@@ -28,12 +28,15 @@ $input-required: #ff3860;
 input::-webkit-input-placeholder {
   color: $input-placeholder-color;
 }
+
 input:-moz-placeholder {
   color: $input-placeholder-color;
 }
+
 textarea::-webkit-input-placeholder {
   color: $input-placeholder-color;
 }
+
 textarea:-moz-placeholder {
   color: $input-placeholder-color;
 }
@@ -91,25 +94,25 @@ label,
 
 select {
   margin: 0;
-  border: .1rem solid #ccc;
   background-color: #fff;
+  border: .1rem solid #ccc;
 }
 
 textarea {
-  padding: .4em;
   min-width: 32rem;
   min-height: 8em;
+  padding: .4em;
   vertical-align: top;
   resize: vertical;
 }
 
 input {
-  padding: .8em;
-  max-width: 32rem;
   width: 100%;
+  max-width: 32rem;
+  padding: .8em;
+  background: $input-background-color;
   border: $input-border;
   border-radius: $input-border-radius;
-  background: $input-background-color;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, .08);
 }
 
@@ -123,40 +126,40 @@ input:focus {
   box-shadow: $focus-ring;
 }
 
-input[type="radio"] + label,
-input[type="checkbox"] + label {
+input[type='radio'] + label,
+input[type='checkbox'] + label {
   display: inline-block;
   margin-right: 1rem;
   vertical-align: baseline;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-  padding: 0;
+input[type='radio'],
+input[type='checkbox'] {
   width: inherit;
+  padding: 0;
 }
 
 /* autogrid
 -------------------------------------------------------------- */
 
-[class^="f-grid"] {
+[class^='f-grid'] {
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-end;
 }
 
-[class^="f-grid"] > * {
+[class^='f-grid'] > * {
   display: flex;
-  flex-direction: column;
   flex: 1 0 0;
+  flex-direction: column;
   margin-left: 2rem;
 }
 
-[class^="f-grid"] > *:first-child {
+[class^='f-grid'] > *:first-child {
   margin-left: 0;
 }
 
-[class^="f-grid"] input {
+[class^='f-grid'] input {
   max-width: 100%;
 }
 

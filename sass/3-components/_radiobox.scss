@@ -9,16 +9,16 @@
 
 .radiobox {
   display: inline-flex;
-  padding: .2rem;
-  max-width: 32rem;
   width: 100%;
+  max-width: 32rem;
+  padding: .2rem;
   border: $input-border;
   border-radius: $input-border-radius;
 }
 
 .radiobox--full {
-  max-width: 100%;
   width: 100%;
+  max-width: 100%;
 }
 
 .radiobox input {
@@ -28,15 +28,15 @@
 
 .radiobox input + label {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  min-height: 4rem;
   margin: 0;
   padding: 1rem 1.8rem;
-  min-height: 4rem;
-  width: 50%;
-  text-align: center;
   font-weight: normal;
+  text-align: center;
   transition: all .05s ease-in;
 }
 
@@ -51,8 +51,8 @@
 /* Checked state */
 
 .radiobox input:checked + label {
-  background-color: $color-primary;
   color: #fff;
+  background-color: $color-primary;
 }
 
 /* Focus state */

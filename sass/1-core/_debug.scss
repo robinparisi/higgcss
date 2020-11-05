@@ -21,8 +21,8 @@
 
 @mixin debug() {
   @include randomColor;
-  border: .3rem dotted rgb($red, $green, $blue);
   background-color: rgba($red, $green, $blue, 30%);
+  border: .3rem dotted rgb($red, $green, $blue);
 }
 
 

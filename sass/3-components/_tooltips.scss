@@ -23,29 +23,29 @@ $tooltip-radius: .5em;
   cursor: help;
 }
 
-.tooltip:after {
-  font-family: helvetica, arial, sans-serif;
+.tooltip::after {
+  font-family: 'helvetica', 'arial', sans-serif;
 }
 
-.tooltip:hover:after {
+.tooltip:hover::after {
   position: absolute;
   bottom: 1.35em;
   left: 1em;
   padding: .5em 1em;
-  border-radius: $tooltip-radius;
-  background: $tooltip-bg;
   color: $tooltip-color;
-  content: attr(data-tooltip);
   white-space: nowrap;
+  background: $tooltip-bg;
+  border-radius: $tooltip-radius;
+  content: attr(data-tooltip);
 }
 
-.tooltip:hover:before {
+.tooltip:hover::before {
   position: absolute;
   bottom: 1em;
   left: 2em;
   display: block;
   border: solid;
-  border-width: .4em .4em 0 .4em;
   border-color: $tooltip-bg transparent;
-  content: "";
+  border-width: .4em .4em 0 .4em;
+  content: '';
 }

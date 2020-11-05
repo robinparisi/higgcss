@@ -3,6 +3,7 @@
 /* ----------------------------------------------------------- */
 
 /* BFC to the rescue */
+
 .mod {
   overflow: hidden;
 }
@@ -14,12 +15,13 @@
 }
 
 /* blocks that must contain floats */
-.clearfix:after,
-.line:after,
-.mod:after {
+
+.clearfix::after,
+.line::after,
+.mod::after {
   display: table;
   clear: both;
-  content: "";
+  content: '';
 }
 
 .inbl {

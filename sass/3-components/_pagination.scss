@@ -9,7 +9,7 @@
 
 
 $pagination-border-radius: .2rem;
-$pagination-border: .1rem solid grey;
+$pagination-border: .1rem solid #808080;
 $pagination-hover-color: $color-secondary;
 $pagination-current-bg: $color-primary;
 $pagination-current-color: #fff;
@@ -49,6 +49,6 @@ $pagination-current-color: #fff;
 }
 
 .pagination li.current a {
-  background-color: $pagination-current-bg;
   color: $pagination-current-color;
+  background-color: $pagination-current-bg;
 }
