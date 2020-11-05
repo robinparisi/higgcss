@@ -6,6 +6,11 @@
         "type": "git",
         "url": "git+https://github.com/robinparisi/higgcss.git"
     },
+    "scripts": {
+        "watch": "gulp watch",
+        "build": "gulp",
+        "lint": "stylelint sass/* --ignore-path .gitignore"
+    },
     "devDependencies": {
         "babel-core": "^6.26.3",
         "babel-preset-env": "^1.7.0",

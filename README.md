@@ -20,7 +20,7 @@ npm install
 2) Lancement d'un petit serveur en local capable d'écouter les changements
 
 ```
-gulp watch
+npm run watch
 ```
 
 Licence
