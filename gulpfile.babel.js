@@ -1,11 +1,9 @@
 "use strict";
 
 import gulp from 'gulp';
-import sass from'gulp-sass';
+import sass from 'gulp-sass';
 import autoprefixer from 'gulp-autoprefixer';
 import browserSync from 'browser-sync';
-
-const reload = browserSync.reload;
 
 const paths = {
     sass: {
@@ -18,34 +16,38 @@ const paths = {
     }
 };
 
-gulp.task('sass', () => {
-    gulp.src(paths.sass.src)
+const runSass = () => {
+    return gulp.src(paths.sass.src)
         .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
         .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
             cascade: false
         }))
         .pipe(gulp.dest(paths.sass.dest))
-        .pipe(reload({stream:true}));
-});
+        .pipe(browserSync.stream({ match: '**/*.css' }));
+};
 
-gulp.task('browser-sync', () => {
+const bs = () => {
     browserSync({
         server: {
             baseDir: "demo",
             directory: true
         }
     });
-});
+};
 
-gulp.task('bs-reload', () => {
-    browserSync.reload();
-});
+exports.watch = gulp.series(runSass, () => {
 
+        browserSync.init({
+            server: {
+                baseDir: "demo",
+                directory: true
+            },
+            open: false
+        });
 
-gulp.task('watch', ['browser-sync'], () => {
-    gulp.watch(paths.sass.watch, ['sass']);
-    gulp.watch(paths.html.watch, ['bs-reload']);
-});
+        gulp.watch(paths.sass.watch, gulp.series(runSass));
+        gulp.watch(paths.html.watch).on('change', browserSync.reload);
 
-gulp.task('default', ['sass']);
+})
+
+exports.default = gulp.series(runSass);
