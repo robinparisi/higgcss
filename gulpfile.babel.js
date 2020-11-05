@@ -31,7 +31,8 @@ const bs = () => {
         server: {
             baseDir: "demo",
             directory: true
-        }
+        },
+        open: false
     });
 };
 
