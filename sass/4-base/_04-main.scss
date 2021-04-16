@@ -1,6 +1,6 @@
-/* ----------------------------------------------------------- */
-/* == main */
-/* ----------------------------------------------------------- */
+// -----------------------------------------------------------
+// main
+// -----------------------------------------------------------
 
 body {
   color: $color-dark-text;
@@ -49,7 +49,7 @@ a:hover {
 }
 
 a:focus {
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   outline: none;
   box-shadow: $focus-ring;
 }
@@ -67,9 +67,9 @@ ul {
 
 hr {
   display: block;
-  height: .1rem;
+  height: 0.1rem;
   margin: 1em 0;
   padding: 0;
   border: 0;
-  border-top: .1rem solid #ccc;
+  border-top: 0.1rem solid #ccc;
 }

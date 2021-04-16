@@ -3,20 +3,17 @@
  * namespace : .tooltip
  */
 
+// -------------------------------------------------------------
+// module
+// -------------------------------------------------------------
 
-/* ----------------------------------------------------------- */
-/* == configuration */
-/* ----------------------------------------------------------- */
-
-
-$tooltip-bg: rgba(0, 0, 0, .80);
+$tooltip-bg: rgba(0, 0, 0, 0.8);
 $tooltip-color: #fff;
-$tooltip-radius: .5em;
+$tooltip-radius: 0.5em;
 
-
-/* ----------------------------------------------------------- */
-/* == module */
-/* ----------------------------------------------------------- */
+// -------------------------------------------------------------
+// module
+// -------------------------------------------------------------
 
 .tooltip {
   position: relative;
@@ -31,7 +28,7 @@ $tooltip-radius: .5em;
   position: absolute;
   bottom: 1.35em;
   left: 1em;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   color: $tooltip-color;
   white-space: nowrap;
   background: $tooltip-bg;
@@ -46,6 +43,6 @@ $tooltip-radius: .5em;
   display: block;
   border: solid;
   border-color: $tooltip-bg transparent;
-  border-width: .4em .4em 0 .4em;
+  border-width: 0.4em 0.4em 0 0.4em;
   content: '';
 }

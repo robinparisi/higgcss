@@ -3,22 +3,15 @@
  * namespace : .table
  */
 
-
-/* ----------------------------------------------------------- */
-/* == configuration */
-/* ----------------------------------------------------------- */
-
-
-
-/* ----------------------------------------------------------- */
-/* == module */
-/* ----------------------------------------------------------- */
+// -------------------------------------------------------------
+// module
+// -------------------------------------------------------------
 
 .table {
   width: 100%;
   max-width: 100%;
   table-layout: fixed /* http://css-tricks.com/fixing-tables-long-strings */;
-  border: .1rem solid #cbcbcb;
+  border: 0.1rem solid #cbcbcb;
   border-collapse: collapse /* remove spacing between table cells */;
   border-spacing: 0;
 }
@@ -33,14 +26,14 @@
 .table td,
 .table th {
   margin: 0;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   overflow: hidden;
   font-size: inherit;
   white-space: nowrap;
   text-overflow: ellipsis;
   word-wrap: break-word;
-  border-width: 0 0 0 .1rem;
-  border-left: .1rem solid #cbcbcb;
+  border-width: 0 0 0 0.1rem;
+  border-left: 0.1rem solid #cbcbcb;
 }
 
 .table td:first-child,

@@ -9,7 +9,8 @@
     "scripts": {
         "watch": "gulp watch",
         "build": "gulp",
-        "lint": "stylelint sass/* --ignore-path .gitignore"
+        "lint": "npx stylelint 'sass/**/*.scss'",
+        "autofix": "npx stylelint 'sass/**/*.scss' --fix"
     },
     "devDependencies": {
         "babel-core": "^6.26.3",
@@ -19,7 +20,9 @@
         "gulp-autoprefixer": "^7.0.1",
         "gulp-babel": "^8.0.0",
         "gulp-sass": "^4.1.0",
-        "stylelint": "^13.7.2",
-        "stylelint-config-rational-order": "^0.1.2"
+        "stylelint": "^13.12.0",
+        "stylelint-config-rational-order": "^0.1.2",
+        "stylelint-config-standard": "^21.0.0",
+        "stylelint-scss": "^3.19.0"
     }
 }

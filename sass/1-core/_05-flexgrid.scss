@@ -3,37 +3,32 @@
 .grid {
   display: flex;
   flex-direction: row;
-
   flex-wrap: wrap;
   align-items: stretch;
 }
 
 .grid > * {
   display: block; /* IE fix */
-
   flex: 0 0 auto;
 }
-
 
 // equal grid
 @mixin grid($number:$number, $gutter:$default-gutter, $mb:$gutter) {
 
   // equal grid no gutter
   @if $gutter == 0 {
-
     & {
       margin-bottom: -$mb;
     }
 
     & > *:nth-child(n) {
-      width: calc(100% * 1 / #{$number} - .01px);
+      width: calc(100% * 1 / #{$number} - 0.01px);
       margin-bottom: $mb;
     }
   }
 
   // one column mode
   @if $number == 1 {
-
     & {
       margin-bottom: -$mb;
       margin-left: 0;
@@ -48,14 +43,13 @@
 
   // with gutter (avoid percentage since it doesn't work well with margin bottom)
   @if $number>1 and $gutter>0 {
-
     & {
       margin-bottom: -$mb; /* avoid unwanted margin on last line */
       margin-left: -$gutter;
     }
 
     & > *:nth-child(n) {
-      width: calc(100% * 1 / #{$number} - #{$gutter} - .01px); // .01px = $bugfix IE
+      width: calc(100% * 1 / #{$number} - #{$gutter} - 0.01px); // .01px = $bugfix IE
       margin-bottom: $mb;
       margin-left: $gutter;
     }
@@ -67,14 +61,15 @@
 
   // no gutter (when gutter = 0)
   @if $gutter == 0 {
-
     & > *:nth-child(odd) {
       $size : ($column1 * 100%) / ($column1 + $column2);
+
       width: calc(#{$size});
     }
 
     & > *:nth-child(even) {
       $size : ($column2 * 100%) / ($column1 + $column2);
+
       width: calc(#{$size});
     }
   }
@@ -83,18 +78,20 @@
   @else {
     $g : $gutter / 2;
 
-    &> * {
+    & > * {
       margin-bottom: $mb;
     }
 
     & > *:nth-child(odd) {
       $size : ($column1 * 100%) / ($column1 + $column2);
-      width: calc(#{$size} - #{$g} - .01px); // .01px = $bugfix IE
+
+      width: calc(#{$size} - #{$g} - 0.01px); // .01px = $bugfix IE
     }
 
     & > *:nth-child(even) {
       $size : ($column2 * 100%) / ($column1 + $column2);
-      width: calc(#{$size} - #{$g} - .01px); // .01px = $bugfix IE
+
+      width: calc(#{$size} - #{$g} - 0.01px); // .01px = $bugfix IE
       margin-left: $gutter;
     }
   }

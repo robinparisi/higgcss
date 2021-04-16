@@ -3,15 +3,15 @@
  * Namespace : .radiobox
  */
 
-/* ----------------------------------------------------------- */
-/* == module */
-/* ----------------------------------------------------------- */
+// -------------------------------------------------------------
+// module
+// -------------------------------------------------------------
 
 .radiobox {
   display: inline-flex;
   width: 100%;
   max-width: 32rem;
-  padding: .2rem;
+  padding: 0.2rem;
   border: $input-border;
   border-radius: $input-border-radius;
 }
@@ -37,26 +37,24 @@
   padding: 1rem 1.8rem;
   font-weight: normal;
   text-align: center;
-  transition: all .05s ease-in;
-}
-
-.radiobox input:first-child + label {
-  border-radius: ($input-border-radius - .2rem) 0 0 ($input-border-radius - .2rem);
+  transition: all 0.05s ease-in;
 }
 
 .radiobox label:last-child {
-  border-radius: 0 ($input-border-radius - .2rem) ($input-border-radius - .2rem) 0;
+  border-radius: 0 ($input-border-radius - 0.2rem) ($input-border-radius - 0.2rem) 0;
+}
+
+.radiobox input:first-child + label {
+  border-radius: ($input-border-radius - 0.2rem) 0 0 ($input-border-radius - 0.2rem);
 }
 
 /* Checked state */
-
 .radiobox input:checked + label {
   color: #fff;
   background-color: $color-primary;
 }
 
 /* Focus state */
-
 .radiobox input:focus + label {
   box-shadow: $focus-ring;
 }

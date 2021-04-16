@@ -3,26 +3,24 @@
 * namespace : .btn
 */
 
-/* ----------------------------------------------------------- */
-/* == configuration */
-/* ----------------------------------------------------------- */
-
+// -------------------------------------------------------------
+// configuration
+// -------------------------------------------------------------
 
 $btn-primary: $color-primary;
 $btn-secondary: $color-secondary;
 $btn-success: #1cb841;
 $btn-danger: #c53a3a;
 $btn-hover: 5%;
-$btn-radius: .2rem;
+$btn-radius: 0.2rem;
 
-
-/* ----------------------------------------------------------- */
-/* == module */
-/* ----------------------------------------------------------- */
+// -------------------------------------------------------------
+// module
+// -------------------------------------------------------------
 
 .btn {
   display: inline-block;
-  padding: .8em 1.6em;
+  padding: 0.8em 1.6em;
   color: #fff;
   line-height: normal;
   text-align: center;
@@ -33,7 +31,7 @@ $btn-radius: .2rem;
   border-radius: $btn-radius;
   box-shadow: none;
   cursor: pointer;
-  transition: background-color .4s;
+  transition: background-color 0.4s;
 }
 
 .btn:active,
@@ -77,7 +75,6 @@ $btn-radius: .2rem;
   color: #fff;
   background-color: $btn-danger;
 }
-
 
 .btn--danger:hover,
 .btn--danger:active,
