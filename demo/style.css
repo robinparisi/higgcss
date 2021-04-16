@@ -1,15 +1,24 @@
-/* ----------------------------------------------------------- */
-/* == reset */
-/* ----------------------------------------------------------- */
+/* texts
+-------------------------------------------------------------- */
+/* links
+-------------------------------------------------------------- */
+/* brands
+-------------------------------------------------------------- */
+/* base
+-------------------------------------------------------------- */
+/* responsive
+-------------------------------------------------------------- */
+/* gutter
+-------------------------------------------------------------- */
+/* focus ring
+-------------------------------------------------------------- */
 html {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *,
 *::after,
 *::before {
-  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -39,7 +48,6 @@ img {
 /* fix input no style on Safari */
 input[type='search'] {
   -webkit-appearance: textfield;
-  -moz-appearance: textfield;
   appearance: textfield;
 }
 
@@ -50,13 +58,9 @@ textarea {
   font: inherit;
 }
 
-/* ----------------------------------------------------------- */
-/* == typography */
-/* ----------------------------------------------------------- */
 html {
   font-size: 62.5%;
-  /* IE9-11 calculation fix */
-  font-size: calc(1em * .625);
+  font-size: calc(1em * 0.625);
 }
 
 body {
@@ -78,9 +82,6 @@ caption {
   margin: 0 0 1.5em 0;
 }
 
-/* ----------------------------------------------------------- */
-/* == helpers */
-/* ----------------------------------------------------------- */
 /* screen readers
 -------------------------------------------------------------- */
 /* Hide only visually, but have it available for screen readers (from HTML5 Boilerplate) */
@@ -105,10 +106,6 @@ caption {
   clip: auto;
 }
 
-/* ----------------------------------------------------------- */
-/* == layout */
-/* ----------------------------------------------------------- */
-/* BFC to the rescue */
 .mod {
   overflow: hidden;
 }
@@ -119,7 +116,6 @@ caption {
   clear: both;
 }
 
-/* blocks that must contain floats */
 .clearfix::after,
 .line::after,
 .mod::after {
@@ -133,45 +129,29 @@ caption {
 }
 
 .grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
 }
 
 .grid > * {
   display: block;
   /* IE fix */
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
 
 /* vertical align
 -------------------------------------------------------------- */
 [class*='grid-top'] {
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: flex-start;
 }
 
 [class*='grid-bottom'] {
-  -webkit-box-align: end;
-  -ms-flex-align: end;
   align-items: flex-end;
 }
 
 [class*='grid-center'] {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -181,10 +161,6 @@ caption {
   margin-bottom: 0;
 }
 
-/* ----------------------------------------------------------- */
-/* == rwd */
-/* ----------------------------------------------------------- */
-/* responsive iframe http://www.smashingmagazine.com/2014/02/27/making-embedded-content-work-in-responsive-design/ */
 .responsive-iframe {
   position: relative;
   height: 0;
@@ -261,9 +237,6 @@ caption {
   }
 }
 
-/* ----------------------------------------------------------- */
-/* == debug */
-/* ----------------------------------------------------------- */
 /*
  * Generates a random color
  *
@@ -277,14 +250,10 @@ caption {
  *
  */
 .debug-rythm {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.1em, #ba9b9a), color-stop(0.1em, transparent)) !important;
   background: linear-gradient(to bottom, #ba9b9a 0.1em, transparent 0.1em) !important;
   background-size: 100% 1.5em !important;
 }
 
-/* ----------------------------------------------------------- */
-/* == alignment */
-/* ----------------------------------------------------------- */
 /* block
 -------------------------------------------------------------- */
 .left {
@@ -326,9 +295,6 @@ caption {
   vertical-align: middle;
 }
 
-/* ----------------------------------------------------------- */
-/* == colors */
-/* ----------------------------------------------------------- */
 .color-primary {
   color: #3498db;
 }
@@ -337,9 +303,6 @@ caption {
   color: #1abc9c;
 }
 
-/* ----------------------------------------------------------- */
-/* == spacings */
-/* ----------------------------------------------------------- */
 .ma0 {
   margin: 0;
 }
@@ -516,9 +479,6 @@ caption {
   padding-left: 3rem;
 }
 
-/* ----------------------------------------------------------- */
-/* == text */
-/* ----------------------------------------------------------- */
 .bold {
   font-weight: bold;
 }
@@ -567,9 +527,6 @@ caption {
   text-transform: lowercase;
 }
 
-/* ----------------------------------------------------------- */
-/* == width */
-/* ----------------------------------------------------------- */
 .w10 {
   width: 10%;
 }
@@ -630,12 +587,51 @@ caption {
  * Form Module
  * Namespace : .form
  */
-/* ----------------------------------------------------------- */
-/* == configuration */
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-/* == module */
-/* ----------------------------------------------------------- */
+/* basics style
+-------------------------------------------------------------- */
+fieldset {
+  margin: 2.5rem 0;
+  padding: 1em;
+  border: 0.1rem solid #d8d8d8;
+}
+
+input,
+select,
+label,
+.label {
+  vertical-align: middle;
+}
+
+select {
+  margin: 0;
+  background-color: #fff;
+  border: 0.1rem solid #ccc;
+}
+
+textarea {
+  min-width: 32rem;
+  min-height: 8em;
+  padding: 0.4em;
+  vertical-align: top;
+  resize: vertical;
+}
+
+input {
+  width: 100%;
+  max-width: 32rem;
+  padding: 0.8em;
+  background: #fff;
+  border: 0.1rem solid #d8d8d8;
+  border-radius: 0.4rem;
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.08);
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  width: inherit;
+  padding: 0;
+}
+
 /* placeholders
 -------------------------------------------------------------- */
 input::-webkit-input-placeholder {
@@ -654,25 +650,44 @@ textarea:-moz-placeholder {
   color: #c4c1be;
 }
 
+/* state
+-------------------------------------------------------------- */
+textarea:active,
+textarea:focus,
+select:active,
+select:focus,
+input:active,
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
+}
+
 /* block form
 -------------------------------------------------------------- */
 label,
 .label {
   display: block;
   margin-top: 1.3em;
-  margin-bottom: .8em;
+  margin-bottom: 0.8em;
   vertical-align: middle;
   cursor: pointer;
 }
 
-/* inline form
--------------------------------------------------------------- */
 .f-inline label,
 .f-inline .label {
   display: inline-block;
   margin: 0 1rem;
 }
 
+input[type='radio'] + label,
+input[type='checkbox'] + label {
+  display: inline-block;
+  margin-right: 1rem;
+  vertical-align: baseline;
+}
+
+/* inline form
+-------------------------------------------------------------- */
 .f-inline {
   display: inline-block;
 }
@@ -686,93 +701,17 @@ label,
   vertical-align: middle;
 }
 
-/* basics style
--------------------------------------------------------------- */
-fieldset {
-  margin: 2.5rem 0;
-  padding: 1em;
-  border: .1rem solid #d8d8d8;
-}
-
-input,
-select,
-label,
-.label {
-  vertical-align: middle;
-}
-
-select {
-  margin: 0;
-  background-color: #fff;
-  border: .1rem solid #ccc;
-}
-
-textarea {
-  min-width: 32rem;
-  min-height: 8em;
-  padding: .4em;
-  vertical-align: top;
-  resize: vertical;
-}
-
-input {
-  width: 100%;
-  max-width: 32rem;
-  padding: .8em;
-  background: #fff;
-  border: 0.1rem solid #d8d8d8;
-  border-radius: 0.4rem;
-  -webkit-box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.08);
-  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.08);
-}
-
-textarea:active,
-textarea:focus,
-select:active,
-select:focus,
-input:active,
-input:focus {
-  outline: none;
-  -webkit-box-shadow: 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
-  box-shadow: 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
-}
-
-input[type='radio'] + label,
-input[type='checkbox'] + label {
-  display: inline-block;
-  margin-right: 1rem;
-  vertical-align: baseline;
-}
-
-input[type='radio'],
-input[type='checkbox'] {
-  width: inherit;
-  padding: 0;
-}
-
 /* autogrid
 -------------------------------------------------------------- */
 [class^='f-grid'] {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
   align-items: flex-end;
 }
 
 [class^='f-grid'] > * {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 0 0px;
   flex: 1 0 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   margin-left: 2rem;
 }
@@ -819,7 +758,7 @@ input[type='checkbox'] {
 }
 
 .f-error input {
-  margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
   border: 0.1rem solid #ff3860;
 }
 
@@ -831,24 +770,18 @@ input[type='checkbox'] {
   * Switch Module
   * Namespace: .switch
   */
-/* ----------------------------------------------------------- */
-/* == module */
-/* ----------------------------------------------------------- */
 .switch[type='checkbox'] {
   position: relative;
   width: 4rem;
   height: 2rem;
-  margin-top: -.05em;
+  margin-top: -0.05em;
   background-color: #fff;
   border: 0.1rem solid #d8d8d8;
   border-radius: 42rem;
   outline: none;
-  -webkit-box-shadow: inset -2rem 0 0 0.1rem rgba(192, 192, 192, 0.5);
   box-shadow: inset -2rem 0 0 0.1rem rgba(192, 192, 192, 0.5);
-  -webkit-transition: .2s;
-  transition: .2s;
+  transition: 0.2s;
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -861,7 +794,6 @@ input[type='checkbox'] {
 -------------------------------------------------------------- */
 .switch[type='checkbox']:checked {
   border-color: #3498db;
-  -webkit-box-shadow: inset 2rem 0 0 0.1rem rgba(52, 152, 219, 0.7);
   box-shadow: inset 2rem 0 0 0.1rem rgba(52, 152, 219, 0.7);
 }
 
@@ -869,13 +801,11 @@ input[type='checkbox'] {
 -------------------------------------------------------------- */
 .switch[type='checkbox']:active,
 .switch[type='checkbox']:focus {
-  -webkit-box-shadow: inset -2rem 0 0 0.1rem rgba(192, 192, 192, 0.5), 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
   box-shadow: inset -2rem 0 0 0.1rem rgba(192, 192, 192, 0.5), 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
 }
 
 .switch[type='checkbox']:checked:active,
 .switch[type='checkbox']:checked:focus {
-  -webkit-box-shadow: inset 2rem 0 0 0.1rem rgba(52, 152, 219, 0.7), 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
   box-shadow: inset 2rem 0 0 0.1rem rgba(52, 152, 219, 0.7), 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
 }
 
@@ -883,16 +813,11 @@ input[type='checkbox'] {
  * Radiobox Module
  * Namespace : .radiobox
  */
-/* ----------------------------------------------------------- */
-/* == module */
-/* ----------------------------------------------------------- */
 .radiobox {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100%;
   max-width: 32rem;
-  padding: .2rem;
+  padding: 0.2rem;
   border: 0.1rem solid #d8d8d8;
   border-radius: 0.4rem;
 }
@@ -908,17 +833,9 @@ input[type='checkbox'] {
 }
 
 .radiobox input + label {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
   flex-grow: 1;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 50%;
   min-height: 4rem;
@@ -926,16 +843,15 @@ input[type='checkbox'] {
   padding: 1rem 1.8rem;
   font-weight: normal;
   text-align: center;
-  -webkit-transition: all .05s ease-in;
-  transition: all .05s ease-in;
-}
-
-.radiobox input:first-child + label {
-  border-radius: 0.2rem 0 0 0.2rem;
+  transition: all 0.05s ease-in;
 }
 
 .radiobox label:last-child {
   border-radius: 0 0.2rem 0.2rem 0;
+}
+
+.radiobox input:first-child + label {
+  border-radius: 0.2rem 0 0 0.2rem;
 }
 
 /* Checked state */
@@ -946,18 +862,15 @@ input[type='checkbox'] {
 
 /* Focus state */
 .radiobox input:focus + label {
-  -webkit-box-shadow: 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
   box-shadow: 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
 }
 
 .radiobox:active,
 .radiobox:focus-within {
-  -webkit-box-shadow: 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
   box-shadow: 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
 }
 
 .radiobox:focus-within input:focus + label {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -965,15 +878,9 @@ input[type='checkbox'] {
 * Button Module
 * namespace : .btn
 */
-/* ----------------------------------------------------------- */
-/* == configuration */
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-/* == module */
-/* ----------------------------------------------------------- */
 .btn {
   display: inline-block;
-  padding: .8em 1.6em;
+  padding: 0.8em 1.6em;
   color: #fff;
   line-height: normal;
   text-align: center;
@@ -982,17 +889,14 @@ input[type='checkbox'] {
   background-color: #3498db;
   border: none;
   border-radius: 0.2rem;
-  -webkit-box-shadow: none;
   box-shadow: none;
   cursor: pointer;
-  -webkit-transition: background-color .4s;
-  transition: background-color .4s;
+  transition: background-color 0.4s;
 }
 
 .btn:active,
 .btn:focus {
   outline: none;
-  -webkit-box-shadow: 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
   box-shadow: 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
 }
 
@@ -1047,16 +951,10 @@ input[type='checkbox'] {
  * Pagination Module
  * namespace : .pagination
  */
-/* ----------------------------------------------------------- */
-/* == configuration */
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-/* == module */
-/* ----------------------------------------------------------- */
 .pagination {
   display: inline-block;
   margin: 2rem 0;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
 }
 
 .pagination,
@@ -1067,13 +965,13 @@ input[type='checkbox'] {
 
 .pagination li {
   display: inline-block;
-  margin: 0 .3rem 1em;
+  margin: 0 0.3rem 1em;
   list-style-type: none;
 }
 
 .pagination li a,
 .pagination li > span {
-  padding: .3em .6em;
+  padding: 0.3em 0.6em;
   border: 0.1rem solid #808080;
   border-radius: 0.2rem;
 }
@@ -1091,17 +989,11 @@ input[type='checkbox'] {
  * Table Module
  * namespace : .table
  */
-/* ----------------------------------------------------------- */
-/* == configuration */
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-/* == module */
-/* ----------------------------------------------------------- */
 .table {
   width: 100%;
   max-width: 100%;
   table-layout: fixed;
-  border: .1rem solid #cbcbcb;
+  border: 0.1rem solid #cbcbcb;
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -1116,14 +1008,14 @@ input[type='checkbox'] {
 .table td,
 .table th {
   margin: 0;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   overflow: hidden;
   font-size: inherit;
   white-space: nowrap;
   text-overflow: ellipsis;
   word-wrap: break-word;
-  border-width: 0 0 0 .1rem;
-  border-left: .1rem solid #cbcbcb;
+  border-width: 0 0 0 0.1rem;
+  border-left: 0.1rem solid #cbcbcb;
 }
 
 .table td:first-child,
@@ -1142,12 +1034,6 @@ input[type='checkbox'] {
  * Tooltip Module
  * namespace : .tooltip
  */
-/* ----------------------------------------------------------- */
-/* == configuration */
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-/* == module */
-/* ----------------------------------------------------------- */
 .tooltip {
   position: relative;
   cursor: help;
@@ -1161,7 +1047,7 @@ input[type='checkbox'] {
   position: absolute;
   bottom: 1.35em;
   left: 1em;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   color: #fff;
   white-space: nowrap;
   background: rgba(0, 0, 0, 0.8);
@@ -1176,7 +1062,7 @@ input[type='checkbox'] {
   display: block;
   border: solid;
   border-color: rgba(0, 0, 0, 0.8) transparent;
-  border-width: .4em .4em 0 .4em;
+  border-width: 0.4em 0.4em 0 0.4em;
   content: '';
 }
 
@@ -1184,12 +1070,6 @@ input[type='checkbox'] {
  * Notification module
  * Namespace : .notif
  */
-/* ----------------------------------------------------------- */
-/* == configuration */
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-/* == module */
-/* ----------------------------------------------------------- */
 .notif {
   padding: 1em;
   border-radius: 4px;
@@ -1210,15 +1090,6 @@ input[type='checkbox'] {
   background-color: #ff3860;
 }
 
-/* ----------------------------------------------------------- */
-/* == custom fonts */
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-/* == icons */
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-/* == grids */
-/* ----------------------------------------------------------- */
 /**
  * Some grid examples
  */
@@ -1240,7 +1111,7 @@ input[type='checkbox'] {
 }
 
 .grid-2 > *:nth-child(n) {
-  width: calc(100% * 1 / 2 - 2rem - .01px);
+  width: calc(100% * 1 / 2 - 2rem - 0.01px);
   margin-bottom: 2rem;
   margin-left: 2rem;
 }
@@ -1252,7 +1123,7 @@ input[type='checkbox'] {
 }
 
 .grid-3 > *:nth-child(n) {
-  width: calc(100% * 1 / 3 - 2rem - .01px);
+  width: calc(100% * 1 / 3 - 2rem - 0.01px);
   margin-bottom: 2rem;
   margin-left: 2rem;
 }
@@ -1264,7 +1135,7 @@ input[type='checkbox'] {
 }
 
 .grid-4 > *:nth-child(n) {
-  width: calc(100% * 1 / 4 - 2rem - .01px);
+  width: calc(100% * 1 / 4 - 2rem - 0.01px);
   margin-bottom: 2rem;
   margin-left: 2rem;
 }
@@ -1274,7 +1145,7 @@ input[type='checkbox'] {
 }
 
 .grid-2-noGutter > *:nth-child(n) {
-  width: calc(100% * 1 / 2 - .01px);
+  width: calc(100% * 1 / 2 - 0.01px);
   margin-bottom: 0;
 }
 
@@ -1283,11 +1154,11 @@ input[type='checkbox'] {
 }
 
 .grid-1-3 > *:nth-child(odd) {
-  width: calc(25% - 1rem - .01px);
+  width: calc(25% - 1rem - 0.01px);
 }
 
 .grid-1-3 > *:nth-child(even) {
-  width: calc(75% - 1rem - .01px);
+  width: calc(75% - 1rem - 0.01px);
   margin-left: 2rem;
 }
 
@@ -1307,15 +1178,12 @@ input[type='checkbox'] {
     margin-left: -2rem;
   }
   .grid-2-xs > *:nth-child(n) {
-    width: calc(100% * 1 / 2 - 2rem - .01px);
+    width: calc(100% * 1 / 2 - 2rem - 0.01px);
     margin-bottom: 2rem;
     margin-left: 2rem;
   }
 }
 
-/* ----------------------------------------------------------- */
-/* == main */
-/* ----------------------------------------------------------- */
 body {
   color: #000;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -1369,9 +1237,8 @@ a:hover {
 }
 
 a:focus {
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   outline: none;
-  -webkit-box-shadow: 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
   box-shadow: 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
 }
 
@@ -1386,25 +1253,13 @@ ul {
 -------------------------------------------------------------- */
 hr {
   display: block;
-  height: .1rem;
+  height: 0.1rem;
   margin: 1em 0;
   padding: 0;
   border: 0;
-  border-top: .1rem solid #ccc;
+  border-top: 0.1rem solid #ccc;
 }
 
-/* ----------------------------------------------------------- */
-/* == header */
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-/* == navigation */
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-/* == content */
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-/* == footer */
-/* ----------------------------------------------------------- */
 .footer {
   padding: 2rem 0;
 }
@@ -1421,18 +1276,7 @@ hr {
   color: #3498db;
 }
 
-/* ----------------------------------------------------------- */
-/* == rwd -> large */
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-/* == rwd -> medium */
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-/* == rwd -> small */
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-/* == rwd -> xsmall */
-/* ----------------------------------------------------------- */
-/* ----------------------------------------------------------- */
-/* == rwd */
-/* ----------------------------------------------------------- */
+/*
+  Tips: load vendor from your package manager and override CSS here (e.g. o-vendor-name.scss)
+  In this context, "o" means "override" and you can use it as a convention.
+*/
