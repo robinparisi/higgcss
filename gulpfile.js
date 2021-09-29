@@ -1,9 +1,7 @@
-"use strict";
-
-import gulp from 'gulp';
-import sass from 'gulp-sass';
-import autoprefixer from 'gulp-autoprefixer';
-import browserSync from 'browser-sync';
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const autoprefixer = require('gulp-autoprefixer');
+const browserSync = require('browser-sync');
 
 const paths = {
     sass: {
@@ -37,7 +35,6 @@ const bs = () => {
 };
 
 exports.watch = gulp.series(runSass, () => {
-
         browserSync.init({
             server: {
                 baseDir: "demo",
@@ -48,7 +45,6 @@ exports.watch = gulp.series(runSass, () => {
 
         gulp.watch(paths.sass.watch, gulp.series(runSass));
         gulp.watch(paths.html.watch).on('change', browserSync.reload);
-
 })
 
 exports.default = gulp.series(runSass);
