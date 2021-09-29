@@ -1,17 +1,3 @@
-/* texts
--------------------------------------------------------------- */
-/* links
--------------------------------------------------------------- */
-/* brands
--------------------------------------------------------------- */
-/* base
--------------------------------------------------------------- */
-/* responsive
--------------------------------------------------------------- */
-/* gutter
--------------------------------------------------------------- */
-/* focus ring
--------------------------------------------------------------- */
 html {
   box-sizing: border-box;
 }
@@ -303,42 +289,6 @@ caption {
   color: #1abc9c;
 }
 
-.ma0 {
-  margin: 0;
-}
-
-.pa0 {
-  padding: 0;
-}
-
-.ma1 {
-  margin: 1rem;
-}
-
-.ma2 {
-  margin: 2rem;
-}
-
-.ma3 {
-  margin: 3rem;
-}
-
-.pa1 {
-  padding: 1rem;
-}
-
-.pa2 {
-  padding: 2rem;
-}
-
-.pa3 {
-  padding: 3rem;
-}
-
-.mt0 {
-  margin-top: 0;
-}
-
 .mt1 {
   margin-top: 1rem;
 }
@@ -359,8 +309,8 @@ caption {
   margin-top: 5rem;
 }
 
-.mr0 {
-  margin-right: 0;
+.mr05 {
+  margin-right: 0.5rem;
 }
 
 .mr1 {
@@ -373,10 +323,6 @@ caption {
 
 .mr3 {
   margin-right: 3rem;
-}
-
-.mb0 {
-  margin-bottom: 0;
 }
 
 .mb1 {
@@ -399,8 +345,8 @@ caption {
   margin-bottom: 5rem;
 }
 
-.ml0 {
-  margin-left: 0;
+.ml05 {
+  margin-left: 0.5rem;
 }
 
 .ml1 {
@@ -415,10 +361,6 @@ caption {
   margin-left: 3rem;
 }
 
-.pt0 {
-  padding-top: 0;
-}
-
 .pt1 {
   padding-top: 1rem;
 }
@@ -431,8 +373,16 @@ caption {
   padding-top: 3rem;
 }
 
-.pr0 {
-  padding-right: 0;
+.pt4 {
+  padding-top: 4rem;
+}
+
+.pt5 {
+  padding-top: 5rem;
+}
+
+.pr05 {
+  padding-right: 0.5rem;
 }
 
 .pr1 {
@@ -447,10 +397,6 @@ caption {
   padding-right: 3rem;
 }
 
-.pb0 {
-  padding-bottom: 0;
-}
-
 .pb1 {
   padding-bottom: 1rem;
 }
@@ -463,8 +409,16 @@ caption {
   padding-bottom: 3rem;
 }
 
-.pl0 {
-  padding-left: 0;
+.pb4 {
+  padding-bottom: 4rem;
+}
+
+.pb5 {
+  padding-bottom: 5rem;
+}
+
+.pl05 {
+  padding-left: 0.5rem;
 }
 
 .pl1 {
