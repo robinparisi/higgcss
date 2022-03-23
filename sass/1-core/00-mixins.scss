@@ -1,4 +1,4 @@
-@use 'sass:math';
+@use "sass:math";
 
 // -------------------------------------------------------------
 // mixins
@@ -6,7 +6,7 @@
 
 @mixin flow($font-size, $bf: $base-font, $lh: $line-height) {
   $lh-value: $base-font * $lh;
-  $coeff: ceil(math.div($font-size, $lh-value));
+  $coeff: math.ceil(math.div($font-size, $lh-value));
   $new-lh: math.div($lh-value, $font-size) * $coeff;
   $margin-bottom: math.div($new-lh, $coeff);
 

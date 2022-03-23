@@ -9,21 +9,21 @@
 
 .visually-hidden {
   position: absolute;
+  overflow: hidden;
   width: 1px;
   height: 1px;
-  margin: -1px;
   padding: 0;
-  overflow: hidden;
   border: 0;
+  margin: -1px;
   clip: rect(0 0 0 0);
 }
 
 .visually-hidden.focusable:active,
 .visually-hidden.focusable:focus {
   position: static;
+  overflow: visible;
   width: auto;
   height: auto;
   margin: 0;
-  overflow: visible;
   clip: auto;
 }

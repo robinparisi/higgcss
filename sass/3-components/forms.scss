@@ -23,9 +23,9 @@ $input-required: #ff3860;
 -------------------------------------------------------------- */
 
 fieldset {
-  margin: 2.5rem 0;
   padding: 1em;
   border: 0.1rem solid #d8d8d8;
+  margin: 2.5rem 0;
 }
 
 input,
@@ -36,31 +36,31 @@ label,
 }
 
 select {
+  border: 0.1rem solid #ccc;
   margin: 0;
   background-color: #fff;
-  border: 0.1rem solid #ccc;
 }
 
 textarea {
   min-width: 32rem;
   min-height: 8em;
   padding: 0.4em;
-  vertical-align: top;
   resize: vertical;
+  vertical-align: top;
 }
 
 input {
   width: 100%;
   max-width: 32rem;
   padding: 0.8em;
-  background: $input-background-color;
   border: $input-border;
+  background: $input-background-color;
   border-radius: $input-border-radius;
-  box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.08);
+  box-shadow: inset 0 1px 2px rgb(10 10 10 / 8%);
 }
 
-input[type='radio'],
-input[type='checkbox'] {
+input[type="radio"],
+input[type="checkbox"] {
   width: inherit;
   padding: 0;
 }
@@ -68,19 +68,11 @@ input[type='checkbox'] {
 /* placeholders
 -------------------------------------------------------------- */
 
-input::-webkit-input-placeholder {
+input:placeholder {
   color: $input-placeholder-color;
 }
 
-input:-moz-placeholder {
-  color: $input-placeholder-color;
-}
-
-textarea::-webkit-input-placeholder {
-  color: $input-placeholder-color;
-}
-
-textarea:-moz-placeholder {
+textarea:placeholder {
   color: $input-placeholder-color;
 }
 
@@ -93,8 +85,8 @@ select:active,
 select:focus,
 input:active,
 input:focus {
-  outline: none;
   box-shadow: $focus-ring;
+  outline: none;
 }
 
 /* block form
@@ -105,7 +97,6 @@ label,
   display: block;
   margin-top: 1.3em;
   margin-bottom: 0.8em;
-  vertical-align: middle;
   cursor: pointer;
 }
 
@@ -115,8 +106,8 @@ label,
   margin: 0 1rem;
 }
 
-input[type='radio'] + label,
-input[type='checkbox'] + label {
+input[type="radio"] + label,
+input[type="checkbox"] + label {
   display: inline-block;
   margin-right: 1rem;
   vertical-align: baseline;
@@ -141,24 +132,24 @@ input[type='checkbox'] + label {
 /* autogrid
 -------------------------------------------------------------- */
 
-[class^='f-grid'] {
+[class^="f-grid"] {
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-end;
 }
 
-[class^='f-grid'] > * {
+[class^="f-grid"] > * {
   display: flex;
   flex: 1 0 0;
   flex-direction: column;
   margin-left: 2rem;
 }
 
-[class^='f-grid'] > *:first-child {
+[class^="f-grid"] > *:first-child {
   margin-left: 0;
 }
 
-[class^='f-grid'] input {
+[class^="f-grid"] input {
   max-width: 100%;
 }
 
@@ -198,8 +189,8 @@ input[type='checkbox'] + label {
 }
 
 .f-error input {
-  margin-bottom: 0.8rem;
   border: 0.1rem solid $input-error;
+  margin-bottom: 0.8rem;
 }
 
 .f-error-message {

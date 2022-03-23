@@ -31,13 +31,13 @@ svg {
 
 img {
   height: auto;
-  vertical-align: middle;
   border-style: none;
+  vertical-align: middle;
 }
 
 /* fix input no style on Safari */
 
-input[type='search'] {
+input[type="search"] {
   appearance: textfield;
 }
 

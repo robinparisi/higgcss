@@ -10,7 +10,7 @@
         "watch": "gulp watch",
         "build": "gulp",
         "lint": "npx stylelint 'sass/**/*.scss'",
-        "autofix": "npx stylelint 'sass/**/*.scss' --fix"
+        "lint-autofix": "npx stylelint 'sass/**/*.scss' --fix"
     },
     "devDependencies": {
         "browser-sync": "^2.27.5",
@@ -18,9 +18,8 @@
         "gulp-autoprefixer": "^8.0.0",
         "gulp-sass": "^5.0.0",
         "sass": "^1.42.1",
-        "stylelint": "^13.13.1",
-        "stylelint-config-rational-order": "^0.0.4",
-        "stylelint-config-standard": "^21.0.0",
-        "stylelint-scss": "^3.21.0"
+        "stylelint": "^14.6.0",
+        "stylelint-config-idiomatic-order": "^8.1.0",
+        "stylelint-config-standard-scss": "^3.0.0"
     }
 }

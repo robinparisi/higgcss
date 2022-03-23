@@ -3,17 +3,17 @@
 // -----------------------------------------------------------
 
 body {
+  background-color: #fff;
   color: $color-dark-text;
   font-family: $fontstack1;
-  background-color: #fff;
 }
 
 .container {
   max-width: 102.4rem;
-  margin-right: auto;
-  margin-left: auto;
   padding-right: 1rem;
   padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* titles
@@ -50,8 +50,8 @@ a:hover {
 
 a:focus {
   border-radius: 0.3rem;
-  outline: none;
   box-shadow: $focus-ring;
+  outline: none;
 }
 
 /* lists
@@ -68,8 +68,8 @@ ul {
 hr {
   display: block;
   height: 0.1rem;
-  margin: 1em 0;
   padding: 0;
   border: 0;
   border-top: 0.1rem solid #ccc;
+  margin: 1em 0;
 }

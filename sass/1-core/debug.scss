@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // -------------------------------------------------------------
 // debug
 // -------------------------------------------------------------
@@ -7,10 +9,10 @@
  *
  */
 
-@mixin randomColor {
-  $red: round(random() *222);
-  $green: round(random() *222);
-  $blue: round(random() *222);
+@mixin random-color {
+  $red: math.round(math.random() * 222);
+  $green: math.round(math.random() * 222);
+  $blue: math.round(math.random() * 222);
 }
 
 /*
@@ -19,10 +21,10 @@
  */
 
 @mixin debug() {
-  @include randomColor;
+  @include random-color;
 
-  background-color: rgba($red, $green, $blue, 30%);
   border: 0.3rem dotted rgb($red, $green, $blue);
+  background-color: rgba($red, $green, $blue, 30%);
 }
 
 /*
@@ -36,5 +38,5 @@
 }
 
 .debug-rythm {
-  @include debug-rythm();
+  @include debug-rythm;
 }

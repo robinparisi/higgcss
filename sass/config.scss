@@ -9,13 +9,13 @@
 $base-font: 14; // px value (without unit), will be converted in em
 $line-height: 1.5;
 $fontstack1: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
-$fontstack2: 'Georgia', 'Times', 'Times New Roman', serif;
+$fontstack2: "Georgia", "Times", "Times New Roman", serif;
 
 // -------------------------------------------------------------
 // spacers
 // -------------------------------------------------------------
 
-$spacingRules: (
+$spacing-rules: (
   (mt, margin-top, (1, 2, 3, 4, 5)), // generates mt1, mt2...
   (mr, margin-right, (0.5, 1, 2, 3)), // generates mr05, mr1...
   (mb, margin-bottom, (1, 2, 3, 4, 5)),

@@ -2,64 +2,64 @@
 // config
 // -------------------------------------------------------------
 
-@import '_colors';
-@import '_config';
+@import "colors";
+@import "config";
 
 // -------------------------------------------------------------
 // core
 // -------------------------------------------------------------
 
-@import '1-core/_00-mixins';
-@import '1-core/_01-reset';
-@import '1-core/_02-typography';
-@import '1-core/_03-helpers';
-@import '1-core/_04-layout';
-@import '1-core/_05-flexgrid';
-@import '1-core/_06-rwd';
-@import '1-core/_debug';
+@import "1-core/00-mixins";
+@import "1-core/01-reset";
+@import "1-core/02-typography";
+@import "1-core/03-helpers";
+@import "1-core/04-layout";
+@import "1-core/05-flexgrid";
+@import "1-core/06-rwd";
+@import "1-core/debug";
 
 // -------------------------------------------------------------
 // helpers
 // -------------------------------------------------------------
 
-@import '2-helpers/_alignment';
-@import '2-helpers/_colors';
-@import '2-helpers/_spacing';
-@import '2-helpers/_text';
-@import '2-helpers/_width';
+@import "2-helpers/alignment";
+@import "2-helpers/colors";
+@import "2-helpers/spacing";
+@import "2-helpers/text";
+@import "2-helpers/width";
 
 // -------------------------------------------------------------
 // components
 // -------------------------------------------------------------
 
-@import '3-components/_forms';
-@import '3-components/_switch';
-@import '3-components/_radiobox';
-@import '3-components/_buttons';
-@import '3-components/_pagination';
-@import '3-components/_tables';
-@import '3-components/_tooltips';
-@import '3-components/_notifications';
+@import "3-components/forms";
+@import "3-components/switch";
+@import "3-components/radiobox";
+@import "3-components/buttons";
+@import "3-components/pagination";
+@import "3-components/tables";
+@import "3-components/tooltips";
+@import "3-components/notifications";
 
 // -------------------------------------------------------------
 // base
 // -------------------------------------------------------------
 
-@import '4-base/_01-fonts';
-@import '4-base/_02-icons';
-@import '4-base/_03-grids';
-@import '4-base/_04-main';
-@import '4-base/_05-layout';
-@import '4-base/_06-header';
-@import '4-base/_07-navigation';
-@import '4-base/_08-content';
-@import '4-base/_09-footer';
+@import "4-base/01-fonts";
+@import "4-base/02-icons";
+@import "4-base/03-grids";
+@import "4-base/04-main";
+@import "4-base/05-layout";
+@import "4-base/06-header";
+@import "4-base/07-navigation";
+@import "4-base/08-content";
+@import "4-base/09-footer";
 
 // -------------------------------------------------------------
 // modules
 // -------------------------------------------------------------
 
-//@import '5-modules/...';
+// @import '5-modules/...';
 
 // -------------------------------------------------------------
 // pages
@@ -82,8 +82,8 @@
 // rwd
 // -------------------------------------------------------------
 
-@import '8-rwd/_rwd-large';
-@import '8-rwd/_rwd-medium';
-@import '8-rwd/_rwd-small';
-@import '8-rwd/_rwd-xsmall';
-@import '8-rwd/_rwd';
+@import "8-rwd/rwd-large";
+@import "8-rwd/rwd-medium";
+@import "8-rwd/rwd-small";
+@import "8-rwd/rwd-xsmall";
+@import "8-rwd/rwd";

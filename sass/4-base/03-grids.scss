@@ -30,7 +30,7 @@ $grid-mb: 2rem;
 }
 
 .grid-1-3 {
-  @include unequalGrid(1, 3, $grid-gutter, 2rem);
+  @include unequal-grid(1, 3, $grid-gutter, 2rem);
 }
 
 @media (max-width: $xsmall) {

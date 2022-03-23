@@ -27,8 +27,8 @@ svg {
 
 img {
   height: auto;
-  vertical-align: middle;
   border-style: none;
+  vertical-align: middle;
 }
 
 /* fix input no style on Safari */
@@ -73,22 +73,22 @@ caption {
 /* Hide only visually, but have it available for screen readers (from HTML5 Boilerplate) */
 .visually-hidden {
   position: absolute;
+  overflow: hidden;
   width: 1px;
   height: 1px;
-  margin: -1px;
   padding: 0;
-  overflow: hidden;
   border: 0;
+  margin: -1px;
   clip: rect(0 0 0 0);
 }
 
 .visually-hidden.focusable:active,
 .visually-hidden.focusable:focus {
   position: static;
+  overflow: visible;
   width: auto;
   height: auto;
   margin: 0;
-  overflow: visible;
   clip: auto;
 }
 
@@ -116,8 +116,7 @@ caption {
 
 .grid {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   align-items: stretch;
 }
 
@@ -149,10 +148,10 @@ caption {
 
 .responsive-iframe {
   position: relative;
+  overflow: hidden;
   height: 0;
   padding-top: 3rem;
   padding-bottom: 56.25%;
-  overflow: hidden;
 }
 
 .responsive-iframe iframe,
@@ -211,8 +210,8 @@ caption {
 @media (max-width: 480px) {
   .mod {
     display: block !important;
-    float: none !important;
     width: auto !important;
+    float: none !important;
   }
 }
 /*
@@ -536,9 +535,9 @@ caption {
 /* basics style
 -------------------------------------------------------------- */
 fieldset {
-  margin: 2.5rem 0;
   padding: 1em;
   border: 0.1rem solid #d8d8d8;
+  margin: 2.5rem 0;
 }
 
 input,
@@ -549,25 +548,25 @@ label,
 }
 
 select {
+  border: 0.1rem solid #ccc;
   margin: 0;
   background-color: #fff;
-  border: 0.1rem solid #ccc;
 }
 
 textarea {
   min-width: 32rem;
   min-height: 8em;
   padding: 0.4em;
-  vertical-align: top;
   resize: vertical;
+  vertical-align: top;
 }
 
 input {
   width: 100%;
   max-width: 32rem;
   padding: 0.8em;
-  background: #fff;
   border: 0.1rem solid #d8d8d8;
+  background: #fff;
   border-radius: 0.4rem;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.08);
 }
@@ -580,19 +579,11 @@ input[type=checkbox] {
 
 /* placeholders
 -------------------------------------------------------------- */
-input::-webkit-input-placeholder {
+input:placeholder {
   color: #c4c1be;
 }
 
-input:-moz-placeholder {
-  color: #c4c1be;
-}
-
-textarea::-webkit-input-placeholder {
-  color: #c4c1be;
-}
-
-textarea:-moz-placeholder {
+textarea:placeholder {
   color: #c4c1be;
 }
 
@@ -604,8 +595,8 @@ select:active,
 select:focus,
 input:active,
 input:focus {
-  outline: none;
   box-shadow: 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
+  outline: none;
 }
 
 /* block form
@@ -615,7 +606,6 @@ label,
   display: block;
   margin-top: 1.3em;
   margin-bottom: 0.8em;
-  vertical-align: middle;
   cursor: pointer;
 }
 
@@ -704,8 +694,8 @@ input[type=checkbox] + label {
 }
 
 .f-error input {
-  margin-bottom: 0.8rem;
   border: 0.1rem solid #ff3860;
+  margin-bottom: 0.8rem;
 }
 
 .f-error-message {
@@ -720,20 +710,20 @@ input[type=checkbox] + label {
   position: relative;
   width: 4rem;
   height: 2rem;
-  margin-top: -0.05em;
-  background-color: #fff;
   border: 0.1rem solid #d8d8d8;
-  border-radius: 42rem;
-  outline: none;
-  box-shadow: inset -2rem 0 0 0.1rem rgba(192, 192, 192, 0.5);
-  transition: 0.2s;
+  margin-top: -0.05em;
   -webkit-appearance: none;
   appearance: none;
+  background-color: #fff;
+  border-radius: 42rem;
+  box-shadow: inset -2rem 0 0 0.1rem rgba(192, 192, 192, 0.5);
+  outline: none;
+  transition: 0.2s;
 }
 
 .switch[type=checkbox]::-ms-check {
-  opacity: 0;
   filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
 }
 
 /* Checked state
@@ -780,13 +770,13 @@ input[type=checkbox] + label {
 
 .radiobox input + label {
   display: flex;
+  width: 50%;
+  min-height: 4rem;
   flex-grow: 1;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  min-height: 4rem;
-  margin: 0;
   padding: 1rem 1.8rem;
+  margin: 0;
   font-weight: normal;
   text-align: center;
   transition: all 0.05s ease-in;
@@ -802,8 +792,8 @@ input[type=checkbox] + label {
 
 /* Checked state */
 .radiobox input:checked + label {
-  color: #fff;
   background-color: #3498db;
+  color: #fff;
 }
 
 /* Focus state */
@@ -827,23 +817,23 @@ input[type=checkbox] + label {
 .btn {
   display: inline-block;
   padding: 0.8em 1.6em;
+  border: none;
+  background-color: #3498db;
+  border-radius: 0.2rem;
+  box-shadow: none;
   color: #fff;
+  cursor: pointer;
   line-height: normal;
   text-align: center;
   text-decoration: none !important;
-  vertical-align: middle;
-  background-color: #3498db;
-  border: none;
-  border-radius: 0.2rem;
-  box-shadow: none;
-  cursor: pointer;
   transition: background-color 0.4s;
+  vertical-align: middle;
 }
 
 .btn:active,
 .btn:focus {
-  outline: none;
   box-shadow: 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
+  outline: none;
 }
 
 /* colors
@@ -851,8 +841,8 @@ input[type=checkbox] + label {
 .btn--primary,
 .btn--primary:link,
 .btn--primary:visited {
-  color: #fff;
   background-color: #3498db;
+  color: #fff;
 }
 
 .btn--primary:hover,
@@ -864,8 +854,8 @@ input[type=checkbox] + label {
 .btn--secondary,
 .btn--secondary:link,
 .btn--secondary:visited {
-  color: #fff;
   background-color: #1abc9c;
+  color: #fff;
 }
 
 .btn--secondary:hover,
@@ -877,8 +867,8 @@ input[type=checkbox] + label {
 .btn--danger,
 .btn--danger:link,
 .btn--danger:visited {
-  color: #fff;
   background-color: #c53a3a;
+  color: #fff;
 }
 
 .btn--danger:hover,
@@ -905,8 +895,8 @@ input[type=checkbox] + label {
 
 .pagination,
 .pagination li {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 .pagination li {
@@ -927,8 +917,8 @@ input[type=checkbox] + label {
 }
 
 .pagination li.current a {
-  color: #fff;
   background-color: #3498db;
+  color: #fff;
 }
 
 /**
@@ -938,30 +928,30 @@ input[type=checkbox] + label {
 .table {
   width: 100%;
   max-width: 100%;
-  table-layout: fixed;
   border: 0.1rem solid #cbcbcb;
   border-collapse: collapse;
   border-spacing: 0;
+  table-layout: fixed;
 }
 
 .table caption {
   padding: 1em 0;
   color: #000;
-  font: italic 85%/1 "arial", sans-serif;
+  font: italic 85%/1 arial, sans-serif;
   text-align: center;
 }
 
 .table td,
 .table th {
-  margin: 0;
-  padding: 0.5em 1em;
   overflow: hidden;
-  font-size: inherit;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
+  padding: 0.5em 1em;
   border-width: 0 0 0 0.1rem;
   border-left: 0.1rem solid #cbcbcb;
+  margin: 0;
+  font-size: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: break-word;
 }
 
 .table td:first-child,
@@ -970,10 +960,10 @@ input[type=checkbox] + label {
 }
 
 .table thead {
+  background: #e0e0e0;
   color: #000;
   text-align: left;
   vertical-align: bottom;
-  background: #e0e0e0;
 }
 
 /**
@@ -986,7 +976,7 @@ input[type=checkbox] + label {
 }
 
 .tooltip::after {
-  font-family: "helvetica", "arial", sans-serif;
+  font-family: helvetica, arial, sans-serif;
 }
 
 .tooltip:hover::after {
@@ -994,11 +984,11 @@ input[type=checkbox] + label {
   bottom: 1.35em;
   left: 1em;
   padding: 0.5em 1em;
-  color: #fff;
-  white-space: nowrap;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 0.5em;
+  color: #fff;
   content: attr(data-tooltip);
+  white-space: nowrap;
 }
 
 .tooltip:hover::before {
@@ -1007,8 +997,8 @@ input[type=checkbox] + label {
   left: 2em;
   display: block;
   border: solid;
+  border-width: 0.4em 0.4em 0;
   border-color: rgba(0, 0, 0, 0.8) transparent;
-  border-width: 0.4em 0.4em 0 0.4em;
   content: "";
 }
 
@@ -1022,18 +1012,18 @@ input[type=checkbox] + label {
 }
 
 .notif--success {
-  color: #fff;
   background-color: #00d1b2;
+  color: #fff;
 }
 
 .notif--warning {
-  color: #444;
   background-color: #ffdd57;
+  color: #444;
 }
 
 .notif--error {
-  color: #fff;
   background-color: #ff3860;
+  color: #fff;
 }
 
 /**
@@ -1124,17 +1114,17 @@ input[type=checkbox] + label {
   }
 }
 body {
+  background-color: #fff;
   color: #000;
   font-family: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
-  background-color: #fff;
 }
 
 .container {
   max-width: 102.4rem;
-  margin-right: auto;
-  margin-left: auto;
   padding-right: 1rem;
   padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* titles
@@ -1177,8 +1167,8 @@ a:hover {
 
 a:focus {
   border-radius: 0.3rem;
-  outline: none;
   box-shadow: 0 0 0 0.3rem rgba(33, 133, 208, 0.5);
+  outline: none;
 }
 
 /* lists
@@ -1193,10 +1183,10 @@ ul {
 hr {
   display: block;
   height: 0.1rem;
-  margin: 1em 0;
   padding: 0;
   border: 0;
   border-top: 0.1rem solid #ccc;
+  margin: 1em 0;
 }
 
 .footer {
@@ -1205,8 +1195,8 @@ hr {
 
 .footer ul,
 .footer li {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 .footer a,

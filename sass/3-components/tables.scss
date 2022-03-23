@@ -10,30 +10,30 @@
 .table {
   width: 100%;
   max-width: 100%;
-  table-layout: fixed /* http://css-tricks.com/fixing-tables-long-strings */;
   border: 0.1rem solid #cbcbcb;
   border-collapse: collapse /* remove spacing between table cells */;
   border-spacing: 0;
+  table-layout: fixed /* http://css-tricks.com/fixing-tables-long-strings */;
 }
 
 .table caption {
   padding: 1em 0;
   color: #000;
-  font: italic 85%/1 'arial', sans-serif;
+  font: italic 85%/1 arial, sans-serif;
   text-align: center;
 }
 
 .table td,
 .table th {
-  margin: 0;
-  padding: 0.5em 1em;
   overflow: hidden;
-  font-size: inherit;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
+  padding: 0.5em 1em;
   border-width: 0 0 0 0.1rem;
   border-left: 0.1rem solid #cbcbcb;
+  margin: 0;
+  font-size: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: break-word;
 }
 
 .table td:first-child,
@@ -42,8 +42,8 @@
 }
 
 .table thead {
+  background: #e0e0e0;
   color: #000;
   text-align: left;
   vertical-align: bottom;
-  background: #e0e0e0;
 }

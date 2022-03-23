@@ -7,7 +7,7 @@
 // module
 // -------------------------------------------------------------
 
-$tooltip-bg: rgba(0, 0, 0, 0.8);
+$tooltip-bg: rgb(0 0 0 / 80%);
 $tooltip-color: #fff;
 $tooltip-radius: 0.5em;
 
@@ -21,7 +21,7 @@ $tooltip-radius: 0.5em;
 }
 
 .tooltip::after {
-  font-family: 'helvetica', 'arial', sans-serif;
+  font-family: helvetica, arial, sans-serif;
 }
 
 .tooltip:hover::after {
@@ -29,11 +29,11 @@ $tooltip-radius: 0.5em;
   bottom: 1.35em;
   left: 1em;
   padding: 0.5em 1em;
-  color: $tooltip-color;
-  white-space: nowrap;
   background: $tooltip-bg;
   border-radius: $tooltip-radius;
+  color: $tooltip-color;
   content: attr(data-tooltip);
+  white-space: nowrap;
 }
 
 .tooltip:hover::before {
@@ -42,7 +42,7 @@ $tooltip-radius: 0.5em;
   left: 2em;
   display: block;
   border: solid;
+  border-width: 0.4em 0.4em 0;
   border-color: $tooltip-bg transparent;
-  border-width: 0.4em 0.4em 0 0.4em;
-  content: '';
+  content: "";
 }
