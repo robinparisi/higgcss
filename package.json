@@ -1,5 +1,5 @@
 {
-    "name": "Higgcss",
+    "name": "higgcss",
     "version": "0.0.1",
     "license": "MIT",
     "repository": {
@@ -18,7 +18,7 @@
         "gulp-autoprefixer": "^8.0.0",
         "gulp-sass": "^5.0.0",
         "sass": "^1.42.1",
-        "stylelint": "^14.6.0",
+        "stylelint": "^14.8.5",
         "stylelint-config-idiomatic-order": "^8.1.0",
         "stylelint-config-standard-scss": "^3.0.0"
     }

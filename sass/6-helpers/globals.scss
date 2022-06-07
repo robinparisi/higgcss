@@ -1,0 +1,17 @@
+@each $utilKey, $utilValue in $helpers {
+  @if $utilKey == base {
+    @each $class, $prop, $value in map-get($helpers, $utilKey) {
+      .#{$class} {
+        #{$prop}: #{$value};
+      }
+    }
+  } @else {
+    @media (max-width: map-get($breakpoints, $utilKey)) {
+      @each $class, $prop, $value in map-get($helpers, $utilKey) {
+        .#{$utilKey}\:#{$class} {
+          #{$prop}: #{$value};
+        }
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@
 
 @import "colors";
 @import "config";
+@import "helpers";
 
 // -------------------------------------------------------------
 // core
@@ -14,69 +15,66 @@
 @import "1-core/02-typography";
 @import "1-core/03-helpers";
 @import "1-core/04-layout";
-@import "1-core/05-flexgrid";
+@import "1-core/05-grids";
 @import "1-core/06-rwd";
 @import "1-core/debug";
-
-// -------------------------------------------------------------
-// helpers
-// -------------------------------------------------------------
-
-@import "2-helpers/alignment";
-@import "2-helpers/colors";
-@import "2-helpers/spacing";
-@import "2-helpers/text";
-@import "2-helpers/width";
 
 // -------------------------------------------------------------
 // components
 // -------------------------------------------------------------
 
-@import "3-components/forms";
-@import "3-components/switch";
-@import "3-components/radiobox";
-@import "3-components/buttons";
-@import "3-components/pagination";
-@import "3-components/tables";
-@import "3-components/tooltips";
-@import "3-components/notifications";
+@import "2-components/forms";
+@import "2-components/switch";
+@import "2-components/radiobox";
+@import "2-components/buttons";
+@import "2-components/pagination";
+@import "2-components/tables";
+@import "2-components/notifications";
+@import "2-components/tag";
+@import "2-components/tooltip";
 
 // -------------------------------------------------------------
 // base
 // -------------------------------------------------------------
 
-@import "4-base/01-fonts";
-@import "4-base/02-icons";
-@import "4-base/03-grids";
-@import "4-base/04-main";
-@import "4-base/05-layout";
-@import "4-base/06-header";
-@import "4-base/07-navigation";
-@import "4-base/08-content";
-@import "4-base/09-footer";
+@import "3-base/01-fonts";
+@import "3-base/02-icons";
+@import "3-base/03-grids";
+@import "3-base/04-main";
+@import "3-base/05-layout";
+@import "3-base/06-header";
+@import "3-base/07-navigation";
+@import "3-base/08-content";
+@import "3-base/09-footer";
 
 // -------------------------------------------------------------
 // modules
 // -------------------------------------------------------------
 
-// @import '5-modules/...';
+// @import "4-modules/...";
 
 // -------------------------------------------------------------
 // pages
 // -------------------------------------------------------------
 
-// @import '6-pages/...';
+// @import "5-pages/...";
+
+// -------------------------------------------------------------
+// helpers
+// -------------------------------------------------------------
+
+@import "6-helpers/globals";
+@import "6-helpers/colors";
+@import "6-helpers/spacing";
 
 /// -------------------------------------------------------------
 // vendors
 // -------------------------------------------------------------
 
-/*
-  Tips: load vendor from your package manager and override CSS here (e.g. o-vendor-name.scss)
-  In this context, "o" means "override" and you can use it as a convention.
-*/
+// Tips: load vendor from your package manager and override CSS here (e.g. o-vendor-name.scss)
+// ↓ In this context, "o" means "override" and you can use it as a convention.
 
-// @import '7-vendors/o-vendor.scss';
+// @import "7-vendors/o-vendor.scss";
 
 // -------------------------------------------------------------
 // rwd
@@ -85,5 +83,4 @@
 @import "8-rwd/rwd-large";
 @import "8-rwd/rwd-medium";
 @import "8-rwd/rwd-small";
-@import "8-rwd/rwd-xsmall";
 @import "8-rwd/rwd";

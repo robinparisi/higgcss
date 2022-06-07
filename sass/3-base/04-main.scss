@@ -1,0 +1,84 @@
+// -----------------------------------------------------------
+// main
+// -----------------------------------------------------------
+
+body {
+  accent-color: $color-1;
+  background-color: #fff;
+  color: $color-dark-text;
+  font-family: $fontstack1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizespeed; // Fix performances issues (especially on mobile): https://marco.org/2012/11/15/text-rendering-optimize-legibility
+}
+
+// titles
+// --------------------------------------------------------------
+
+h1 {
+  @include flow(50);
+}
+
+h2 {
+  @include flow(25);
+}
+
+h3 {
+  @include flow(18);
+}
+
+h4 {
+  @include flow(16);
+}
+
+// links
+// --------------------------------------------------------------
+
+a:where(:any-link) {
+  color: currentcolor;
+  text-decoration: none;
+}
+
+a:where(:focus) {
+  border-radius: 0.3rem;
+  box-shadow: $focus-ring;
+  outline: none;
+}
+
+// A elements that don't have a class get default styles
+a:not([class]) {
+  color: $color-link;
+  text-decoration: underline;
+}
+
+a:where(:not([class]):hover) {
+  text-decoration: underline;
+}
+
+// buttons
+// --------------------------------------------------------------
+
+// Some browsers like Firefox doesn't display a pointer by default on buttons deliberately (as it shouldn't be the only indication of a clickable element). We choosed to make it default anyway to limit repetition in our stylesheets.
+button {
+  cursor: pointer;
+}
+
+// lists
+// --------------------------------------------------------------
+
+// Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed
+:where(ul, ol)[role="list"] {
+  list-style: none;
+}
+
+// divers
+// --------------------------------------------------------------
+
+hr {
+  display: block;
+  height: 0.1rem;
+  padding: 0;
+  border: 0;
+  border-top: 0.1rem solid #ccc;
+  margin: 1em 0;
+}

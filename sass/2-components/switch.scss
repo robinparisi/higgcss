@@ -1,0 +1,57 @@
+@use "sass:color";
+
+// Switch Module
+// Namespace: .switch
+
+// -------------------------------------------------------------
+// module
+// -------------------------------------------------------------
+
+.switch {
+  position: relative;
+  width: 3em;
+  height: 1.5em;
+  border: $input-border;
+  margin: 0;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 42rem;
+  box-shadow: inset -1.5em 0 0 0.1rem $input-border-color;
+  outline: none;
+  transform: translateY(0.4em);
+  transition: 0.2s;
+  vertical-align: baseline;
+}
+
+// Checked state
+// --------------------------------------------------------------
+
+.switch:checked {
+  border-color: $color-1;
+  box-shadow: inset 1.5em 0 0 0.1rem $color-1;
+}
+
+// Focus state
+// --------------------------------------------------------------
+
+.switch:active,
+.switch:focus {
+  box-shadow: inset -2rem 0 0 0.1rem rgb(192 192 192 / 50%), $focus-ring;
+}
+
+.switch:checked:active,
+.switch:checked:focus {
+  box-shadow: inset 2rem 0 0 0.1rem $color-1, $focus-ring;
+}
+
+// Error state
+// --------------------------------------------------------------
+
+.f-error .switch {
+  margin: 0;
+  outline: none;
+}
+
+.f-error .switch:checked {
+  border-color: $input-error;
+}

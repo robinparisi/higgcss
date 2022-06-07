@@ -1,10 +1,5 @@
-/**
- * Tooltip Module
- * namespace : .tooltip
- */
-
 // -------------------------------------------------------------
-// module
+// Tooltip
 // -------------------------------------------------------------
 
 $tooltip-bg: rgb(0 0 0 / 80%);
@@ -20,10 +15,6 @@ $tooltip-radius: 0.5em;
   cursor: help;
 }
 
-.tooltip::after {
-  font-family: helvetica, arial, sans-serif;
-}
-
 .tooltip:hover::after {
   position: absolute;
   bottom: 1.35em;
@@ -33,6 +24,7 @@ $tooltip-radius: 0.5em;
   border-radius: $tooltip-radius;
   color: $tooltip-color;
   content: attr(data-tooltip);
+  font-family: $fontstack2;
   white-space: nowrap;
 }
 

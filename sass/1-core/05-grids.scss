@@ -1,0 +1,19 @@
+// -------------------------------------------------------------
+// grids
+// -------------------------------------------------------------
+
+.grid {
+  display: grid;
+}
+
+@mixin grid($cols, $prefix: "") {
+  @if $prefix != "" {
+    .#{$prefix}\:grid-#{$cols} {
+      grid-template-columns: repeat(#{$cols}, minmax(0, 1fr));
+    }
+  } @else {
+    .grid-#{$cols} {
+      grid-template-columns: repeat(#{$cols}, minmax(0, 1fr));
+    }
+  }
+}

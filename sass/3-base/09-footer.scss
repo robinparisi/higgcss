@@ -3,17 +3,7 @@
 // -------------------------------------------------------------
 
 .footer {
-  padding: 2rem 0;
-}
-
-.footer ul,
-.footer li {
-  padding: 0;
-  margin: 0;
-}
-
-.footer a,
-.footer a:hover,
-.footer a:visited {
-  color: $color-link;
+  border-top: 0.2rem dotted $color-4;
+  margin-top: 5rem;
+  padding-block: 3rem;
 }

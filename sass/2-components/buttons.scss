@@ -1,0 +1,122 @@
+@use "sass:color";
+
+// -------------------------------------------------------------
+// Buttons
+// -------------------------------------------------------------
+
+$btn-primary: $color-1;
+$btn-secondary: $color-2;
+$btn-dark: $color-dark-text;
+$btn-danger: #c53a3a;
+$btn-hover: 5%;
+$btn-radius: 0.2rem;
+$btn-border-width: 0.1rem;
+
+.btn {
+  --color-accent: #{$btn-primary};
+  --color-text: #fff;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8em 1.6em;
+  border: $btn-border-width solid transparent;
+  margin: 0;
+  background-color: var(--color-accent);
+  border-radius: $btn-radius;
+  box-shadow: none;
+  color: var(--color-text);
+  font: inherit;
+  line-height: ($line-height + em);
+  text-align: center;
+  transition: all 0.2s;
+  vertical-align: middle;
+}
+
+.btn:where(:hover, :active) {
+  --color-accent: #{color.adjust($btn-primary, $lightness: -10%)};
+}
+
+// Custom focus ring
+.btn:where(:active, :focus) {
+  box-shadow: $focus-ring;
+  outline: none;
+}
+
+// Colors
+// --------------------------------------------------------------
+
+.btn--secondary { --color-accent: #{$btn-secondary}; }
+.btn--secondary:where(:hover, :active) { --color-accent: #{color.adjust($btn-secondary, $lightness: -10%)}; }
+
+.btn--danger { --color-accent: #{$btn-danger}; }
+.btn--danger:where(:hover, :active) { --color-accent: #{color.adjust($btn-danger, $lightness: - 10%)}; }
+
+.btn--dark { --color-accent: #{$btn-dark}; }
+.btn--dark:where(:hover, :active) { --color-accent: #{color.adjust($btn-dark, $lightness: + 10%)}; }
+
+// Styles
+// --------------------------------------------------------------
+
+// Ghost
+
+.btn--ghost {
+  border-color: var(--color-accent);
+  background-color: transparent;
+  color: var(--color-accent);
+}
+
+.btn--ghost:where(:hover, :active) {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+// Inline-link styled
+
+.btn--link {
+  display: inline-flex;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+// Btn with icon
+// --------------------------------------------------------------
+
+[class*="btn--ico"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 1ch; // 1 letter large of gap
+}
+
+[class*="btn--ico"] svg {
+  width: ($line-height + em);
+  height: ($line-height + em);
+  flex-shrink: 0;
+  fill: currentcolor;
+}
+
+// Ico sizes
+
+.btn--icoSmall svg {
+  width: 0.75em;
+  height: 0.75em;
+}
+
+.btn--icoMedium svg {
+  width: 1em;
+  height: 1em;
+}
+
+// Button Sizes
+// --------------------------------------------------------------
+
+.btn--big {
+  font-size: 1.2em;
+}
+
+.btn--small {
+  padding: 0.3em 0.75em;
+}

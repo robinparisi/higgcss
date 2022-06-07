@@ -1,14 +1,9 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-    <title></title>
-    <meta name="description" content="">
+    <title>Buttons - Higgcss</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
     <link rel="stylesheet" href="/style.css" media="all">
     <style>
         .container {
@@ -18,24 +13,92 @@
     </style>
 </head>
 <body>
-<div class="container">
-    <p>
-        <button class="btn btn--primary">.btn .btn-primary</button>
-        <button class="btn btn--secondary">.btn .btn-secondary</button>
-        <button class="btn btn--danger">.btn .btn-danger</button>
-    </p>
-    <p>
-        <button class="btn"><i class="fa fa-calendar mr1"></i>icon left</button>
-        <button class="btn">icon right<i class="fa fa-users ml1 "></i></button>
-    </p>
-    <p>
-        <a href="#" class="btn">Lien 1</a>
-        <a href="#" class="btn">Lien 2</a>
-    </p>
+<main class="container">
+    <h1>Buttons</h1>
+    <section class="mt5">
+        <h2>Colors</h2>
+        <article>
+            <button class="btn">.btn</button>
+            <button class="btn btn--secondary">.btn .btn--secondary</button>
+            <button class="btn btn--danger">.btn .btn--danger</button>
+            <button class="btn btn--dark">.btn .btn--dark</button>
+        </article>
+        <article>
+            <h3>Works too with &lt;a&gt;</h3>
+                <a href="#" class="btn">&lt;a&gt; with .btn class</a>
+                <a href="#" class="btn btn--secondary">&lt;a&gt; with .btn .btn--secondary classes</a>
+        </article>
+    </section>
+    <section class="mt5">
+        <h2>Styles</h2>
+        <article>
+            <h3>Ghost buttons</h3>
+            <button class="btn btn--ghost">.btn .btn--ghost</button>
+            <button class="btn btn--ghost btn--secondary">.btn .btn--ghost .btn--secondary</button>
+            <button class="btn btn--ghost btn--danger">.btn .btn--ghost .btn--danger</button>
+            <button class="btn btn--ghost btn--dark">.btn .btn--ghost .btn--dark</button>
+        </article>
+        <article>
+            <h3>Link styled buttons</h3>
+            <button class="btn btn--link">.btn btn--link</button>
+            <button class="btn btn--link btn--secondary">.btn btn--link .btn--secondary</button>
+            <button class="btn btn--link btn--danger">.btn btn--link .btn--danger</button>
+            <button class="btn btn--link btn--dark">.btn btn--link .btn--dark</button>
+        </article>
+    </section>
+    <section class="mt5">
+        <h2>With icons</h2>
+        <article>
+            <h3>Different dispositions</h3>
+            <button class="btn btn--ico">
+                <svg viewBox="0 0 20 20"><use href="#svg-vader"/></svg>
+                .btn .btn--ico
+            </button>
+            <button class="btn btn--ico">
+                .btn .btn--ico
+                <svg viewBox="0 0 20 20"><use href="#svg-c3po"/></svg>
+            </button>
+            <button class="btn btn--ico">
+                <svg viewBox="0 0 20 20"><use href="#svg-mando"/></svg>
+            </button>
+        </article>
+       <article>
+           <h3>Different sizes</h3>
+           <p>
+            <button class="btn btn--icoMedium">
+                <svg viewBox="0 0 20 20"><use href="#svg-mando"/></svg>
+                .btn .btn--icoMedium
+            </button>
+            <button class="btn btn--icoSmall">
+                <svg viewBox="0 0 20 20"><use href="#svg-mando"/></svg>
+                .btn .btn--icoSmall
+            </button>
+        </p>
+       </article>
+       <p>(<em>icons by <a href="http://svgicons.sparkk.fr">svgicons.sparkk.fr</a>)</em></p>
+    </section>
+    <section class="mt5">
+        <h2>Sizes</h2>
+        <a href="#" class="btn btn--primary btn--big">.btn .btn--big</a>
+        <a href="#" class="btn btn--primary btn--small">.btn .btn--small</a>
+    </section>
 
-    <p>
-      <a href="#" class="btn btn-primary btn--big">.btn .btn--bigger</a>
-    </p>
+</main>
+
+<!-- SVG Icons -->
+<div class="hidden">
+<svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <path id="svg-vader" x="0" y="0" d="M16.85 8.36V5.88A5.5 5.5 0 0 0 11.37.4H8.63a5.5 5.5 0 0 0-5.48 5.48v2.47L.4 15.48c0 1.37 4.3 4.11 9.59 4.11s9.6-2.74 9.6-4.1l-2.75-7.13zm-10.96 9a.51.51 0 1 1 0-1.02.51.51 0 0 1 0 1.03zM5.2 10c0-.38.2-.93.43-1.23 0 0 .65-.83 1.97-.83.67 0 1.14.31 1.14.31.32.21.57.69.57 1.06v1.03c0 .2-.3.35-.68.35H5.89A.69.69 0 0 1 5.2 10zm2.74 6.85h-.68v-1.37l.68-.68v2.05zm1.72 0H8.63v-2.74h1.03v2.74zm-.69-3.42V12.4a1.03 1.03 0 1 1 2.06 0v1.03H8.97zm2.4 3.42h-1.03v-2.74h1.03v2.74zm1.37 0h-.68V14.8l.68.68v1.37zm1.37.52a.51.51 0 1 1 0-1.03.51.51 0 0 1 0 1.03zm0-6.69h-2.74c-.38 0-.68-.15-.68-.34V9.31c0-.37.25-.85.57-1.06 0 0 .47-.3 1.14-.3 1.32 0 1.97.82 1.97.82.24.3.43.85.43 1.23s-.31.69-.69.69zm4.24 5.12a.34.34 0 0 1-.44-.2l-2.5-6.4c-.66-1.64-1.47-2.28-2.9-2.28a3.3 3.3 0 0 0-1.76.6c-.42.3-1.08.3-1.5 0-.01-.01-.81-.6-1.76-.6-1.43 0-2.24.64-2.9 2.29l-2.5 6.4a.34.34 0 1 1-.63-.25l2.49-6.4c.76-1.92 1.82-2.73 3.54-2.73 1.18 0 2.13.7 2.17.73.18.14.5.14.68 0 .04-.03 1-.73 2.17-.73 1.72 0 2.78.81 3.54 2.72l2.5 6.4a.34.34 0 0 1-.2.45z"/>
+        <g id="svg-mando" x="0" y="0">
+            <path d="M18.2 7.95H3.17v.68l6.15 1.1v9.83h2.73V9.73l6.15-1.1z"/>
+            <path d="M2.48 10.06V1.8h1.37a.68.68 0 1 0 0-1.36H1.12a.68.68 0 1 0 0 1.36h.68v4.85a1 1 0 0 0-.68.96v2.73c0 .57.46 1.03 1.02 1.03l.16-.02-.5 5.48 5.9 2.74h.93c0-6.3-3.4-9.11-6.15-9.51z"/>
+            <path d="M18.17 6.58c-.3-3.9-3.2-6.15-7.49-6.15C6.4.43 3.5 2.7 3.2 6.58h14.97zm-2.7-3.4c.02.36-.11.72-.4.98-.54.5-1.4.5-1.94 0a1.2 1.2 0 0 1-.4-.97c.78.64 1.95.64 2.73 0zm3.42 6.88c-2.75.4-6.16 3.2-6.16 9.5h.94l5.9-2.73-.68-6.77z"/>
+        </g>
+
+        <path id="svg-c3po" x="0" y="0" d="M5.177,17.658c0,0,3.445,1.987,4.823,1.987c2.067,0,4.823-1.987,4.823-1.987c0.024-0.025,0.044-0.054,0.068-0.08H5.109C5.133,17.604,5.153,17.633,5.177,17.658z M8.622,1.583V0.531C6.496,0.973,2.539,2.521,1.376,7.933H0.699c-0.189,0-0.344,0.155-0.344,0.344v1.378C0.354,9.845,0.509,10,0.699,10h0.392c-0.016,0.224-0.026,0.454-0.033,0.689H0.699c-0.189,0-0.344,0.155-0.344,0.344v1.378c0,0.189,0.155,0.344,0.344,0.344h0.439c0.089,0.79,0.262,1.804,0.594,2.849v2.663H4.34c-2.233-2.449-2.264-6.822-2.264-7.01C2.077,4.052,6.353,2.108,8.622,1.583zM10.689,0.354H9.311v2.059h1.378V0.354z M11.378,2.63v0.472H8.622V2.63C6.612,3.147,3.11,4.951,3.11,11.258c0,0,0.004,3.373,1.47,5.632h4.042v-0.689h2.756v0.689h4.042c1.466-2.259,1.47-5.632,1.47-5.632C16.89,4.951,13.388,3.147,11.378,2.63z M5.005,12.035c-0.318-0.364-0.517-0.833-0.517-1.354S4.687,9.69,5.005,9.327V12.035zM6.383,10.026c-0.295,0.078-0.517,0.335-0.517,0.654c0,0.319,0.222,0.576,0.517,0.654v1.395c-0.384-0.032-0.738-0.163-1.033-0.377V9.008c0.296-0.214,0.649-0.345,1.033-0.377V10.026z M7.761,12.353c-0.296,0.214-0.649,0.345-1.033,0.377v-1.395C7.022,11.257,7.244,11,7.244,10.681c0-0.319-0.222-0.576-0.517-0.654V8.631c0.384,0.032,0.738,0.163,1.033,0.377V12.353zM8.105,12.035V9.327c0.318,0.363,0.517,0.833,0.517,1.354S8.423,11.671,8.105,12.035z M10,13.445l-1.378,0.689L10,12.756l1.378,1.378L10,13.445z M11.895,12.035c-0.318-0.364-0.517-0.833-0.517-1.354s0.199-0.991,0.517-1.354V12.035z M13.273,10.026c-0.295,0.078-0.517,0.335-0.517,0.654c0,0.319,0.222,0.576,0.517,0.654v1.395c-0.384-0.032-0.738-0.163-1.033-0.377V9.008c0.296-0.214,0.649-0.345,1.033-0.377V10.026z M14.651,12.353c-0.296,0.214-0.649,0.345-1.033,0.377v-1.395c0.295-0.078,0.517-0.335,0.517-0.654c0-0.319-0.222-0.576-0.517-0.654V8.631c0.384,0.032,0.738,0.163,1.033,0.377V12.353zM14.995,12.035V9.327c0.318,0.363,0.517,0.833,0.517,1.354S15.313,11.671,14.995,12.035z M19.646,9.656V8.278c0-0.189-0.155-0.344-0.344-0.344h-0.678c-1.163-5.413-5.12-6.96-7.246-7.402v1.052c2.269,0.525,6.545,2.469,6.545,9.675c0,0.188-0.031,4.561-2.264,7.01h2.608v-2.663c0.333-1.044,0.505-2.058,0.594-2.849h0.439c0.189,0,0.344-0.155,0.344-0.344v-1.378c0-0.189-0.155-0.344-0.344-0.344h-0.359c-0.007-0.235-0.017-0.465-0.033-0.689h0.392C19.491,10,19.646,9.845,19.646,9.656z"></path>
+    </defs>
+</svg>
 
 </div>
 

@@ -1,4 +1,15 @@
 @use "sass:math";
+@use "sass:map";
+@use "sass:string";
+
+$breakpoints: (
+  sm: 768px,
+  md: 960px,
+  lg: 1280px,
+) !default;
+$small: map.get($breakpoints, sm) !default;
+$medium: map.get($breakpoints, md) !default;
+$large: map.get($breakpoints, lg) !default;
 
 // -------------------------------------------------------------
 // mixins
@@ -13,4 +24,16 @@
   margin-bottom: $margin-bottom + em;
   font-size: math.div($font-size, 10) + rem;
   line-height: $new-lh;
+}
+
+@function hex-to-hsl($hex) {
+  $hue: color.hue($hex);
+  $saturation: color.saturation($hex);
+  $lightness: color.lightness($hex);
+
+  @return $hue, $saturation, $lightness;
+}
+
+@function hex-rm-hash($hex) {
+  @return string.slice(#{$hex}, 2);
 }

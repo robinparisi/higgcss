@@ -1,0 +1,39 @@
+// -----------------------------------------------------------
+// == Tag component
+// -----------------------------------------------------------
+
+.tag {
+  display: inline-block;
+  padding: 0.3rem 0.5rem;
+  background-color: #607386;
+  border-radius: 0.2rem;
+  color: $color-light-text;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+
+.tag--medium {
+  padding: 0.2rem 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.25em;
+}
+
+.tag--dark {
+  background-color: $color-dark-text;
+}
+
+.tag--red {
+  background-color: $color-red;
+}
+
+.tag--green {
+  background-color: $color-green;
+  color: $color-light-text;
+}
+
+.tag--yellow {
+  background-color: $color-yellow;
+  color: $color-dark-text;
+}

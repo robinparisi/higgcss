@@ -1,0 +1,251 @@
+@use "sass:color";
+
+// -------------------------------------------------------------
+// Forms
+// -------------------------------------------------------------
+
+$input-color: $color-dark-text;
+$input-lineheight: ($line-height + em);
+$input-padding-y: 0.8em;
+$input-padding-x: 1em;
+$input-padding: $input-padding-y $input-padding-x;
+$input-border-radius: 0.4rem;
+$input-border-color: #d8d8d8;
+$input-border-width: 0.1rem;
+$input-border: $input-border-width solid $input-border-color;
+$input-background-color: #fff;
+$input-placeholder-color: $color-dark-text;
+$input-error: #ff3860;
+$input-error-bg: color.adjust($input-error, $lightness: 30%);
+
+// Input customized with icons
+$input-ico-color: #515151;
+$input-ico-arrow: url("data:image/svg+xml,%3Csvg viewBox='0 0 11 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 7.515.08 1.897 1.44.484l4.06 4.217L9.557.484l1.362 1.413z' fill='%23#{hex-rm-hash($input-ico-color)}'/%3E%3C/svg%3E");
+$input-ico-arrow-width: 1.1rem;
+$input-ico-search: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m19.4 18-3.7-3.6a8.9 8.9 0 0 0-.6-11.8A8.7 8.7 0 0 0 8.9 0a8.8 8.8 0 0 0-6.3 2.6A8.8 8.8 0 0 0 0 8.9a8.9 8.9 0 0 0 14.4 7l3.6 3.5a1 1 0 0 0 .7.3c.3 0 .5 0 .7-.3a1 1 0 0 0 0-1.4Zm-3.7-9.1a6.7 6.7 0 0 1-2 4.8 7 7 0 0 1-4.8 2 6.7 6.7 0 0 1-4.9-2A7 7 0 0 1 2 9 6.9 6.9 0 0 1 8.9 2a6.9 6.9 0 0 1 6.9 6.9Z' fill='%23#{hex-rm-hash($input-ico-color)}'/%3E%3C/svg%3E");
+$input-ico-search-width: 2rem;
+
+// layoutblocks
+// --------------------------------------------------------------
+
+.f-container {
+  max-width: 47rem;
+}
+
+.f-group:where(:not(:first-child)) {
+  margin-top: 3rem;
+}
+
+.f-group > :where(label, .label) {
+  margin-top: 0;
+}
+
+// global style
+// --------------------------------------------------------------
+
+fieldset {
+  padding: 1em;
+  border: 0.1rem solid #d8d8d8;
+  margin: 2.5rem 0;
+}
+
+label,
+.label {
+  display: block;
+  margin-top: 1.3em;
+  margin-bottom: 0.3125em;
+  color: $color-dark-text;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  max-width: 32rem;
+  padding: $input-padding;
+  border: $input-border;
+  margin: 0;
+  background-color: $input-background-color;
+  border-radius: $input-border-radius;
+  color: $input-color;
+  line-height: $input-lineheight;
+  vertical-align: middle;
+}
+
+select {
+  padding-right: calc($input-ico-arrow-width + $input-padding-x);
+  appearance: none;
+  background-image: $input-ico-arrow;
+  background-position: calc(100% - $input-ico-arrow-width) center;
+  background-repeat: no-repeat;
+  background-size: $input-ico-arrow-width auto;
+}
+
+textarea {
+  min-width: 32rem;
+  min-height: 8em;
+  resize: vertical;
+  vertical-align: top;
+}
+
+// inline form
+// --------------------------------------------------------------
+
+.f-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.f-inline :where(label, .label) {
+  margin-block: 0;
+}
+
+// autogrid
+// --------------------------------------------------------------
+
+[class^="f-grid"] {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+}
+
+[class^="f-grid"] > * {
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+[class^="f-grid"] > *:first-child {
+  margin-left: 0;
+}
+
+[class^="f-grid"] :where(input, select, textarea) {
+  max-width: 100%;
+}
+
+[class^="f-grid"] :where(label, .label) {
+  margin-top: 0;
+}
+
+// Input type specific styles
+// --------------------------------------------------------------
+
+input:where(
+[type="radio"],
+[type="checkbox"]
+) {
+  width: inherit;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+input:where(
+[type="radio"],
+[type="checkbox"]
+) + label {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-block: 0;
+  vertical-align: baseline;
+}
+
+.f-error input:where(
+[type="radio"],
+[type="checkbox"]) {
+  outline: $input-border-width solid $input-error;
+  outline-offset: 0.4rem;
+}
+
+// search input custom
+input[type="search"] {
+  padding-right: calc($input-ico-search-width + $input-padding-x);
+  appearance: none;
+  background-image: $input-ico-search;
+  background-position: calc(100% - $input-ico-search-width) center;
+  background-repeat: no-repeat;
+  background-size: $input-ico-search-width auto;
+}
+
+// placeholders
+// --------------------------------------------------------------
+
+input:placeholder {
+  color: $input-placeholder-color;
+}
+
+textarea:placeholder {
+  color: $input-placeholder-color;
+}
+
+// size
+// --------------------------------------------------------------
+
+.f-size-07 {
+  max-width: 7rem;
+}
+
+.f-size-1 {
+  max-width: 10rem;
+}
+
+.f-size-2 {
+  max-width: 20rem;
+}
+
+.f-size-3 {
+  max-width: 30rem;
+}
+
+.f-size-4 {
+  max-width: 40rem;
+}
+
+.f-size-5 {
+  max-width: 50rem;
+}
+
+.f-size-full {
+  max-width: 100%;
+}
+
+// Scale
+// --------------------------------------------------------------
+
+.f-small {
+  padding: 0.5rem 1.2rem;
+  line-height: 1.25em;
+}
+
+// States
+// --------------------------------------------------------------
+
+.f-disabled {
+  border-color: #d4d2d2;
+  color: #d4d2d2;
+}
+
+// errors
+.f-error :is(input, select, textarea) {
+  border-color: $input-error;
+  margin-bottom: 0.8rem;
+}
+
+.f-error-message {
+  color: $input-error;
+}
+
+// focus state
+:is(input, select, textarea):where(:active, :focus) {
+  box-shadow: $focus-ring;
+  outline: none;
+}
+
+:is(input, select, textarea):invalid {
+  border-color: $input-error;
+}

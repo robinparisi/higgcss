@@ -2,19 +2,13 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-    <title></title>
-    <meta name="description" content="">
+    <title>Forms - Higgcss</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
     <link rel="stylesheet" href="/style.css" media="all">
     <style>
         .container {
           padding: 10px;
         }
-
     </style>
 </head>
 <body>
@@ -96,29 +90,29 @@
         <fieldset class="mt3">
             <legend>Formulaire grid</legend>
 
-            <div class="grid-3">
+            <div class="grid grid-3 gap">
                 <div>
                     <label for="adress">Adresse</label>
-                    <input id="adress" name="adress" type="text" class="large-input">
+                    <input id="adress" name="adress" type="text" class="f-size-full">
                 </div>
                 <div>
                     <label for="town">Ville</label>
-                    <input id="town" name="town" type="text">
+                    <input id="town" name="town" type="text" class="f-size-full">
                 </div>
                 <div>
                     <label for="zipcode">Code postal</label>
-                    <input id="zipcode" name="zipcode" type="text">
+                    <input id="zipcode" name="zipcode" type="text" class="f-size-full">
                 </div>
             </div>
 
-            <div class="grid-1-3">
+            <div class="grid grid-4 gap">
                 <div>
                     <label for="note">Note</label>
-                    <input id="note" name="note" type="text" class="large-input">
+                    <input id="note" name="note" type="text" class="f-size-full">
                 </div>
-                <div>
+                <div class="col-span-3">
                     <label for="phone">Numéro de téléphone</label>
-                    <input id="phone" name="phone" type="text">
+                    <input id="phone" name="phone" type="text" class="f-size-full">
                 </div>
             </div>
         </fieldset>
@@ -144,7 +138,13 @@
                     <div class="f-error-message">Une adresse email valide est requise</div>
                 </div>
             </div>
-            
+
+            <!-- Input search -->
+            <div>
+                    <label for="search">Rechercher</label>
+                    <input id="search" name="search" type="search">
+            </div>
+
             <!-- Input select -->
             <div>
                 <label for="fruits">Select box</label>
@@ -154,17 +154,17 @@
                     <option value="poire">Poire</option>
                 </select>
             </div>
-            
+
             <!-- Textarea -->
             <div>
                 <label for="text">Un textarea</label>
                 <textarea id="text" class="f-100"></textarea>
             </div>
-            
+
             <!--- Radio groupe -->
             <div>
-                <div class="ferror">
-                    <span class="label">Un groupe de radio : </span>
+                <div class="f-error">
+                    <span class="label">Un groupe de radio&nbsp;: </span>
                     <input name="radio" type="radio" id="radio1" value="starwars">
                     <label for="radio1">Star Wars</label>
                     <input name="radio" type="radio" id="radio2" value="startreck">
@@ -172,10 +172,10 @@
                     <div class="f-error-message">Message d'erreur</div>
                 </div>
             </div>
-            
+
             <!-- Checkboxes groupe -->
             <div>
-                <span class="label">Un groupe de checkbox :</span>
+                <span class="label">Un groupe de checkbox&nbsp;:</span>
                 <input type="checkbox" name="frites" id="frites" />
                 <label for="frites">bleu</label>
                 <input type="checkbox" name="steak" id="steak" />
@@ -185,20 +185,25 @@
                 <input type="checkbox" name="huitres" id="huitres" />
                 <label for="huitres">rouge</label>
             </div>
-            
-            <!-- Switch groupe -->
+
+            <!-- Switch -->
             <div>
-                <span class="label">Un groupe de switch :</span>
-                <input class="switch" type="checkbox" name="ketchup" id="ketchup" checked/>
-                <label for="ketchup">Sauce ketchup</label>
-                <input class="switch" type="checkbox" name="frite_sup" id="frite_sup" />
-                <label for="frite_sup">Supplément frites</label>
+                <span class="label">Des switch&nbsp;:</span>
+                <div>
+                    <input class="switch" type="checkbox" name="ketchup" id="ketchup" checked/>
+                    <label for="ketchup">Sauce ketchup</label>
+                </div>
+                <div class="f-error">
+                    <input class="switch" type="checkbox" name="frite_sup" id="frite_sup" />
+                    <label for="frite_sup">Supplément frites</label>
+                    <div class="f-error-message">Message d'erreur</div>
+                </div>
             </div>
-            
+
             <!-- Radiobox groupe -->
             <div>
-                <span class="label">Une radiobox :</span>
-            
+                <span class="label">Une radiobox&nbsp;:</span>
+
                 <div class="radiobox">
                     <input name="whatdo" id="work" value="work" type="radio">
                     <label for="work">Travailler /o\</label>

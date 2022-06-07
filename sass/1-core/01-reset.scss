@@ -35,10 +35,9 @@ img {
   vertical-align: middle;
 }
 
-/* fix input no style on Safari */
-
-input[type="search"] {
-  appearance: textfield;
+// Remove special styling on Safari iOS
+input[type="search"]::-webkit-search-decoration {
+  display: none;
 }
 
 button,

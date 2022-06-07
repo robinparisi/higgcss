@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "sass:map";
+
 // --------------------------------------------------------------
 // config
 // --------------------------------------------------------------
@@ -6,43 +9,44 @@
 // base
 // -------------------------------------------------------------
 
-$base-font: 14; // px value (without unit), will be converted in em
+$base-font: 16; // px value (without unit), will be converted in em
 $line-height: 1.5;
-$fontstack1: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen-sans, ubuntu, cantarell, "Helvetica Neue", sans-serif;
-$fontstack2: "Georgia", "Times", "Times New Roman", serif;
+$fontstack1: "Inter", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$fontstack2: "Georgia", "Times", "Times New Roman", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+// ℹ️ Emoji fonts are explicitely declared at the fontstacks end to be sure to be displayed correctely on every platforms. https://answers.microsoft.com/en-us/windows/forum/all/flag-emoji/85b163bc-786a-4918-9042-763ccf4b6c05
 
 // -------------------------------------------------------------
-// spacers
+// container
 // -------------------------------------------------------------
 
-$spacing-rules: (
-  (mt, margin-top, (1, 2, 3, 4, 5)), // generates mt1, mt2...
-  (mr, margin-right, (0.5, 1, 2, 3)), // generates mr05, mr1...
-  (mb, margin-bottom, (1, 2, 3, 4, 5)),
-  (ml, margin-left, (0.5, 1, 2, 3)),
-  (pt, padding-top, (1, 2, 3, 4, 5)),
-  (pr, padding-right, (0.5, 1, 2, 3)),
-  (pb, padding-bottom, (1, 2, 3, 4, 5)),
-  (pl, padding-left, (0.5, 1, 2, 3)),
-);
+$container-base: 120rem;
+$container-small: 55rem;
 
 // -------------------------------------------------------------
 // responsive
 // -------------------------------------------------------------
 
-$xsmall: 480px;
-$small: 768px;
-$medium: 960px;
-$large: 1280px;
+$breakpoints: (
+  sm: 480px,
+  md: 769px,
+  lg: 1000px,
+);
+$small: map.get($breakpoints, sm);
+$medium: map.get($breakpoints, md);
+$large: map.get($breakpoints, lg);
+$small-label: "sm";
+$medium-label: "md";
+$large-label: "lg";
 
 // -------------------------------------------------------------
 // grids
 // -------------------------------------------------------------
 
-$default-gutter: 2rem;
+$gap: 3rem;
 
 // -------------------------------------------------------------
 // others
 // -------------------------------------------------------------
 
-$focus-ring: 0 0 0 0.3rem rgba($color-info, 0.5);
+$focus-ring: 0 0 0 0.3rem color.change(#3498db, $alpha: 0.7);

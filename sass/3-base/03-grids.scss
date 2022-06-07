@@ -1,0 +1,64 @@
+// -------------------------------------------------------------
+// grids
+// -------------------------------------------------------------
+
+@include grid(1);
+@include grid(2);
+@include grid(3);
+@include grid(4);
+@include grid(5);
+@include grid(6);
+@include grid(9);
+
+.gap { gap: $gap; }
+.gap-demi { gap: calc($gap / 2); }
+.gap-inline { row-gap: $gap; }
+.gap-block { column-gap: $gap; }
+
+// Spread grid's child on ceveral columns
+// --------------------------------------------------------------
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
+
+.col-span-5 {
+  grid-column: span 5 / span 5;
+}
+
+@media (max-width: $medium) {
+  @include grid(1, $medium-label);
+  @include grid(2, $medium-label);
+  @include grid(3, $medium-label);
+  @include grid(4, $medium-label);
+
+  .md\:gap { gap: $gap; }
+  .md\:gap-demi { gap: calc($gap / 2); }
+  .md\:gap-inline { row-gap: $gap; }
+  .md\:gap-block { column-gap: $gap; }
+
+  .md\:col-span-1 { grid-column: span 1 / span 1; }
+  .md\:col-span-2 { grid-column: span 2 / span 2; }
+  .md\:col-span-3 { grid-column: span 3 / span 3; }
+}
+
+@media (max-width: $small) {
+  @include grid(1, $small-label);
+  @include grid(2, $small-label);
+
+  .sm\:gap { gap: $gap; }
+  .sm\:gap-demi { gap: calc($gap / 2); }
+  .sm\:gap-inline { row-gap: $gap; }
+  .sm\:gap-block { column-gap: $gap; }
+
+  .sm\:col-span-1 { grid-column: span 1 / span 1; }
+  .sm\:col-span-2 { grid-column: span 2 / span 2; }
+}

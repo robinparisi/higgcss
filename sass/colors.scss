@@ -2,10 +2,14 @@
 // colors
 // --------------------------------------------------------------
 
-$color-primary: #3498db;
-$color-secondary: #1abc9c;
-$color-tertiary: #34495e;
+$color-1: #3498db;
+$color-2: #1abc9c;
+$color-3: #34495e;
+$color-4: #d0dada;
 $color-info: #2185d0;
+$color-red: #de350b;
+$color-green: $color-2;
+$color-yellow: #ffdd57;
 
 // -------------------------------------------------------------
 // text
@@ -18,7 +22,7 @@ $color-dark-text: #000;
 // links
 // -------------------------------------------------------------
 
-$color-link: $color-primary;
+$color-link: $color-1;
 
 // -------------------------------------------------------------
 // brands

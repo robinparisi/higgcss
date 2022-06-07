@@ -1,0 +1,13 @@
+// -----------------------------------------------------------
+// == Webfonts
+// -----------------------------------------------------------
+
+// An example the good practices to use webfonts on your project
+// @font-face {
+//   font-display: swap; // Prevent hidden text when the font isn't loaded yet
+//   font-family: "Open Sans";
+//   font-weight: normal; // You can specify if this file is for a specific weight
+//   src:
+//     local("Open Sans"), // Define a local first so viewers who already have the font on their computer don't have to download it again
+//     url("/fonts/subset-OpenSans.woff2") format("woff2"); // WOFF2 is enough these days
+// }

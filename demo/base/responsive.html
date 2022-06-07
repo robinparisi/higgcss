@@ -2,9 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
     <title>Responsive</title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css" media="all">
     <style>
@@ -70,42 +68,50 @@
 </head>
 <body>
     <div class="container">
+        <div class="box">
+            Default breakpoints:
+            <ul>
+                <li>Small: 480px</li>
+                <li>Medium: 769px</li>
+                <li>Large: 1000px</li>
+            </ul>
+        </div>
         <table>
             <thead>
                 <tr>
                     <th></th>
-                    <th>Extra Small (xs)</th>
-                    <th>Small (s)</th>
-                    <th>Medium (m)</th>
-                    <th>Desktop (l)</th>
-                    <th>Visible</th>
+                    <th>Small (sm)</th>
+                    <th>Medium (md)</th>
+                    <th>Large (lg)</th>
+                    <th>Max</th>
+                    <th>Visible?</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th>hidden-xs</th>
+                    <th>hidden-sm</th>
                     <td class="hide"></td>
                     <td class="visible"></td>
                     <td class="visible"></td>
                     <td class="visible"></td>
-                    <td class="test"><span class="hidden-xs">yes</span></td>
+                    <td class="test"><span class="hidden-sm">yes</span></td>
 
                 </tr>
                 <tr>
-                    <th>hidden-xs-s</th>
+                    <th>hidden-sm-md</th>
                     <td class="hide"></td>
                     <td class="hide"></td>
                     <td class="visible"></td>
                     <td class="visible"></td>
-                    <td class="test"><span class="hidden-xs-s">yes</span></td>
+                    <td class="test"><span class="hidden-sm-md">yes</span></td>
                 </tr>
                 <tr>
-                    <th>hidden-xs-s-m</th>
+                    <th>hidden-sm-md-lg</th>
                     <td class="hide"></td>
                     <td class="hide"></td>
                     <td class="hide"></td>
                     <td class="visible"></td>
-                    <td class="test"><span class="hidden-xs-s-m-l">yes</span></td>
+                    <td class="test"><span class="hidden-sm-md-lg">yes</span></td>
                 </tr>
                 <tr>
                     <th>hidden</th>
@@ -115,54 +121,48 @@
                     <td class="hide"></td>
                     <td class="test"><span class="hidden">yes</span></td>
                 </tr>
+                <tr><td colspan="6">&nbsp;</td></tr>
                 <tr>
-                    <th>hidden-xs-s-m-l-l+</th>
+                    <th>hidden-md-lg</th>
+                    <td class="visible"></td>
                     <td class="hide"></td>
                     <td class="hide"></td>
-                    <td class="hide"></td>
-                    <td class="hide"></td>
-                    <td class="test"><span class="hidden-xs-s-m-l-l+">yes</span></td>
+                    <td class="visible"></td>
+                    <td class="test"><span class="hidden-md-lg">yes</span></td>
                 </tr>
                 <tr>
-                    <th>hidden-xs-m</th>
+                    <th>hidden-sm-lg</th>
                     <td class="hide"></td>
                     <td class="visible"></td>
                     <td class="hide"></td>
                     <td class="visible"></td>
-                    <td class="test"><span class="hidden-xs-m">yes</span></td>
+                    <td class="test"><span class="hidden-sm-lg">yes</span></td>
                 </tr>
+                <tr><td colspan="6">&nbsp;</td></tr>
                 <tr>
-                    <th>hidden-m</th>
-                    <td class="visible"></td>
-                    <td class="visible"></td>
-                    <td class="hide"></td>
-                    <td class="visible"></td>
-                    <td class="test"><span class="hidden-m">yes</span></td>
-                </tr>
-                <tr>
-                    <th>hidden-xs-up</th>
+                    <th>hidden-sm-up</th>
                     <td class="visible"></td>
                     <td class="hide"></td>
                     <td class="hide"></td>
                     <td class="hide"></td>
-                    <td class="test"><span class="hidden-xs-up">yes</span></td>
+                    <td class="test"><span class="hidden-sm-up">yes</span></td>
                 </tr>
 
                 <tr>
-                    <th>hidden-s-up</th>
+                    <th>hidden-md-up</th>
                     <td class="visible"></td>
                     <td class="visible"></td>
                     <td class="hide"></td>
                     <td class="hide"></td>
-                    <td class="test"><span class="hidden-s-up">yes</span></td>
+                    <td class="test"><span class="hidden-md-up">yes</span></td>
                 </tr>
                 <tr>
-                    <th>hidden-m-l+</th>
+                    <th>hidden-lg-up</th>
+                    <td class="visible"></td>
                     <td class="visible"></td>
                     <td class="visible"></td>
                     <td class="hide"></td>
-                    <td class="hide"></td>
-                    <td class="test"><span class="hidden-m-l+">yes</span></td>
+                    <td class="test"><span class="hidden-lg-up">yes</span></td>
                 </tr>
             </tbody>
         </table>

@@ -1,0 +1,20 @@
+// stylelint-disable unit-no-unknown
+// -------------------------------------------------------------
+// icons
+// -------------------------------------------------------------
+
+.ico-inline svg {
+  width: 0.75em; // em value as fallback for cap unit
+  width: 1cap;
+  height: 0.75em;
+  height: 1cap;
+  margin-inline: 0.75ch;
+}
+
+.ico-inline:first-child svg {
+  margin-inline-start: initial;
+}
+
+.ico-inline:last-child svg {
+  margin-inline-end: initial;
+}

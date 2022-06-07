@@ -1,0 +1,43 @@
+// Notification module
+// Namespace : .notif
+
+// -------------------------------------------------------------
+// configuration
+// -------------------------------------------------------------
+
+$notif-success: $color-green;
+$notif-warning: $color-yellow;
+$notif-error: $color-red;
+
+// -------------------------------------------------------------
+// module
+// -------------------------------------------------------------
+
+.notif {
+  padding: 2rem;
+  border: 0.1rem solid currentcolor;
+  border-radius: 0.3rem;
+}
+
+// Colors
+// --------------------------------------------------------------
+
+.notif--success {
+  color: $notif-success;
+}
+
+.notif--warning {
+  border-color: $notif-warning;
+  color: #444;
+}
+
+.notif--error {
+  color: $notif-error;
+}
+
+// Sizes
+// --------------------------------------------------------------
+
+.notif--small {
+  padding: 1rem 1.5rem;
+}

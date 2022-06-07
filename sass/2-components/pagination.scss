@@ -1,7 +1,5 @@
-/**
- * Pagination Module
- * namespace : .pagination
- */
+// Pagination Module
+// namespace : .pagination
 
 // -------------------------------------------------------------
 // configuration
@@ -9,8 +7,8 @@
 
 $pagination-border-radius: 0.2rem;
 $pagination-border: 0.1rem solid #808080;
-$pagination-hover-color: $color-secondary;
-$pagination-current-bg: $color-primary;
+$pagination-hover-color: $color-2;
+$pagination-current-bg: $color-1;
 $pagination-current-color: #fff;
 
 // -------------------------------------------------------------
