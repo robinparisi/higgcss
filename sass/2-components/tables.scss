@@ -19,9 +19,16 @@
 
 .table caption {
   padding: 1em 0;
-  color: #000;
-  font: italic 85%/1 Arial, sans-serif;
+  color: $color-dark-text;
+  font: italic 85%/1 $fontstack1;
   text-align: center;
+}
+
+.table thead {
+  background: #e0e0e0;
+  color: $color-dark-text;
+  text-align: left;
+  vertical-align: bottom;
 }
 
 .table td,
@@ -43,25 +50,15 @@
   font-weight: 600;
 }
 
-.table :where(td, th):first-child {
+.table :is(td, th):first-child {
   padding-left: 2rem;
 }
 
-.table :where(td, th):last-child {
+.table :is(td, th):last-child {
   padding-right: 2rem;
 }
 
-.table--invisible {
-  border: none;
-}
-
-.table--invisible :where(td, th) {
+.table--invisible,
+.table--invisible :is(td, th):nth-child(n) { // nth-child(n) is used to keep a increasing specificity for this special table style
   border-bottom: none;
-}
-
-.table thead {
-  background: #e0e0e0;
-  color: $color-dark-text;
-  text-align: left;
-  vertical-align: bottom;
 }

@@ -241,7 +241,7 @@ textarea:placeholder {
 }
 
 // focus state
-:is(input, select, textarea):where(:active, :focus) {
+:is(input, select, textarea):is(:active, :focus) {
   box-shadow: $focus-ring;
   outline: none;
 }

@@ -45,13 +45,13 @@ a:where(:focus) {
   outline: none;
 }
 
-// A elements that don't have a class get default styles
-a:not([class]) {
-  color: $color-link;
+a:where(:not([class]):hover) {
   text-decoration: underline;
 }
 
-a:where(:not([class]):hover) {
+// A elements that don't have a class get default styles
+a:not([class]) {
+  color: $color-link;
   text-decoration: underline;
 }
 

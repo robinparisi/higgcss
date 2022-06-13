@@ -34,24 +34,22 @@
 // Focus state
 // --------------------------------------------------------------
 
-.switch:active,
-.switch:focus {
+.switch:is(:active,:focus) {
   box-shadow: inset -2rem 0 0 0.1rem rgb(192 192 192 / 50%), $focus-ring;
 }
 
-.switch:checked:active,
-.switch:checked:focus {
+.switch:checked:where(:active,:focus) {
   box-shadow: inset 2rem 0 0 0.1rem $color-1, $focus-ring;
 }
 
 // Error state
 // --------------------------------------------------------------
 
-.f-error .switch {
+.f-error > .switch {
   margin: 0;
   outline: none;
 }
 
-.f-error .switch:checked {
+.f-error > .switch:checked {
   border-color: $input-error;
 }
