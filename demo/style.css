@@ -353,7 +353,7 @@ textarea:placeholder {
   color: #ff3860;
 }
 
-:is(input, select, textarea):where(:active, :focus) {
+:is(input, select, textarea):is(:active, :focus) {
   box-shadow: 0 0 0 0.3rem rgba(52, 152, 219, 0.7);
   outline: none;
 }
@@ -384,22 +384,20 @@ textarea:placeholder {
   box-shadow: inset 1.5em 0 0 0.1rem #3498db;
 }
 
-.switch:active,
-.switch:focus {
+.switch:is(:active, :focus) {
   box-shadow: inset -2rem 0 0 0.1rem rgba(192, 192, 192, 0.5), 0 0 0 0.3rem rgba(52, 152, 219, 0.7);
 }
 
-.switch:checked:active,
-.switch:checked:focus {
+.switch:checked:where(:active,:focus) {
   box-shadow: inset 2rem 0 0 0.1rem #3498db, 0 0 0 0.3rem rgba(52, 152, 219, 0.7);
 }
 
-.f-error .switch {
+.f-error > .switch {
   margin: 0;
   outline: none;
 }
 
-.f-error .switch:checked {
+.f-error > .switch:checked {
   border-color: #ff3860;
 }
 
@@ -610,8 +608,15 @@ textarea:placeholder {
 .table caption {
   padding: 1em 0;
   color: #000;
-  font: italic 85%/1 Arial, sans-serif;
+  font: italic 85%/1 "Inter", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-align: center;
+}
+
+.table thead {
+  background: #e0e0e0;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
 }
 
 .table td,
@@ -633,27 +638,17 @@ textarea:placeholder {
   font-weight: 600;
 }
 
-.table :where(td, th):first-child {
+.table :is(td, th):first-child {
   padding-left: 2rem;
 }
 
-.table :where(td, th):last-child {
+.table :is(td, th):last-child {
   padding-right: 2rem;
 }
 
-.table--invisible {
-  border: none;
-}
-
-.table--invisible :where(td, th) {
+.table--invisible,
+.table--invisible :is(td, th):nth-child(n) {
   border-bottom: none;
-}
-
-.table thead {
-  background: #e0e0e0;
-  color: #000;
-  text-align: left;
-  vertical-align: bottom;
 }
 
 .notif {
@@ -804,6 +799,10 @@ textarea:placeholder {
   column-gap: 3rem;
 }
 
+.col-span-0 {
+  grid-column: auto;
+}
+
 .col-span-2 {
   grid-column: span 2/span 2;
 }
@@ -853,6 +852,10 @@ textarea:placeholder {
     column-gap: 3rem;
   }
 
+  .md\:col-span-0 {
+    grid-column: auto;
+  }
+
   .md\:col-span-1 {
     grid-column: span 1/span 1;
   }
@@ -888,6 +891,10 @@ textarea:placeholder {
 
   .sm\:gap-block {
     column-gap: 3rem;
+  }
+
+  .sm\:col-span-0 {
+    grid-column: auto;
   }
 
   .sm\:col-span-1 {
@@ -943,12 +950,12 @@ a:where(:focus) {
   outline: none;
 }
 
-a:not([class]) {
-  color: #3498db;
+a:where(:not([class]):hover) {
   text-decoration: underline;
 }
 
-a:where(:not([class]):hover) {
+a:not([class]) {
+  color: #3498db;
   text-decoration: underline;
 }
 
